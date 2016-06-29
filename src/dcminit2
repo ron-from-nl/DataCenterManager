@@ -1,0 +1,28 @@
+su -
+cat << _EOF_ > /etc/init/dcmserver.conf
+start on runlevel [2345]
+stop on runlevel [016]
+respawn
+chdir /home/netplaza/dcm
+setuid netplaza
+
+script
+/usr/bin/java -server -Djava.rmi.server.hostname=192.168.192.3 -Xmx256m -cp DCManager.jar DCMServer 20000 --daemon
+end script
+_EOF_
+
+cat << _EOF_ > /etc/init/dcmserver.conf
+start on runlevel [2345]
+stop on runlevel [016]
+respawn
+chdir /home/netplaza/dcm
+setuid netplaza
+
+script
+/usr/bin/java -Duser.country=US -Duser.language=en -Xmx128m -cp DCManager.jar DCMPoller --daemon
+end script
+_EOF_
+
+
+start dcmserver; start dcmpoller
+stop dcmserver; stop dcmpoller

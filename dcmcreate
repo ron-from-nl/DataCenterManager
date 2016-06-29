@@ -1,0 +1,9 @@
+#! /bin/bash
+rsync -av Documents/NetBeansProjects/DCManager/dist/DCManager.jar ./dcm/
+rsync -av Documents/NetBeansProjects/DCManager/dist/lib ./dcm/
+rm -Rf ./dcm/data
+rm -f ./dcm/.dcm*
+find dcm -name ".DS_Store" -exec rm {} \;
+#java -jar /Users/ron/Documents/NetBeansProjects/DCManager/proguard4.7beta3/lib/proguard.jar -forceprocessing "@/Users/ron/Documents/NetBeansProjects/DCManager/pg.pro"
+java -jar Documents/NetBeansProjects/DCManager/SEPRo.jar
+cp dcm/DCManager.jar Desktop/dcm/

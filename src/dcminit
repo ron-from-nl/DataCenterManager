@@ -1,0 +1,32 @@
+
+# useradd -g 100 -c "DatacenterManager" -d /usr/local/bin/dcm -m -s /bin/bash dcm
+
+#/etc/init.d/dcm
+#! /bin/sh
+. /etc/rc.status
+rc_reset
+
+case "$1" in
+    start)
+        start_daemon -f -u dcm -g users /usr/local/bin/dcm/dcm/dcmstart
+        rc_status -v -r
+        ;;
+    stop)
+        start_daemon /usr/local/bin/dcm/dcm/dcmstop
+        rc_status -v
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|status}"
+        exit 1
+        ;;
+esac
+
+rc_exit
+
+
+#================================================================
+# screen -ls # list screen sessions
+# screen -r 23340.pts-0.voipstorm # re-attach to screen session
+
+# CTRL-a " = list processes within screen session
+# CTRL-a CTRL-d de-attach from screen session

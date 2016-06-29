@@ -1,0 +1,13 @@
+Thu Apr 14 14:33:27 CEST 2011 : Apache Derby Network Server - 10.7.1.1 - (1040133) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+Thu Apr 14 14:33:36 CEST 2011:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.7.1.1 - (1040133): instance a816c00e-012f-5400-760f-0000043ce288 
+on database directory /Users/ron/NetBeansProjects/DatacenterManager/JavaDB  with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4 
+Loaded from file:/Users/ron/NetBeansProjects/DatacenterManager/libs/derby.jar
+java.vendor=Apple Inc.
+java.runtime.version=1.6.0_24-b07-334-10M3326
+WARNING: The database is booted with derby.system.durability=test. In this mode, it is possible that database may not be able to recover, committed transactions may be lost, database may be in an inconsistent state. Please use this mode only when these consequences are acceptable  
+
+WARNING: The database was at least at one time booted with derby.system.durability=test. As a result of this mode being used, it is possible that the database may not be able to recover, committed transactions may be lost, and the database may be in an inconsistent state. This may cause unexpected errors.
+
+Database Class Loader started - derby.database.classpath=''

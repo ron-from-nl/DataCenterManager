@@ -1,0 +1,72 @@
+DatacenterManager Trend Analysis Tool.
+
+Fully automated inventory of your UNIX servers.
+Server(s) ready for polling in 5 secs from scratch.
+No server agent required to inventory or poll.
+Only an SSH login required on your UNIX servers. 
+Ultra lightweight inventory and poller design.
+Polls 100.000 resources per min (1000 servers).
+On-demand graphs over any precise period.
+On-demand graphs with multi server resources.
+Allows hundreds of resources per graph.
+Generates any custom graph in an eye-blink.
+Zero maintenance / growth RRD archives used.
+Provides clear datacenter scalability trends.
+Allows proactive datacenter capacity planning.
+Nice looking interface is Fast and Easy to use.
+Contains an all in one desktop interface
+Contains a multi-user client / server interface.
+Graphs can be saved as an image file to disk.
+Autoscales your graph when resizing window.
+User friendly date and time picker to set period. 
+Smart search or drag and drop known resources.
+Quick change line colors or thickness in graphs.
+Different user privileges: admin or regular users.
+Currently Linux, Solaris & Darwin (OSX) supported.
+Unsupported UNIX OS's included free of charge.
+
+Single click trend view navigation:
+
+move left/right on time-scale
+move up/down on value-scale
+zoom in/out on time-scale
+zoom in/out on value-scale
+
+No loss of accuracy over any wanted period or value range by X/Y zooming functions.
+
+With all due respect, but this replaces those under-designed, CPU hungry, sluggish, fixed period and value range RRDTool graph scripts built over the years, that usually lack custom periods and consolidated resources graphs and are hard, if not impossible to maintain / expand for regular users.
+
+DatacenterManager is an everything done by interface application, that requires no technical skills at all adding and polling servers or even creating graphs for that matter.
+
+DatacenterManager allows you to choose any period and choose any multi server resources (by smart search engine) into one graph.
+
+---------------------------------------------------------------------------------------------------------------------------
+How searching for resources works:
+
+Search: "cpu idle | storage perc" Creates a graph with all cpu stats & filesystem usage percentages of all your servers.
+Search: "Linux cpu | Linux diskio" Creates a graph with all your Linux servers cpu stats & diskio.
+Search: "network error" Creates an entire datacenter network interface error graph.
+Search: "x86 tcpstat | x86 numofprocs" Creates a graph with all Intel X86 servers tcpstats and number of processes.
+Search: "mem swap used | mem ram free" Creates a graph with memory consumption of all your servers e.g. detecting datacenter memory leaks in a snap.
+
+You don't have to type search phrases, you can also slide open the inventory view and drag and drop any inventory items into the search bar, so you don't have to memorize or guess what the inventory has available for you.
+The smart search engine will search every word you specify in all inventory fields, which provides a lazy search capability to you, isn't that great?
+Multiple different search criteria allowed by specifying a "|" character.
+Match Search and Exact Search possible allowing you to search for parts of words or entire words (the wildcard % also works in Exact Search).
+You can even edit the search results (selected resources) before creating your desired graph.
+
+You'll get the drift, the smart search engine is designed to make searching for server resources or any inventory items extremely easy and powerful.
+---------------------------------------------------------------------------------------------------------------------------
+
+All in all DatacenterManager is the best thing on offer in it's category !!
+
+Take it from me as a 13 years experienced UNIX System Engineer and a 30 years experienced programmer, this is a must have in any company to identify and address any performance or scalability issues in no-time.
+
+This tool will save literally hundreds of thousands of euro's on human resources and customers struggling with those invincible and eternal performance issues coming and going at random day after day, year after year sickening your staff and customers.
+
+Please let me know what you think: ronuitzaandam@gmail.com
+
+Regards,
+
+Ron de Jong
++31 6 344 733 73

@@ -1,0 +1,1009 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>DatacenterManager</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.3  (Unix)">
+	<META NAME="AUTHOR" CONTENT="ronalddj">
+	<META NAME="CREATED" CONTENT="20110622;13230000">
+	<META NAME="CHANGEDBY" CONTENT="Ron Jong, de">
+	<META NAME="CHANGED" CONTENT="20111124;22205800">
+	<META NAME="CLASSIFICATION" CONTENT="Performance Monitoring &amp; Trend Analysis">
+	<META NAME="DESCRIPTION" CONTENT="http://java-apps.org/content/show.php/DatacenterManager?content=144298&amp;PHPSESSID=c728b44b97100bbf0c71e2fff9951e80">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 21.59cm 27.94cm; margin-left: 3.18cm; margin-right: 2.86cm; margin-top: 1.27cm; margin-bottom: 1.27cm }
+		P { margin-bottom: 0.21cm; direction: ltr; color: #000000; text-align: left; widows: 2; orphans: 2 }
+		P.western { font-family: "Arial", sans-serif; font-size: 10pt; so-language: en-US }
+		P.cjk { font-family: "Times New Roman", serif; font-size: 10pt; so-language: zh-CN }
+		P.ctl { font-family: "Calibri", sans-serif; font-size: 11pt; so-language: ar-SA }
+		H1 { margin-bottom: 0.11cm; direction: ltr; color: #000000; text-align: left; widows: 2; orphans: 2 }
+		H1.western { font-family: "Arial", sans-serif; font-size: 16pt; so-language: en-US }
+		H1.cjk { font-family: "Times New Roman", serif; font-size: 16pt; so-language: zh-CN }
+		H1.ctl { font-family: "Arial", sans-serif; font-size: 16pt; so-language: ar-SA }
+		H2 { margin-bottom: 0.11cm; direction: ltr; color: #000000; text-align: left; widows: 2; orphans: 2 }
+		H2.western { font-family: "Arial", sans-serif; font-size: 14pt; so-language: en-US; font-style: italic }
+		H2.cjk { font-family: "Times New Roman", serif; font-size: 14pt; so-language: zh-CN; font-style: italic }
+		H2.ctl { font-family: "Arial", sans-serif; font-size: 14pt; so-language: ar-SA; font-style: italic }
+		H1.toc-heading-western { margin-top: 0.85cm; margin-bottom: 0cm; color: #365f91; font-family: "Cambria", serif; font-size: 14pt; so-language: en-US; line-height: 115%; page-break-inside: avoid }
+		H1.toc-heading-cjk { margin-top: 0.85cm; margin-bottom: 0cm; color: #365f91; font-family: "Times New Roman", serif; font-size: 14pt; so-language: zh-CN; line-height: 115%; page-break-inside: avoid }
+		H1.toc-heading-ctl { margin-top: 0.85cm; margin-bottom: 0cm; color: #365f91; font-family: "Times New Roman", serif; font-size: 14pt; so-language: ar-SA; line-height: 115%; page-break-inside: avoid }
+		A:link { color: #0000ff }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-GB" TEXT="#000000" LINK="#0000ff" BGCOLOR="#ffffff" DIR="LTR">
+<DIV TYPE=HEADER>
+	<TABLE WIDTH=666 BORDER=1 BORDERCOLOR="#ff0000" CELLPADDING=5 CELLSPACING=0 FRAME=BELOW RULES=NONE>
+		<COL WIDTH=186>
+		<COL WIDTH=460>
+		<TR VALIGN=BOTTOM>
+			<TD WIDTH=186 BGCOLOR="#943634">
+				<P LANG="en-US" ALIGN=LEFT>November 20, 2011</P>
+			</TD>
+			<TD WIDTH=460>
+				<P LANG="en-US" ALIGN=RIGHT><FONT COLOR="#76923c"><FONT SIZE=2 STYLE="font-size: 9pt"><B>[DatacenterManager
+				UserManual</B></FONT></FONT><FONT SIZE=2 STYLE="font-size: 9pt"><B>
+				v1.15.4</B></FONT><FONT COLOR="#76923c"><FONT SIZE=2 STYLE="font-size: 9pt"><B>]</B></FONT></FONT></P>
+			</TD>
+		</TR>
+	</TABLE>
+	<P LANG="en-US" STYLE="margin-bottom: 1.17cm"><BR>
+	</P>
+</DIV>
+<P ALIGN=CENTER STYLE="margin-top: 0.21cm"><FONT COLOR="#333333"><FONT SIZE=7><B><SPAN STYLE="background: transparent">DatacenterManager</SPAN></B></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.21cm; font-weight: normal; text-decoration: none">
+<FONT COLOR="#666666"><FONT SIZE=7 STYLE="font-size: 32pt"><I>User
+Manual</I></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><IMG SRC="dcm_manual_html_m207ba3.jpg" NAME="Afbeeldingen1" ALIGN=LEFT WIDTH=663 HEIGHT=270 BORDER=0><BR CLEAR=LEFT><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-top: 0.21cm; font-weight: normal"><FONT FACE="STHeiti"><FONT SIZE=5><SPAN STYLE="background: transparent">Automated
+Server Inventory</SPAN></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-top: 0.21cm; font-weight: normal"><FONT FACE="STHeiti"><FONT SIZE=5><SPAN STYLE="background: transparent">Performance
+Monitoring</SPAN></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-top: 0.21cm; font-weight: normal"><FONT FACE="STHeiti"><FONT SIZE=5><SPAN STYLE="background: transparent">Trend
+Analysis Navigation</SPAN></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-top: 0.21cm; font-weight: normal"><FONT FACE="STHeiti"><FONT SIZE=5><SPAN STYLE="background: transparent">Scalability
+Management</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm; font-weight: normal">
+<FONT FACE="STHeiti"><FONT SIZE=5><SPAN STYLE="background: transparent">Datacenter
+Commander</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal">
+<FONT FACE="STHeiti"><FONT SIZE=5><SPAN STYLE="background: transparent">Minute
+Installation</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal">
+<FONT FACE="STHeiti"><FONT SIZE=5><SPAN STYLE="background: transparent">No
+Server Changes</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm; font-style: normal">
+<BR>
+</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm; font-style: normal">
+<BR>
+</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal">
+<FONT FACE="STHeiti"><FONT SIZE=5><U><SPAN STYLE="background: transparent">Build
+to be Easy</SPAN></U></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal">
+<FONT FACE="STHeiti"><FONT SIZE=5><U><SPAN STYLE="background: transparent">Build
+to save Time</SPAN></U></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal">
+<FONT FACE="STHeiti"><FONT SIZE=5><U><SPAN STYLE="background: transparent">Build
+to save Costs</SPAN></U></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal">
+<FONT FACE="STHeiti"><FONT SIZE=5><U><SPAN STYLE="background: transparent">Build
+to be in Control</SPAN></U></FONT></FONT></P>
+<P LANG="en-US" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm">
+<BR>
+</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" ALIGN=RIGHT STYLE="margin-bottom: 0cm"><FONT SIZE=2><I>Ron
+de Jong, Tuesday 2011 November 20</I></FONT></P>
+<H1 LANG="en-US" CLASS="toc-heading-western" ALIGN=CENTER STYLE="page-break-before: always">
+Table of Contents</H1>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<DIV ID="Sectie1" DIR="LTR">
+	<DIV ID="Inhoudsopgave1" DIR="LTR" STYLE="background: transparent">
+		<P LANG="en-US" STYLE="margin-bottom: 0cm; line-height: 150%">
+		<FONT FACE="Verdana, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">Table
+		of Contents	2</FONT></FONT></P>
+		<P LANG="en-US" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">1
+		Introduction	3</FONT></FONT></P>
+		<P LANG="en-US" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">2
+		How does it work	4</FONT></FONT></P>
+		<P LANG="en-US" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">3
+		<B>Installation</B>	5</FONT></FONT></P>
+		<P LANG="en-US" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">4
+		DCMStarter	5</FONT></FONT></P>
+		<P LANG="en-US" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">5
+		DCMDesktop	6</FONT></FONT></P>
+		<P LANG="en-US" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">6
+		The Inventory	7</FONT></FONT></P>
+		<P LANG="en-US" STYLE="margin-left: 0.39cm; margin-bottom: 0cm; line-height: 150%">
+		<FONT FACE="Verdana, sans-serif"><I>6.1 Adding Servers	7</I></FONT></P>
+		<P LANG="en-US" STYLE="margin-left: 0.39cm; margin-bottom: 0cm; line-height: 150%">
+		<FONT FACE="Verdana, sans-serif"><I>6.2 Inventory (Populated)	8</I></FONT></P>
+		<P LANG="en-US" STYLE="margin-left: 0.39cm; margin-bottom: 0cm; line-height: 150%">
+		<FONT FACE="Verdana, sans-serif"><I>6.3 Importing Servers (CSV)	9</I></FONT></P>
+		<P LANG="en-US" STYLE="margin-left: 0.39cm; margin-bottom: 0cm; line-height: 150%">
+		<FONT FACE="Verdana, sans-serif"><I>6.4 Servers Imported	10</I></FONT></P>
+		<P LANG="en-US" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">7
+		The Poller (DCMPoller)	10</FONT></FONT></P>
+		<P LANG="en-US" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">8
+		The Navigator (Trend Analysis)	11</FONT></FONT></P>
+		<P LANG="en-US" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">9
+		Trend Analysis	12</FONT></FONT></P>
+		<P LANG="en-US" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">10
+		The Commander	13</FONT></FONT></P>
+		<P LANG="en-US" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">11
+		The Admin	14</FONT></FONT></P>
+		<P LANG="en-US" STYLE="margin-left: 0.39cm; margin-bottom: 0cm; line-height: 150%">
+		<FONT FACE="Verdana, sans-serif"><I>11.1 DCM Users	14</I></FONT></P>
+		<P LANG="en-US" STYLE="margin-left: 0.39cm; margin-bottom: 0cm; line-height: 150%">
+		<FONT FACE="Verdana, sans-serif"><I>11.2 License	14</I></FONT></P>
+		<P LANG="en-US" STYLE="margin-left: 0.39cm; margin-bottom: 0cm; line-height: 150%">
+		<FONT FACE="Verdana, sans-serif"><I>11.3 System Properties	14</I></FONT></P>
+		<P LANG="en-US" STYLE="margin-left: 0.39cm; margin-bottom: 0cm; line-height: 150%">
+		<FONT FACE="Verdana, sans-serif"><I>11.4 Backup	14</I></FONT></P>
+		<P LANG="en-US" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">12
+		Logging	15</FONT></FONT></P>
+		<P LANG="en-US" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">13
+		DCMClient – DCMServer	15</FONT></FONT></P>
+		<P LANG="en-US" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT FACE="Verdana, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">14
+		Trial	15</FONT></FONT></P>
+	</DIV>
+	<H1 CLASS="western"></H1>
+	<H1 CLASS="western" STYLE="page-break-before: always"><A NAME="__RefHeading__521_46758241"></A>
+	1Introduction</H1>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><A HREF="http://sites.google.com/site/ronuitzaandam/index/dcm_install.jar?attredirects=0&amp;d=1">DatacenterManager</A>
+	is a state of the art, fully automated Inventory &amp; Performance
+	Monitoring / Trend Analysis Tool (build in Java) that can
+	inventorise your UNIX servers in seconds (without  installing extra
+	software on your servers, just by using SSH and plain old UNIX
+	commands).</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Your entire datacenter
+	can be automatically inventoried by only supplying hostname,
+	username &amp; password for each server, either “one by one” or
+	via an automated CSV host-list import file. 
+	</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Virtually every large
+	company has performance issues that usually arise from years of
+	increased datacenter complexity and change in usage. Different root
+	causes of performance bottlenecks dynamically float across your
+	infrastructure, making it almost impossible to catch by hand in
+	time.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Manual diagnoses just
+	isn't fast enough finding performance bottlenecks before they
+	disappear.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Most companies fail to
+	improve business performance and give up and give in to frustration.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">DatacenterManager was
+	especially designed to accurately inventory and monitor / poll your
+	server's resources and historically (maintenance free) store the
+	recorded performance data for later inspection by powerful Trend
+	Analysis Comparison against the usual workload baselines.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">DatacenterManager's
+	clever poller design makes the operational impact almost
+	unnoticeable.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The Navigator offers
+	easy and powerful multi-server resource querying and swift time
+	navigation through a seemingly endless line-graph by simple
+	mouse-clicks on move and zoom buttons.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">DCM's Navigator also
+	let's you visualize growth expectancies used for Scalability
+	Management.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><IMG SRC="dcm_manual_html_m5d95790d.png" NAME="Afbeeldingen20" ALIGN=LEFT WIDTH=647 HEIGHT=392 BORDER=0><BR CLEAR=LEFT><I>Figure
+	1.1</I></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">DCM interacts with
+	your servers over encrypted SSH communication and does NOT use
+	public key authentication as it is based on password authentication,
+	by smart automated terminal interaction.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">DCM and your UNIX
+	System Administrators login and interact with your servers the same
+	way.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The DCMPoller can
+	process over 100,000 resources per minute from a simple desktop
+	computer !</P>
+	<H1 CLASS="western" STYLE="page-break-before: always"><A NAME="__RefHeading__523_46758241"></A>
+	2How does it work</H1>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">DatacenterManager is
+	designed to make your life as easy as possible, being in control
+	again.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">DatacenterManager
+	installs in under a minute and no server changes are required to
+	operate.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Adding server(s) to
+	DCM is done by just providing a hostname, username and a password.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">DCM will then logon to
+	your server(s), inventorise them and add them to the inventory.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><IMG SRC="dcm_manual_html_m7f626c1.png" NAME="Afbeeldingen21" ALIGN=LEFT WIDTH=645 HEIGHT=388 BORDER=0><BR CLEAR=LEFT><I>Figure
+	2.1</I></P>
+	<P CLASS="western" ALIGN=LEFT STYLE="margin-bottom: 0cm; font-style: normal">
+	<BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">All servers and
+	resources in the inventory will be polled every minute by the
+	DCMPoller (performance data collector) in the background (when
+	turned on) and continuously update the massive numbers of
+	(maintenance free) Historical Data Archives, saved for at least one
+	year.</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">After adding servers
+	to the inventory you can generate on-demand graphs on any period and
+	combination of resources by searching for the related server
+	resources and turn them into graph. Searching for CPUIDLE (in
+	general) gives you a single line-graph with e.g. hundreds of servers
+	showing you instant datacenter CPU performance over any required
+	period and value scale.</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The DCM Navigator is a
+	highly powerful search instrument, allowing you to select an
+	absolute or  relative period in time and any number of
+	server-resources  searching: “cpu” or “server1 diskio” or
+	“solaris storage” and the next moment, you have your exact trend
+	analysis or performance stats.</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">In the Trend View you
+	can move left / right in time or zoom in / out in time, move up /
+	down on the value scale or zoom in / or out on the value scale
+	freely and your graphs are instantly and seamlessly updated as if
+	your graph is an endless roll of film moving back and forth in time.</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">DCM has a standalone
+	desktop application and a client – server application for
+	multi-user and network distributed performance monitoring and
+	management.</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">DCM also has a
+	DatacenterCommander that allows automatic (parallel or sequential)
+	execution of any custom command or shell script on a large amount of
+	selected servers in just seconds !</P>
+	<H1 LANG="en-US" CLASS="western">3Installation</H1>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The installation
+	footprint of DatacenterManager is very small, due to it's Java
+	nature (&lt; 20 MB).</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<OL>
+		<LI><P CLASS="western" STYLE="margin-bottom: 0cm"><A HREF="http://www.java.com/en/download/installed.jsp?detect=jre&amp;try=1">Check</A>
+		that you have at least <A HREF="http://www.java.com/">Java</A> 1.5
+		or higher installed on your computer.</P>
+		<LI><P CLASS="western" STYLE="margin-bottom: 0cm"><A HREF="http://sites.google.com/site/ronuitzaandam/index/dcm_install.jar?attredirects=0&amp;d=1">Download</A>
+		DatacenterManager (<B>dcm_install.jar</B>) to any location on your
+		hard-disk.</P>
+		<LI><P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><SPAN LANG="en-GB">Double
+		click “</SPAN><SPAN LANG="en-GB"><B>dcm_install.jar</B></SPAN><SPAN LANG="en-GB">”
+		starting the self extractor and click the [Extract] button.</SPAN></P>
+		<P CLASS="western" STYLE="margin-bottom: 0cm"></P>
+		<P CLASS="western" STYLE="margin-bottom: 0cm"><IMG SRC="dcm_manual_html_3b1ed7ac.png" NAME="Afbeeldingen23" ALIGN=LEFT WIDTH=306 HEIGHT=405 BORDER=0><BR CLEAR=LEFT></P>
+	</OL>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The installation is
+	now completed and you are ready to start DCM the first time.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><SPAN LANG="en-GB">Go
+	into the extracted “</SPAN><SPAN LANG="en-GB"><B>dcm</B></SPAN><SPAN LANG="en-GB">”
+	subdirectory and double click “</SPAN><SPAN LANG="en-GB"><B>DCManager.jar</B></SPAN><SPAN LANG="en-GB">”
+	to start DCM.</SPAN></P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm">DOS
+	prompt or Terminal can also be used to start DCM, type: java -jar
+	DCManager.jar</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P LANG="en-US" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm">
+	<FONT COLOR="#808080"><FONT SIZE=3><I><U>Extra Information</U></I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>Every
+	server added to the DCM Inventory requires 250 MB – 8 GB, (depends
+	on server “size”).</I></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>The
+	data archives represent the historical data archives for every
+	server added to DCM.</I></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>These
+	large archive-directories are used by the following DCM components:</I></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<OL>
+		<LI><P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>DCMPoller
+		that collects performance data and stores it there.</I></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>DCMDesktop
+		querying archive data to create graphs for Trend Analysis.</I></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>DCMClient
+		querying archive data to create graphs for Trend Analysis.</I></FONT></P>
+	</OL>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>The
+	location of the data archives are: dcm\data\databases\DCMArchiveDB\</I></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>If
+	you later run out of disk space, then you can move / copy the entire
+	“dcm” directory to a different disk location or even a different
+	computer and your done (no lengthy, risky or costly migration).</I></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<H1 LANG="en-US" CLASS="western" STYLE="page-break-before: always">4DCMStarter</H1>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">DatacenterManager
+	isn't just one application, but several independently running
+	applications.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The DCMStarter as a
+	starting point, makes it easy to start the right DCM application for
+	you.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>Please
+	notice the information at the bottom part while hovering over the
+	component buttons.</I></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P LANG="en-US" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm">
+	<IMG SRC="dcm_manual_html_787dfb59.png" NAME="Afbeeldingen2" ALIGN=LEFT WIDTH=505 HEIGHT=441 BORDER=0><BR CLEAR=LEFT>Figure
+	4.1</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>Please
+	notice the “<U><B>Version</B></U>“ (upper right corner) and the
+	“<U><B>Check Version</B></U>“ button (under Poller).</I></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>This
+	allows you the see your current DCM version and check for newer DCM
+	versions online.</I></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Click the “<B>Desktop</B>”
+	button and start the standalone Desktop application “<B>DCMDesktop</B>”.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The <U>first time</U>
+	starting DCMDesktop takes a <U>little longer</U> creating the
+	Inventory database.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><U><B>Congratulations,
+	you are now running the standalone DatacenterManager DCMDesktop.</B></U></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I><U>Extra
+	Information</U></I></FONT></P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>DCM
+	internally uses two different database systems (DCMDBServer) and
+	(DCMArchiveDB).</I></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>DCMDBServer
+	serves the DCM Inventory (datacenter server administration).</I></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>DCMArchiveDB
+	serves the Server Historical Data Archives (Trend Analysis Data).</I></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080">
+	</FONT><BR>
+	</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I><SPAN LANG="en-GB">The
+	DCMPoller &amp; DCMCommander can also be started from the DCMDesktop
+	interface.</SPAN><SPAN LANG="en-GB"> </SPAN></I></FONT>
+	</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>More
+	about DCMPoller and DCMCommander later in this document.</I></FONT></P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>As
+	a beginner you would only start the Desktop as that combines all
+	other components together in one single / standalone desktop
+	application.</I></FONT></P>
+	<H1 LANG="en-US" CLASS="western" STYLE="page-break-before: always">5<SPAN STYLE="font-style: normal">D</SPAN>CMDesktop</H1>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm; text-decoration: none">
+	DCMDesktop starts (see figure 5.1) login with user: <B>admin</B> &amp;
+	password: <B>admin</B>.</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><I>F<IMG SRC="dcm_manual_html_66060d4a.png" NAME="Afbeeldingen3" ALIGN=LEFT WIDTH=637 HEIGHT=388 BORDER=0><BR CLEAR=LEFT>igure
+	5.1</I></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm">An empty
+	Inventory is shown (see figure 5.2) as no servers were added yet.</P>
+	<P LANG="en-US" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm">
+	<IMG SRC="dcm_manual_html_758420ca.png" NAME="Afbeeldingen4" ALIGN=LEFT WIDTH=638 HEIGHT=376 BORDER=0><BR CLEAR=LEFT><SPAN LANG="en-GB"><I>Figure
+	5</I></SPAN>.2</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm">The upper
+	part (calendars and everything in between) is what is called the
+	“Navigator”.</P>
+	<H1 CLASS="western" STYLE="page-break-before: always">6The Inventory</H1>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The Inventory holds
+	the entire server &amp; resources administration (<I>not the
+	DataArchives</I>).</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The Inventory
+	currently supports the operating systems: AIX, HP-UX, Solaris, Linux
+	&amp; OSX.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">At the lower part (the
+	currently big empty spaces) is what is called the “View Area”.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The View Area shows
+	two different views: Inventory View (servers) &amp; Trend View
+	(graphs).</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">DCMDesktop by default
+	shows the Inventory (see Figure 6.1.2) and at the lower left part of
+	the View Area you see the Inventory “Servers Tree” normally
+	showing only server hostnames.</P>
+	<H2 CLASS="western" STYLE="font-style: normal"><A NAME="__RefHeading__525_46758241"></A>
+	6.1Adding Servers</H2>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Right
+	above the “Servers Tree” you see 4 small buttons (Figure 6.1.1):</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><I>F<IMG SRC="dcm_manual_html_m375c4044.png" NAME="Afbeeldingen5" ALIGN=LEFT WIDTH=174 HEIGHT=36 BORDER=0><BR CLEAR=LEFT>igure
+	6.1.1</I></P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Tip: you can hold
+	still your mouse above any button, field or widget to get more info.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Please click the [+]
+	button to add a server to your Inventory (see Figure 6.1.1 or
+	6.1.2).</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P LANG="en-US" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm">
+	<IMG SRC="dcm_manual_html_m286d534e.png" NAME="Afbeeldingen6" ALIGN=LEFT WIDTH=639 HEIGHT=388 BORDER=0><BR CLEAR=LEFT><I>Figure
+	6.1.2</I></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">You will now see the
+	“Add Server Form” that has two tabs called: [Servers] [Import]</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">By default the
+	[Server] tab is shown with server fields like Hostname &amp;
+	Username etc.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Please fill in at
+	least: Hostname, Username &amp; Password and click the [Add] button.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">DCM will now login to
+	your server, inventorise it and add it to the Inventory Database.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Please see the (below)
+	status-bar or Log Tab (at the top) to see more progression details.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">If your server is to
+	busy to respond in time then you can increase your Timeout (Sec).</P>
+	<H2 LANG="en-US" CLASS="western" STYLE="font-style: normal">6.2Inventory
+	(Populated)</H2>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">After adding your
+	server you will see your added server in the Inventory View (see
+	Figure 6.2.1)</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P LANG="en-US" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm">
+	<IMG SRC="dcm_manual_html_63bf317e.png" NAME="Afbeeldingen7" ALIGN=LEFT WIDTH=651 HEIGHT=392 BORDER=0><BR CLEAR=LEFT>Figure
+	6.2.1</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">As you can see the
+	Inventory View is now showing all your server details and server
+	resources.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The left side “Servers
+	Tree” now selects and shows your newly added server's (hostname).</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The right side shows
+	the server's details in two sections (an upper and a lower section):
+		</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The Upper section
+	shows (<U>editable</U>) host details like hostname, credentials,
+	sys-info etc.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The Lower section
+	shows a large (<U>editable</U>) table with related server resources.
+		</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">As easy as you've just
+	added a server, you can also delete the selected server(s).</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Clicking the [-]
+	button (next to the [+] button) shows you the delete server dialog.</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P LANG="en-US" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm">
+	Figure 6.2.2<IMG SRC="dcm_manual_html_mf271da7.png" NAME="Afbeeldingen8" ALIGN=LEFT WIDTH=364 HEIGHT=182 BORDER=0><BR CLEAR=LEFT></P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm">Before
+	clicking the [Delete] button you can also delete the related
+	(performance) data archives.</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm">By
+	default the server's data archives are not deleted as the server
+	might be added again.</P>
+	<H2 CLASS="western" STYLE="font-style: normal">6.3Importing Servers
+	(CSV)</H2>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Coming back to adding
+	servers with the [+] button, you can also use the [Import] button.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The [Import] button
+	allows you to import a CSV based file with servers for automatic
+	inventory.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The Import Servers
+	function can mass inventorise &amp; add 100 server in approximately
+	17 minutes!</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Click the [+] button
+	right above the “Servers Tree” (again) and then click the
+	[Import] tab.</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P LANG="en-US" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm">
+	<IMG SRC="dcm_manual_html_45f33c65.png" NAME="Afbeeldingen9" ALIGN=LEFT WIDTH=632 HEIGHT=379 BORDER=0><BR CLEAR=LEFT>Figure
+	6.3.1</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Click the [Browse]
+	button and a file browser / explorer appears for you to open the CSV
+	file.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Use the file-explorer
+	to locate and open your CSV file (if available ) and click [Open] →
+	[Import].</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>Note
+	the textfield [  ,  ] (next the [browse] button) allowing you to set
+	a custom field separator.</I></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">   
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Your servers are now
+	automatically inventoried and added and you can monitor the import
+	progress by following the Import Dialog line-selection and look at
+	the DCMDesktop status-bar at the bottom.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Like the Add Server
+	process, you can increase “Timeout (Sec)” if your servers are
+	less responsive.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Here is an explanation
+	of the plain text format of the CSV Servers Import file e.g.
+	“myhosts.csv”:</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Fields:
+	Hostname,SSHPortnr,Username,Password,SuperuserPassword</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT SIZE=2 STYLE="font-size: 9pt">Here's
+	an Example:</FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier, Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 9pt">server1,22,peter,petepass,</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier, Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 9pt">server2,22,peter,petepass,</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier, Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 9pt">server3,22,peter,petepass,</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier, Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 9pt">server4,22,peter,petepass,</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier, Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 9pt">server5,22,peter,petepass,</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier, Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 9pt">server6,22,peter,petepass,</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier, Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 9pt">server7,22,peter,petepass,</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier, Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 9pt">server8,22,peter,petepass,</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier, Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 9pt">server9,22,peter,petepass,</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier, Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 9pt">server10,22,peter,petepass,</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>The
+	superuser password field is optional and therefore shows a last
+	comma followed by nothing.</I></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>DCM
+	is designed to require as little server access as possible to
+	inventorise, poll or command.</I></FONT></P>
+	<H2 LANG="en-US" CLASS="western" STYLE="font-style: normal">6.4Servers
+	Imported</H2>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Here's
+	an Inventory with 10 servers added (please ignore the upper
+	Navigator for now).</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P LANG="en-US" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm">
+	<IMG SRC="dcm_manual_html_m7f626c1.png" NAME="Afbeeldingen10" ALIGN=LEFT WIDTH=649 HEIGHT=387 BORDER=0><BR CLEAR=LEFT>Figure
+	6.4.1</P>
+	<P LANG="en-US" CLASS="western" ALIGN=LEFT STYLE="margin-bottom: 0cm">
+	<BR>
+	</P>
+	<P LANG="en-US" CLASS="western" ALIGN=LEFT STYLE="margin-bottom: 0cm">
+	<FONT COLOR="#808080"><I><U>Please note that “Servers Tree”
+	elements (on the left) can also be right clicked for extra
+	functions.</U></I></FONT></P>
+	<P LANG="en-US" CLASS="western" ALIGN=LEFT STYLE="margin-bottom: 0cm">
+	<FONT COLOR="#808080"><I>As you might have already noticed, the
+	server resources table shows editable columns with preset resource
+	information in order to query and poll your resource(s). For
+	advanced use by qualified personnel, these columns can be changed to
+	e.g. influence the polling methodology of resources.</I></FONT></P>
+	<H1 LANG="en-US" CLASS="western">7The Poller (DCMPoller)</H1>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Now
+	that you've added some servers to your Inventory, it is now time to
+	start collecting (performance) data with the Poller (which runs as a
+	non interactive background process).</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">
+	<BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><I>You can disable
+	polling of individual servers and resources by clicking the related
+	checkboxes “Enabled” “on” or “off” in the DCMDesktop
+	Inventory View → Host &amp; Resources Table.</I></P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Either
+	start the Poller from the DCMStarter window (as seen earlier at the
+	start of this document) or click the little blue poller button (see
+	Figure 7.1) at the white “Servers Tree” area on the left.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>Remember
+	you can hold still your mouse above buttons, widgets and fields to
+	get more info.</I></FONT></P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><I>F<IMG SRC="dcm_manual_html_m375c4044.png" NAME="Afbeeldingen11" ALIGN=LEFT WIDTH=174 HEIGHT=36 BORDER=0><BR CLEAR=LEFT>igure
+	7.1</I></P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">
+	<BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">After
+	clicking the poller button the poller background process starts, but
+	not much is seen as it quietly runs in the background as a java or
+	“javaw” process seen on (Microsoft Windows).</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">
+	<BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">More
+	information on the poller activity (verbose mode) can be obtained
+	from the following directory:</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal"><FONT FACE="Courier, Courier New, monospace"><B>dcm\data\log\&lt;date&gt;_&lt;time&gt;_DCMPoller.log</B></FONT></P>
+	<H1 LANG="en-US" CLASS="western">8The Navigator (Trend Analysis)</H1>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">At
+	this point your servers are added, your poller is running and after
+	some time collecting performance data, it is time to see some
+	line-graphs / statistics with the (upper) Navigator:</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">
+	<BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">At
+	first glance the Navigator looks a bit like an aircraft cockpit, but
+	it just consists of Three parts:</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">
+	<BR>
+	</P>
+	<UL>
+		<LI><P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">
+		Select Period (Start &amp; End Time)</P>
+		<LI><P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">
+		Search &amp; Select Server Resources</P>
+		<LI><P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">
+		Trend Analysis Navigation Buttons</P>
+	</UL>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">
+	<BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Period
+	Selection can be done two ways: Static or Dynamic (Absolute Time or
+	Relative Time)</P>
+	<HR>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Static
+	Period Selection (do this for Start and End Time):</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><I>F<IMG SRC="dcm_manual_html_m47ba26c4.png" NAME="Afbeeldingen12" ALIGN=LEFT WIDTH=648 HEIGHT=133 BORDER=0><BR CLEAR=LEFT>igure
+	7.1</I></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Click
+	the [Now] button until the Calendar and Time Picker are enabled.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Select
+	a day in the calendar widget and adjust the hour/minute sliders.</P>
+	<HR>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Dynamic
+	Period Selection (do this for Start and End Time):</P>
+	<P LANG="en-US" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm">
+	<I>Figure 7.2</I><IMG SRC="dcm_manual_html_m4572092b.png" NAME="Afbeeldingen13" ALIGN=LEFT WIDTH=652 HEIGHT=138 BORDER=0><BR CLEAR=LEFT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Click
+	the [Now] button until the Calendar and Time picker are disabled</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">The
+	[Now] button starts blinking and the offset fields (Month, Day,
+	Hour, Min) enable.</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Click
+	the [+] or [-] buttons to offset the various time fields (offsetting
+	from “Now” time).</P>
+	<HR>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Your
+	Trend Period is now set and you can continue to searching for server
+	resources.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Almost
+	any column or anything you see in the inventory details can be
+	searched for.</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Type
+	something like “cpu | stor perc” or “linux memory” and hit
+	enter (Match Search)</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Now
+	the matching resources show right below in the selected resources
+	area (editable).</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#808080"><I>Please
+	note the double arrow button [up/down] that switches Inventory View
+	with Trend View</I></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">The
+	navigation buttons enable and you can now click the middle [Generate
+	Graph] button.</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><I>F<IMG SRC="dcm_manual_html_4dfbaead.png" NAME="Afbeeldingen14" ALIGN=LEFT WIDTH=392 HEIGHT=25 BORDER=0><BR CLEAR=LEFT>igure
+	7.3</I></P>
+	<H1 CLASS="western" STYLE="font-style: normal">9Trend Analysis</H1>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">After
+	clicking the [Generate Graph] button, the lower View Area rolls up
+	and a line-graph shows immediately, showing a graphical representing
+	of your server resources over the period you set.</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><I>F<IMG SRC="dcm_manual_html_m5d95790d.png" NAME="Afbeeldingen15" ALIGN=LEFT WIDTH=647 HEIGHT=400 BORDER=0><BR CLEAR=LEFT>igure
+	9.1</I></P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">The
+	navigator arrow buttons allow you to quickly move / navigate through
+	time and value.</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Simply
+	said move left / right (in time) move up / down in value scale
+	(autoscale is default).</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Zoom
+	in / out period or zoom in / out on value scale to easily examine
+	your suspect resources.</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">The
+	[Generate Graph] button starts flashing “Video Wall Mode” (keeps
+	refreshing every minute).</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Making
+	a “Right Click” on the Graph shows you a quick-menu with
+	additional functionality.</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">DatacenterManager
+	doesn't care how many resources you select in a single graph as long
+	as your monitor allows for enough window-space to write the caption
+	area inside the line-graph (bottom).</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal"> 
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Trend
+	Navigating is the fun part of DatacenterManager as it makes
+	examining and comparing thousands of (multi-server performance)
+	figures a child's play in the world of computer science.</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">DatacenterManager
+	Trend Analysis allows you to also accurately anticipate on future
+	scalability issues due to it's powerful and flexible navigation over
+	any growth period for resources like e.g. storage (displayed in
+	different value types like MB's or Percentages).</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">Endless
+	of other possibilities open up with DatacenterManager as it doesn't
+	stop with performance analysis, but also reaches far into incident
+	and problem management e.g. detecting memory leaks datacenter wide
+	within seconds or bandwidth or any other hardware resource
+	over-utilization.</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal">DatacenterManager
+	does the hard and daunting technical work for you and lets you focus
+	entirely on the essentials, identifying and fixing performance &amp;
+	capacity bottlenecks in no-time.</P>
+	<H1 CLASS="western">10The Commander</H1>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">DatacenterManager
+	wouldn't be called “Manager” if it could only view or monitor
+	your servers.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">DCM Users with “Admin”
+	privilege can use a powerful integrated Commander, that is capable
+	of fully automated execution of custom commands or scripts on
+	selected servers from the Inventory.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Click the black
+	terminal button on the right (see Figure 10.1)</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><I>Figure
+	10.1</I><IMG SRC="dcm_manual_html_m375c4044.png" NAME="Afbeeldingen19" ALIGN=LEFT WIDTH=174 HEIGHT=36 BORDER=0><BR CLEAR=LEFT></P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The Search Servers
+	field works similar to the Search Resources field in the Navigator,
+	but instead it merely selects “servers” by searching through the
+	entire Inventory's server details in the same way.</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">This allows you to do
+	distinct searches for say: only x86_64 servers or only Linux servers
+	or only servers that have “eth” or “en” network interfaces
+	(resources) etc. etc. 
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><IMG SRC="dcm_manual_html_492735b5.png" NAME="Afbeeldingen16" ALIGN=LEFT WIDTH=585 HEIGHT=574 BORDER=0><BR CLEAR=LEFT><I>Figure
+	10.2</I></P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The power doesn't stop
+	there as the Commander allows (sequential and) parallel (or
+	multi-threaded) execution, allowing you execute a script on e.g. 100
+	servers in less than 10 seconds.</P>
+	<H1 LANG="en-US" CLASS="western" STYLE="font-style: normal">11The
+	Admin</H1>
+	<H2 LANG="en-US" CLASS="western">11.1DCM Users</H2>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The DCMDesktop (and
+	DCMClient) has an Admin tab at the top of the interface allowing you
+	to:</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<UL>
+		<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Choose and apply
+		your server license (Code)</P>
+		<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Add, change or
+		delete users and admin privileges.</P>
+		<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Check the system
+		properties in case needed.</P>
+		<LI><P CLASS="western" STYLE="margin-bottom: 0cm">Backup and Import
+		the Inventory Database</P>
+		<P CLASS="western" STYLE="margin-bottom: 0cm"></P>
+	</UL>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><IMG SRC="dcm_manual_html_mf6becca.png" NAME="Afbeeldingen18" ALIGN=LEFT WIDTH=653 HEIGHT=391 BORDER=0><BR CLEAR=LEFT><I>Figure
+	11.1.1</I></P>
+	<H2 LANG="en-US" CLASS="western">11.2License</H2>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">In the upper left
+	corner you can set the number of server licenses required to monitor
+	and manage.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Next a calendar to set
+	the License start date and next to that the License Period field and
+	details.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><I><U><B>The Demo
+	License (Including 5 Server Licenses) works for a Lifetime and if
+	free of charge !</B></U></I></P>
+	<H2 LANG="en-US" CLASS="western">11.3System Properties</H2>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><I>At
+	the right side System Properties are shown. (the DCMClient provides
+	an extra server column).</I></P>
+	<H2 CLASS="western"><I><B>11.4Backup</B></I></H2>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal">
+	<BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal">
+	Backup provides CSV File Export and Import functionality for
+	interfacing with other applications.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal">
+	The Backup export and import (CSV) files are located at the
+	(dcmhome): dcm\data\backup.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal">
+	<BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#808080"><I>Please
+	Note: Export doesn't include Data Archives and Import <B>overwrites</B>
+	the Inventory Database.</I></FONT></P>
+	<H1 LANG="en-US" CLASS="western" STYLE="page-break-before: always">12Logging</H1>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The “Log” Tab
+	provides detailed information also stored at the: dcm\data\log
+	directory.</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><IMG SRC="dcm_manual_html_1e708d80.png" NAME="Afbeeldingen17" ALIGN=LEFT WIDTH=448 HEIGHT=285 BORDER=0><BR CLEAR=LEFT><I>Figure
+	12.1</I></P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">When something doesn't
+	work as expected, you can start the DatacenterManager components in
+	verbose mode (see DCMStarter) (not recommended in operations) and
+	check the verbose logs.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">By default DCM
+	disables debugging output (including Java stack traces). You can
+	enable debugging output by starting from the command-line with the
+	<FONT FACE="Courier, monospace"><FONT SIZE=2>--</FONT></FONT><FONT FACE="Courier, monospace"><FONT SIZE=2><B>debug</B></FONT></FONT>
+	parameter.</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><SPAN LANG="en-GB">Example:
+	java -cp DCManager.jar DCMDesktop </SPAN><FONT FACE="Courier, monospace"><SPAN LANG="en-GB">[--debug]
+	[--help]</SPAN></FONT></P>
+	<H1 LANG="en-US" CLASS="western">13DCMClient – DCMServer</H1>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">DatacenterManager also
+	has an integrated multi-user Client – Server architecture.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">The DCMClient allows
+	your decentralized office users to connect to the central DCMServer.</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">This way you can also
+	secure your office locations from direct login access to your
+	datacenter(s).</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><IMG SRC="dcm_manual_html_6e54dc02.png" NAME="Afbeeldingen22" ALIGN=LEFT WIDTH=226 HEIGHT=165 BORDER=0><BR CLEAR=LEFT><I>Figure
+	13.1</I></P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm">Notice the [Server]
+	and [Port] field (Figure 13.1) used to logon to the DCMServer (over
+	RMI).</P>
+	<H1 LANG="en-US" CLASS="western">14Trial</H1>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+	</P>
+	<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm">Coming
+	this far, you're most likely interested and perhaps you want to
+	<A HREF="http://sites.google.com/site/ronuitzaandam/index/dcm_install.jar?attredirects=0&amp;d=1">Download
+	en try DCM</A> !</P>
+	<P CLASS="western" STYLE="margin-bottom: 0cm"><A NAME="_1370270620"></A>
+	DatacenterManager was idealistically designed and developed without
+	making compromises.</P>
+</DIV>
+<DIV TYPE=FOOTER>
+	<P LANG="en-US" STYLE="margin-top: 1.17cm; margin-bottom: 0cm; border-top: 2.60pt double #800000; border-bottom: none; border-left: none; border-right: none; padding-top: 0.04cm; padding-bottom: 0cm; padding-left: 0cm; padding-right: 0cm">
+	<FONT FACE="Cambria, serif"><B>DatacenterManager</B></FONT><FONT FACE="Cambria, serif">	©
+	Copyright 2011 Author: </FONT><A HREF="mailto:ronuitzaandam@gmail.com"><FONT FACE="Cambria, serif">Ron
+	de Jong</FONT></A><FONT FACE="Cambria, serif">  Page </FONT><FONT FACE="Cambria, serif"><SDFIELD TYPE=PAGE SUBTYPE=RANDOM FORMAT=PAGE>7</SDFIELD></FONT><FONT FACE="Cambria, serif">/</FONT><FONT FACE="Cambria, serif"><SDFIELD TYPE=DOCSTAT SUBTYPE=PAGE FORMAT=PAGE>17</SDFIELD></FONT>
+		</P>
+	<P LANG="en-US" ALIGN=CENTER STYLE="margin-bottom: 0cm"><BR>
+	</P>
+</DIV>
+</BODY>
+</HTML>

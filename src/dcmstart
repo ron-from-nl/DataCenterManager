@@ -1,0 +1,19 @@
+#! /bin/bash
+HOME=/usr/local/bin/dcm/dcm/
+# JAVABIN=/usr/bin/java # Linux
+JAVABIN=/System/Library/Frameworks/JavaVM.framework/Versions/Current/Commands/java # OSX
+DEBUG=""
+#DEBUG="--debug"
+#DAEMON=""
+DAEMON="--daemon"
+export HOME
+cd $HOME
+echo "Starting DCMMetaDBServer..."
+${JAVABIN} -server -Dderby.drda.host=0.0.0.0 -cp $HOME/DCManager.jar DCMDBServer ${DAEMON} ${DEBUG} &
+sleep 15
+echo "Starting DCMPoller..."
+${JAVABIN} -server -cp $HOME/DCManager.jar DCMPoller ${DEBUG} &
+echo "Starting DCManagerServer..."
+
+# Make sure DCMClient and DCMServer use the same DCMServer address (use -Djava.rmi.server.hostname=www.voipstorm.nl on server)
+${JAVABIN} -server -Djava.rmi.server.hostname=server.domain.com -cp $HOME/DCManager.jar DCMServer 20000 ${DAEMON} ${DEBUG} &

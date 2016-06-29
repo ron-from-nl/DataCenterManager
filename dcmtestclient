@@ -1,0 +1,5 @@
+#! /bin/bash
+find dcm -name ".DS_Store" -exec rm {} \;
+cd dcm;
+java -server -Djava.rmi.server.hostname=localhost -cp DCManager.jar DCMServer 20000 &
+java -cp DCManager.jar DCMClient &

@@ -1,0 +1,12 @@
+#! /bin/bash
+# Please use this script as the process owner as root can't always kill DCManagerServer
+echo "Terminating DCM..."
+ps -ef | grep java | grep DCMPoller | awk '{ print $2 }' | while read pid; do kill ${pid}; done
+ps -ef | grep java | grep DCManager | awk '{ print $2 }' | while read pid; do kill ${pid}; done
+ps -ef | grep java | grep DCMMetaDBServer | awk '{ print $2 }' | while read pid; do kill ${pid}; done
+sleep 3
+echo "Killing DCM..."
+ps -ef | grep java | grep DCMPoller | awk '{ print $2 }' | while read pid; do kill -9 ${pid}; done
+ps -ef | grep java | grep DCManager | awk '{ print $2 }' | while read pid; do kill -9 ${pid}; done
+ps -ef | grep java | grep DCMMetaDBServer | awk '{ print $2 }' | while read pid; do kill -9 ${pid}; done
+ps -ef | grep DCM

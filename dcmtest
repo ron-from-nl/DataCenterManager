@@ -1,0 +1,3 @@
+#! /bin/bash
+find dcm -name ".DS_Store" -exec rm {} \;
+cd dcm; java -jar DCManager.jar

@@ -1,0 +1,204 @@
+========== TODO ==========
+
+View Presets
+
+AlarmMonitor
+
+========== DOING =========
+
+
+========== DONE ==========
+
+
+========== ISSUE===========
+
+
+========== OTHER =========
+
+Functionality:
+
+
+
+
+Both Win32 and UNIX like platforms are supported. For Win32 platforms use procrun. For UNIX like platforms use jsvc.
+jsvc:       http://commons.apache.org/daemon/jsvc.html
+procrun:    http://commons.apache.org/daemon/procrun.html
+
+Other:
+
+Check Updates
+NetBeans7.0                         http://netbeans.org/downloads/index.html
+Apache Derby 10.8.2.1               http://db.apache.org/derby/derby_downloads.html
+JRobin 1.5.12                       http://sourceforge.net/projects/jrobin/
+jfreechart1.0.13                    http://www.jfree.org/jfreechart/
+
+possible issues
+(jrobin grapher) java -Djava.awt.headless=true -cp jrobin-{version}.jar ...
+
+
+rrd create  RRDCreate      48   EP
+rrd fetch   InventoryGUI   1292 EP
+rrd update  RRDUpdate      50   EP
+rrd graph   InventoryGUI   1341 EP
+
+Marketing:
+
+Auto Discovery
+Zero Maintenance
+Cross Platform
+Performance
+Scalability
+History
+
+
+
+
+
+
+
+
+
+
+/*
+
+  "Linux" =>       {
+                   dfcommand => "/bin/df -kP",
+                   wcommand => "/usr/bin/w -u | /usr/bin/awk '{ print \$10\" \"\$11\" \"\$12 }'",
+                   whocommand => "/usr/bin/who -q | /usr/bin/grep \"#\"",
+                   proccommand => "/bin/ps ax",
+                   procstates => "RSTDZ",
+                   uptimecommand => "/usr/bin/uptime",
+                   sarcpucommand => "/usr/bin/sar 1 1 | /usr/bin/awk '{ print \$3\" \"\$5\" \"\$6\" \"\$8 }' | tail -1",
+#                   topcommand => "/usr/bin/top -n1",
+                   #memusagecommand => "m=\$((`free | grep Mem | awk '{ print \$3\"/\"\$2/100 }'`));s=\$((`free | grep Swap | gawk '{ print \$3\"/\"int(\$2/100) }'`));echo \"\${m} ${s}\"",
+                   memusagecommand => "mt=\$((`free | grep Mem | awk '{ print \$2 }'`));mf=\$((`free | grep \"buffers/cache\" | awk '{ print \$4 }'`));s=\$((`free | grep Swap | gawk '{ print \$3\"/\"int(\$2/100) }'`));echo \"\$(((\${mt}-\${mf})/(\${mt}/100))) \${s}\"",
+
+                   pscommand => "/bin/ps -elf",
+#                   orausagecommand => "su - oracle -c \"ksh -c \". .profile; echo 'select (a.total_mb - a.free_mb) / a.total_mb * 100 PerUsed from v\\\$asm_diskgroup a;' | sqlplus -S yy0a/yy0a@gldb\" | tail -3 | head -1",
+                   orausagecommand => "/usr/local/scripts/rrdwebstats/orausage",
+                   netstatifstatscommand => "/bin/netstat -i | /usr/bin/awk '{ print \$1\" \"\$3\" \"\$4\" \"\$6\" \"\$7\" \"\$5 }'",
+                   tcpstatscommand => "f=/tmp/rrd_tcp_conn.txt; netstat -an | grep \"tcp\" | awk '{ print \$6 }' | sort > \${f}; for s in ESTABLISHED SYN_SENT SYN_RECV FIN_WAIT1 FIN_WAIT2 TIME_WAIT CLOSED CLOSE_WAIT LAST_ACK LISTEN CLOSING UNKNOWN; do r=`grep -c \"\${s}\" \${f}`; printf \"\${r} \"; done",
+                   },
+  "HP-UX" =>       {
+                   dfcommand => "/bin/bdf -l",
+                   whocommand => "/bin/who -q | /usr/bin/grep \"#\"",
+                   proccommand => "/bin/ps -el",
+                   procstates => "SWRITZX",
+                   uptimecommand => "/bin/uptime",
+#                   sarcpucommand => "/usr/sbin/sar 1 1",
+                   sarcpucommand => "/usr/bin/sar 1 1 | /usr/bin/awk '{ print \$2\" \"\$3\" \"\$4\" \"\$5 }' | tail -1",
+                   sarsyscallcommand => "/usr/sbin/sar -c 1 1",
+                   sardiskcommand => "/usr/sbin/sar -d 1 1",
+                   sarswappingcommand => "/usr/sbin/sar -w 1 1",
+                   sarkernelmemcommand => "/usr/sbin/sar -k 1 1",
+                   sarfileaccesscommand => "/usr/sbin/sar -a 1 1",
+                   netstatstreamsscommand => "/usr/bin/netstat -m",
+                   netstatifstatscommand => "/usr/bin/netstat -i | /usr/bin/awk '{ print \$1\" \"\$5\" \"\$6\" \"\$7\" \"\$8\" \"\$9 }'",
+                   tcpstatscommand => "f=/tmp/rrd_tcp_conn.txt; netstat -an | grep \"tcp\" | awk '{ print \$6 }' | sort > \${f}; for s in ESTABLISHED SYN_SENT SYN_RECV FIN_WAIT1 FIN_WAIT2 TIME_WAIT CLOSED CLOSE_WAIT LAST_ACK LISTEN CLOSING UNKNOWN; do r=`grep -c \"\${s}\" \${f}`; printf \"\${r} \"; done",
+                   netstatprotocolstatscommand => "/usr/bin/netstat -p",
+                   iostatcommand => "/usr/bin/iostat 1 1",
+                   vmstatcommand => "/usr/bin/vmstat 1 1",
+                   mpstatcommand => "/usr/bin/mpstat 1 1",
+                   nfsstatcommand => "/usr/bin/nfsstat",
+                   prstatcommand => "/usr/bin/prstat -a 1 1",
+                   topcommand => "/usr/bin/top -d1",
+                   wcommand => "/usr/bin/w -p | /usr/bin/grep \"load\" | /usr/bin/awk '{ print \$7\" \"\$8\" \"\$9 }'",
+                   pscommand => "/usr/bin/ps -elf",
+#                   orausagecommand => "su - oracle -c \"ksh -c \". .profile; echo 'select (a.total_mb - a.free_mb) / a.total_mb * 100 PerUsed from v\\\$asm_diskgroup a;' | sqlplus -S yy0a/yy0a@gldb\" | tail -3 | head -1",
+                   orausagecommand => "/usr/local/scripts/rrdwebstats/orausage",
+                   memusagecommand => "m=\$((100-`kmeminfo | grep \"Free memory\" | awk '{ print \$6 }' | tr -d \"%\"`));s=\$((`swapinfo | grep \"^dev\" | awk '{ print \$5 }' | tr -d \"%\"`));echo \"\${m} \${s}\"",
+                   },
+  "SunOS" =>       {
+                   dfcommand => "/bin/df -k",
+                 # dfcommand => "/bin/df -kl",   # For only local disks
+                   whocommand => "/bin/who -q | /usr/bin/grep \"#\"",
+                   proccommand => "ps -e -o \"pid tty s time comm\"",
+                   procstates => "SRZTO",
+                   uptimecommand => "/usr/bin/uptime",
+                   sarcpucommand => "/usr/sbin/sar 1 1",
+                   sarsyscallcommand => "/usr/sbin/sar -c 1 1",
+                   sardiskcommand => "/usr/sbin/sar -d 1 1",
+                   sarswappingcommand => "/usr/sbin/sar -w 1 1",
+                   sarkernelmemcommand => "/usr/sbin/sar -k 1 1",
+                   sarfileaccesscommand => "/usr/sbin/sar -a 1 1",
+                   netstatstreamsscommand => "/usr/bin/netstat -m",
+                   netstatifstatscommand => "/usr/bin/netstat -i",
+                   netstatprotocolstatscommand => "/usr/bin/netstat -p",
+                   iostatcommand => "/usr/bin/iostat 1 1",
+                   vmstatcommand => "/usr/bin/vmstat 1 1",
+                   mpstatcommand => "/usr/bin/mpstat 1 1",
+                   nfsstatcommand => "/usr/bin/nfsstat",
+                   prstatcommand => "/usr/bin/prstat -a 1 1",
+                   topcommand => "/usr/local/bin/top -d1",
+                   wcommand => "/usr/bin/w -u",
+                   pscommand => "/usr/bin/ps -elf",
+                   },
+  "IRIX" =>        {
+                   dfcommand => "/bin/df -kP",
+                 # dfcommand => "/bin/df -klP",   # For only local disks
+                   whocommand => "/bin/who -q | /usr/bin/grep \"#\"",
+                   proccommand => "ps -e -o \"pid tty state time comm\"",
+                   procstates => "SRZTIXC0",
+                   uptimecommand => "/usr/bsd/uptime",
+                   },
+  "OSF1" =>        {
+                   dfcommand => "/bin/df -k",
+                   whocommand => "/bin/who -q | /usr/bin/grep \"Total user\"",
+                   proccommand => "ps -e -o \"pid tty state time comm\"",
+                   procstates => "RVSITH",
+                   uptimecommand => "/bin/uptime",
+                   },
+  "FreeBSD" =>     {
+                   dfcommand => "/bin/df -k",
+                   whocommand => "/usr/bin/who | /usr/bin/wc -l",
+                   proccommand => "/bin/ps ax",
+                   procstates => "RSTDIZ",
+                   uptimecommand => "/usr/bin/uptime",
+                   },
+  "NEXTSTEP" =>    {
+                   dfcommand => "/bin/df",
+                   whocommand => "/bin/who | /usr/ucb/wc -l",
+                   proccommand => "/bin/ps -ax",
+                   procstates => "RSTDIZ",
+                   uptimecommand => "/usr/bin/uptime",
+                   },
+  "BSD/OS" =>      {
+                   dfcommand => "/bin/df",
+                   whocommand => "/usr/bin/who | /usr/bin/wc -l",
+                   proccommand => "/bin/ps -ax",
+                   procstates => "RSTDIZ",
+                   uptimecommand => "/usr/bin/uptime",
+                   },
+  "OpenBSD" =>     {
+                   dfcommand => "/bin/df -k",
+                   whocommand => "/usr/bin/who | /usr/bin/wc -l",
+                   proccommand => "/bin/ps -ax",
+                   procstates => "RIDLIS",
+                   uptimecommand => "/usr/bin/uptime",
+                   },
+  "AIX" =>        {
+                  dfcommand => "/usr/bin/df -Ik",
+                  whocommand => "/usr/bin/who | /usr/bin/wc -l",
+                  procommand => "/usr/bin/ps x",
+                  procstates => "OAWISTZ",
+                  uptimecommand => "/usr/bin/uptime",
+                  },
+  "NetBSD" =>     {
+                  dfcommand => "/usr/bin/df -k",
+                  whocommand => "/usr/bin/who | /usr/bin/wc -l",
+                  procommand => "/bin/ps ax",
+                  procstates => "RSTDIZ",
+                  uptimecommand => "/usr/bin/uptime",
+                  },
+  "UNIXWARE2" => {
+                 dfcommand => "/usr/ucb/df",
+                 whocommand => "/usr/bin/who -q | /bin/grep \"#\"",
+                 proccommand => "/usr/bin/ps -el | awk '{printf(\"%6d%9s%2s%5s %s\\n\",\$4,substr(\$0, 61, 8),\$2,substr(\$0,69,5),substr(\$0,75))}",
+                 procstates => "OSRIZTX",
+                 uptimecommand => "echo `/usr/bin/uptime`, load average: 0.00, `sar | awk '{oldidle=idle;idle=\$5} END {print 100-oldidle}'`,0.00",
+                 }
+              ); 
+
+ 
+ 
+*/

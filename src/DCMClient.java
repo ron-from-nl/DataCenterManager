@@ -322,6 +322,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
         country = System.getProperty("user.country");
         language = System.getProperty("user.language");
         currentLocale = new Locale(language, country);
+
         startDateChooserPanel.setLocale(currentLocale);
         endDateChooserPanel.setLocale(currentLocale);
         vergunningDateChooserPanel.setLocale(currentLocale);
@@ -776,7 +777,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
         searchPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), bundle.getString("DCMClient.searchPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10), new java.awt.Color(102, 102, 102))); // NOI18N
         searchPanel.setFont(searchPanel.getFont().deriveFont(searchPanel.getFont().getSize()-1f));
         searchPanel.setOpaque(false);
-        searchPanel.setPreferredSize(new java.awt.Dimension(190, 314));
+        searchPanel.setPreferredSize(new java.awt.Dimension(170, 314));
 
         deletePresetButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete_icon.png"))); // NOI18N
         deletePresetButton.setToolTipText(bundle.getString("DCMClient.deletePresetButton.toolTipText")); // NOI18N
@@ -1916,7 +1917,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
         navigatorPanelLayout.setHorizontalGroup(
             navigatorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(navigatorPanelLayout.createSequentialGroup()
-                .add(startDateSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 195, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(startDateSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 210, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(startTimeSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -1928,7 +1929,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(endTimeSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(endDateSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 195, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(endDateSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 210, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
         navigatorPanelLayout.linkSize(new java.awt.Component[] {endTimeSelectorPanel, startTimeSelectorPanel}, org.jdesktop.layout.GroupLayout.HORIZONTAL);

@@ -1,4 +1,4 @@
-# DataCenterManager
+DataCenterManager WebSite: https://sites.google.com/site/ronuitzaandam/home
 
 DatacenterManager is Performance Monitoring / Trend Analysis Java Desktop and Client - Server application that
 automatically inventories and statistically monitors UNIX servers. (without installing extra software on your
@@ -16,7 +16,5 @@ DCMDBServer:  MetaDatabase Server holding all monitored metadata server resource
 DCMPoller:    Multithreaded Network Poller responsible for collecting all datacenter server resource health stats
 DCMClient:    Client interface (frontend) similar to visible frontend of DCMDesktop connecting to DCMServer over RMI
 DCMCommander: Multithreaded (just like DCMPoller) mass server script execution SSH connected with Terminal automator
-
-Have a look at the following website for more information: https://sites.google.com/site/ronuitzaandam/home
 
 You'll find the necessary libraries in the "libs" directory

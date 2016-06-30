@@ -29,12 +29,12 @@ public class DCMVergunningServer implements Cloneable
 
     public static final String BRAND                            = "JavaSoft";
     public static final String BUSINESS                         = "ICT";
-    public static final String PRODUCT                          = "DatacenterManager";
+    public static final String PRODUCT                          = "DataCenterManager";
     public static final String BRAND_DESCRIPTION                = BRAND + " " + PRODUCT + " offers 21st Century Trend Analysis !";
 //    public static final String VERSION                          = "v0.9.7";
     public static final String PRODUCT_DESCRIPTION              = PRODUCT + " is a fully automated datacenter control and performance, trend and scalability analysis software";
-    public static final String WEBLINK                          = "http://www.voipstorm.nl/";
-    public static final String REQUEST_VERGUNNINGLINK           = "http://www.voipstorm.nl:8080/en/";
+    public static final String WEBLINK                          = "https://sites.google.com/site/ronuitzaandam/home";
+    public static final String REQUEST_VERGUNNINGLINK           = "https://sites.google.com/site/ronuitzaandam/home";
     private static final String VERGUNNINGTOEKENNERTOEGANG      = "IsNwtNp4L";
     public static final String WARNING                          = "Please use " + PRODUCT + " software carefully, responsibly and according your country's legislation.";
     public static final String COPYRIGHT                        = "© " + Calendar.getInstance().get(Calendar.YEAR);
@@ -60,7 +60,7 @@ public class DCMVergunningServer implements Cloneable
     private String              activationCodeFromSystem;
     private String              vergunningCodeFromSystem;
     private boolean             vergunningIsValid;
-    private final int           FREESERVERSLICENSED = 5;
+    private final int           FREESERVERSLICENSED = 1000000; // Used to be 5
     private int                 serversLicensed;
     private String[]            status;
     private NetworkInterface    networkInterface;
@@ -106,7 +106,7 @@ public class DCMVergunningServer implements Cloneable
             serversLicensed =           FREESERVERSLICENSED;                    
             vergunningStartCalendar =   Calendar.getInstance();
             vergunningEndCalendar =     Calendar.getInstance();
-            vergunningEndCalendar.add(Calendar.YEAR, 20);
+            vergunningEndCalendar.add(Calendar.YEAR, 100); // Used to be 20
             vergunningPeriod =          "Lifetime";
         }
         else
@@ -144,7 +144,7 @@ public class DCMVergunningServer implements Cloneable
             serversLicensed = FREESERVERSLICENSED;                    
             vergunningStartCalendar = Calendar.getInstance();
             vergunningEndCalendar = Calendar.getInstance();
-            vergunningEndCalendar.add(Calendar.YEAR, 20);
+            vergunningEndCalendar.add(Calendar.YEAR, 100); // Used to be 20
             vergunningPeriod = "Lifetime";
         }
         else
@@ -162,7 +162,7 @@ public class DCMVergunningServer implements Cloneable
         serversLicensed = FREESERVERSLICENSED;                    
         vergunningStartCalendar = Calendar.getInstance();
         vergunningEndCalendar = Calendar.getInstance();
-        vergunningEndCalendar.add(Calendar.YEAR, 20);
+        vergunningEndCalendar.add(Calendar.YEAR, 100); // Used to be 20
         vergunningPeriod = "Lifetime";
         setVergunningCodeFromFile("");
         vergunningIsValid = false;
@@ -329,7 +329,7 @@ public class DCMVergunningServer implements Cloneable
             else if ( vergunningPeriod.equals("Week") )     { vergunningEndCalendar.add(Calendar.WEEK_OF_YEAR, 1); }
             else if ( vergunningPeriod.equals("Month") )    { vergunningEndCalendar.add(Calendar.MONTH, 1); }
             else if ( vergunningPeriod.equals("Year") )     { vergunningEndCalendar.add(Calendar.YEAR, 1); }
-            else if ( vergunningPeriod.equals("Lifetime") ) { vergunningEndCalendar.add(Calendar.YEAR, 20); }
+            else if ( vergunningPeriod.equals("Lifetime") ) { vergunningEndCalendar.add(Calendar.YEAR, 100); }
 
             // vergunning hardware id gets determined
             status = getAK();

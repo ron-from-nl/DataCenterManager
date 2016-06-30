@@ -2,12 +2,12 @@ import java.util.Calendar;
 
 public class DCMLicense
 {
-    static final String COMPANYNAME = "ZenSoft";
-    static final String PRODUCTNAME = "Datacenter Manager";
+    static final String COMPANYNAME = "GPLv3";
+    static final String PRODUCTNAME = "DataCenterManager";
     static final String AUTHOR = "Ron de Jong";
-    static final String COPYRIGHT = "© Copyright " + Calendar.getInstance().get(Calendar.YEAR);
+    static final String COPYRIGHT = "© Copyleft " + Calendar.getInstance().get(Calendar.YEAR);
     static final String VERSION = "2.1.12";
-    static final Double SERVERLICENSEPRICE = 19D;
+    static final Double SERVERLICENSEPRICE = 0D; //Used to be 19D
 
 //  Version History:
 
@@ -108,9 +108,9 @@ v2.1.11   Improved DCMStarter behavior and added /etc/init/dcm.conf instruction 
 v2.1.12   Replaced serverField for serverComboBox to save connected servers in a list for easy server connects (not fully finished).
 */
     static final String LICENSETEXT = "\n" +
-    "END-USER LICENSE AGREEMENT FOR " + COMPANYNAME + " " + PRODUCTNAME + "\n\nIMPORTANT PLEASE READ THE TERMS AND CONDITIONS OF THIS LICENSE AGREEMENT CAREFULLY BEFORE CONTINUING WITH THIS PROGRAM INSTALL: " + COMPANYNAME + " End-User License Agreement EULA is a legal " +
+    "END-USER LICENSE AGREEMENT FOR " + COMPANYNAME + " " + PRODUCTNAME + "\n\nIMPORTANT PLEASE READ THE TERMS AND CONDITIONS OF THIS LICENSE AGREEMENT CAREFULLY BEFORE CONTINUING WITH THIS PROGRAM INSTALL: " + COMPANYNAME + " End-User License Agreement GPLv3 is a legal " +
     "agreement between you (either an individual or a single entity) and " + COMPANYNAME + ". for the " + COMPANYNAME + " software product(s) identified above which may include associated software " +
-    "components, media, printed materials, and online or electronic documentation (" + PRODUCTNAME + ").\nBy installing, copying, or otherwise using the " + PRODUCTNAME + ", you agree to be bound by the terms of this EULA.\nThis license agreement represents the entire agreement concerning the program between you and " + COMPANYNAME + ", (referred to as licenser), and it supersedes any prior proposal, representation, or understanding between the parties.\nIf you do not agree to the terms of this EULA, do not install or use the " + PRODUCTNAME + ". " +
+    "components, media, printed materials, and online or electronic documentation (" + PRODUCTNAME + ").\nBy installing, copying, or otherwise using the " + PRODUCTNAME + ", you agree to be bound by the terms of this GPLv3.\nThis license agreement represents the entire agreement concerning the program between you and " + COMPANYNAME + ", (referred to as licenser), and it supersedes any prior proposal, representation, or understanding between the parties.\nIf you do not agree to the terms of this GPLv3, do not install or use the " + PRODUCTNAME + ". " +
     "The " + PRODUCTNAME + " is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. The " + PRODUCTNAME + " is licensed, not sold.\n\n" +
     "" +
     "1. GRANT OF LICENSE.\n\n" +
@@ -121,12 +121,12 @@ v2.1.12   Replaced serverField for serverComboBox to save connected servers in a
     "(b) Distribution. You may not distribute registered copies of the " + PRODUCTNAME + " to third parties. Evaluation versions available for download from " + COMPANYNAME + "s websites may be freely distributed.\n" +
     "(c) Prohibition on Reverse Engineering, Decompilation, and Disassembly. You may not reverse engineer, decompile, or disassemble the " + PRODUCTNAME + ", except and only to the extent that such activity is expressly permitted by applicable law notwithstanding this limitation.\n" +
     "(d) Rental. You may not rent, lease, or lend the " + PRODUCTNAME + ".\n" +
-    "(e) Support Services. " + COMPANYNAME + " may provide you with support services related to the " + PRODUCTNAME + " (Support Services). Any supplemental software code provided to you as part of the Support Services shall be considered part of the " + PRODUCTNAME + " and subject to the terms and conditions of this EULA.\n" +
+    "(e) Support Services. " + COMPANYNAME + " may provide you with support services related to the " + PRODUCTNAME + " (Support Services). Any supplemental software code provided to you as part of the Support Services shall be considered part of the " + PRODUCTNAME + " and subject to the terms and conditions of this GPLv3.\n" +
     "(f) Compliance with Applicable Laws. You must comply with all applicable laws regarding use of the " + PRODUCTNAME + ".\n\n" +
     "3. TERMINATION\n\n" +
-    "Without prejudice to any other rights, " + COMPANYNAME + " may terminate this EULA if you fail to comply with the terms and conditions of this EULA.\nIn such event, you must destroy all copies of the " + PRODUCTNAME + " in your possession.\n\n" +
+    "Without prejudice to any other rights, " + COMPANYNAME + " may terminate this GPLv3 if you fail to comply with the terms and conditions of this GPLv3.\nIn such event, you must destroy all copies of the " + PRODUCTNAME + " in your possession.\n\n" +
     "4. COPYRIGHT\n\n" +
-    "All title, including but not limited to copyrights, in and to the " + PRODUCTNAME + " and any copies thereof are owned by " + COMPANYNAME + " or its suppliers.\nAll title and intellectual property rights in and to the content which may be accessed through use of the " + PRODUCTNAME + " is the property of the respective content owner and may be protected by applicable copyright or other intellectual property laws and treaties. This EULA grants you no rights to use such content. All rights not expressly granted are reserved by " + COMPANYNAME + ".\n\n" +
+    "All title, including but not limited to copyrights, in and to the " + PRODUCTNAME + " and any copies thereof are owned by " + COMPANYNAME + " or its suppliers.\nAll title and intellectual property rights in and to the content which may be accessed through use of the " + PRODUCTNAME + " is the property of the respective content owner and may be protected by applicable copyright or other intellectual property laws and treaties. This GPLv3 grants you no rights to use such content. All rights not expressly granted are reserved by " + COMPANYNAME + ".\n\n" +
     "5. NO WARRANTIES\n\n" +
     "" + COMPANYNAME + " expressly disclaims any warranty for the " + PRODUCTNAME + ".\nThe " + PRODUCTNAME + " is provided As Is without any express or implied warranty of any kind, including but not limited to any warranties of merchantability, noninfringement, or fitness of a particular purpose.\n" + COMPANYNAME + " does not warrant or assume responsibility for the accuracy or completeness of any information, text, graphics, links or other items contained within the " + PRODUCTNAME + ".\n" + COMPANYNAME + " makes no warranties respecting any harm that may be caused by the transmission of a computer virus, worm, time bomb, logic bomb, or other such computer program.\n" + COMPANYNAME + " further expressly disclaims any warranty or representation to Authorized Users or to any third party.\n\n" +
     "6. LIMITATION OF LIABILITY\n\n" +

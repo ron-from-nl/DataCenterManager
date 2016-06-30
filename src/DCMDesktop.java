@@ -181,7 +181,10 @@ public class DCMDesktop extends javax.swing.JFrame implements DCMInventoryServer
     private boolean animated;
     long selectedResources = 0;
 
-/** Creates new form InventoryGUI */
+/** Creates new form InventoryGUI
+     * @param daemonParam
+     * @param debugParam
+     * @throws javax.swing.UnsupportedLookAndFeelException */
     public DCMDesktop(boolean daemonParam, boolean debugParam) throws UnsupportedLookAndFeelException // FrontEnd
     {
         daemon = daemonParam;

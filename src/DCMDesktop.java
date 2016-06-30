@@ -402,8 +402,8 @@ public class DCMDesktop extends javax.swing.JFrame implements DCMInventoryServer
                     enableEndTimeRelativeWidgets(true);                    
 
                     // This is to send runtime environment info to gmail only for free license and only the first time
-                    firsttimepassedFileString = ".dcmfirsttimepassed"; firsttimepassedFile = new File(firsttimepassedFileString);
-                    if ( (!firsttimepassedFile.exists()) && (!dcmVergunning.isValid())) { new DCMSendMessage().setVisible(true); }
+//                    firsttimepassedFileString = ".dcmfirsttimepassed"; firsttimepassedFile = new File(firsttimepassedFileString);
+//                    if ( (!firsttimepassedFile.exists()) && (!dcmVergunning.isValid())) { new DCMSendMessage().setVisible(true); }
 
                     try { Thread.sleep(1000); } catch (InterruptedException ex) {  }
                     viewTrendPane(false);

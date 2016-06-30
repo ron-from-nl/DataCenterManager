@@ -367,8 +367,8 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
                     enableEndTimeRelativeWidgets(true);
 
                     // This is to send runtime environment info to gmail only for free license and only the first time
-                    firsttimepassedFileString = ".dcmfirsttimepassed"; firsttimepassedFile = new File(firsttimepassedFileString);
-                    if ( (!firsttimepassedFile.exists()) && (!dcmClientRMI.vergunningIsValid())) { new DCMSendMessage().setVisible(true); }
+//                    firsttimepassedFileString = ".dcmfirsttimepassed"; firsttimepassedFile = new File(firsttimepassedFileString);
+//                    if ( (!firsttimepassedFile.exists()) && (!dcmClientRMI.vergunningIsValid())) { new DCMSendMessage().setVisible(true); }
 
                     try { Thread.sleep(1000); } catch (InterruptedException ex) {  }
                     dcmClientReference.viewTrendPane(false);

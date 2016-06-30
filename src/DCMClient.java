@@ -223,6 +223,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
         catch (InstantiationException ex)           { System.out.println(THISPRODUCT + " InstantiationException: " + ex.getMessage()); }
         catch (IllegalAccessException ex)           { System.out.println(THISPRODUCT + " IllegalAccessException: " + ex.getMessage()); }
         catch (UnsupportedLookAndFeelException ex)  { System.out.println(THISPRODUCT + " UnsupportedLookAndFeelException: " + ex.getMessage()); }
+	
 //      setVisible(false); setVisible(true);
         
 
@@ -567,6 +568,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
         startDateSelectorPanel.setOpaque(false);
         startDateSelectorPanel.setPreferredSize(new java.awt.Dimension(220, 200));
 
+        startDateChooserPanel.setEnabled(false);
         startDateChooserPanel.setLocale(new java.util.Locale("en", "", ""));
         startDateChooserPanel.setNavigateFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 9));
         startDateChooserPanel.setBehavior(datechooser.model.multiple.MultyModelBehavior.SELECT_SINGLE);
@@ -582,11 +584,15 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
         startDateSelectorPanel.setLayout(startDateSelectorPanelLayout);
         startDateSelectorPanelLayout.setHorizontalGroup(
             startDateSelectorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(startDateChooserPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 183, Short.MAX_VALUE)
+            .add(startDateSelectorPanelLayout.createSequentialGroup()
+                .add(startDateChooserPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 210, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(0, 0, Short.MAX_VALUE))
         );
         startDateSelectorPanelLayout.setVerticalGroup(
             startDateSelectorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, startDateChooserPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
+            .add(startDateSelectorPanelLayout.createSequentialGroup()
+                .add(startDateChooserPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 212, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(0, 0, Short.MAX_VALUE))
         );
 
         startTimeSelectorPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), bundle.getString("DCMClient.startTimeSelectorPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10), new java.awt.Color(102, 102, 102))); // NOI18N
@@ -752,6 +758,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
         endDateSelectorPanel.setOpaque(false);
         endDateSelectorPanel.setPreferredSize(new java.awt.Dimension(216, 170));
 
+        endDateChooserPanel.setEnabled(false);
         endDateChooserPanel.setLocale(new java.util.Locale("en", "", ""));
         endDateChooserPanel.setNavigateFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 9));
         endDateChooserPanel.setBehavior(datechooser.model.multiple.MultyModelBehavior.SELECT_SINGLE);
@@ -767,17 +774,17 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
         endDateSelectorPanel.setLayout(endDateSelectorPanelLayout);
         endDateSelectorPanelLayout.setHorizontalGroup(
             endDateSelectorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(endDateChooserPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 183, Short.MAX_VALUE)
+            .add(endDateChooserPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 208, Short.MAX_VALUE)
         );
         endDateSelectorPanelLayout.setVerticalGroup(
             endDateSelectorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, endDateChooserPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, endDateChooserPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         searchPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), bundle.getString("DCMClient.searchPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10), new java.awt.Color(102, 102, 102))); // NOI18N
         searchPanel.setFont(searchPanel.getFont().deriveFont(searchPanel.getFont().getSize()-1f));
         searchPanel.setOpaque(false);
-        searchPanel.setPreferredSize(new java.awt.Dimension(170, 314));
+        searchPanel.setPreferredSize(new java.awt.Dimension(190, 314));
 
         deletePresetButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete_icon.png"))); // NOI18N
         deletePresetButton.setToolTipText(bundle.getString("DCMClient.deletePresetButton.toolTipText")); // NOI18N
@@ -1171,7 +1178,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(matchSearchButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 27, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
             .add(searchStatsScroller, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-            .add(navigateXButtonBar, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE)
+            .add(navigateXButtonBar, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE)
             .add(selectionScroller)
         );
         searchPanelLayout.setVerticalGroup(
@@ -1185,7 +1192,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
                     .add(wordSearchButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 27, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(matchSearchButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 27, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(selectionScroller, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
+                .add(selectionScroller)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(searchStatsScroller, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 19, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -1917,40 +1924,36 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
         navigatorPanelLayout.setHorizontalGroup(
             navigatorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(navigatorPanelLayout.createSequentialGroup()
-                .add(startDateSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 210, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(startDateSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(startTimeSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(startTimeRelativePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(searchPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 409, Short.MAX_VALUE)
+                .add(searchPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(endTimeRelativePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(endTimeSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(endDateSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 210, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(endDateSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 220, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
         navigatorPanelLayout.linkSize(new java.awt.Component[] {endTimeSelectorPanel, startTimeSelectorPanel}, org.jdesktop.layout.GroupLayout.HORIZONTAL);
 
-        navigatorPanelLayout.linkSize(new java.awt.Component[] {endTimeRelativePanel, startTimeRelativePanel}, org.jdesktop.layout.GroupLayout.HORIZONTAL);
-
         navigatorPanelLayout.setVerticalGroup(
             navigatorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(navigatorPanelLayout.createSequentialGroup()
-                .add(navigatorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, startDateSelectorPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, endDateSelectorPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, searchPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, startTimeSelectorPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, endTimeSelectorPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, startTimeRelativePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, endTimeRelativePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .add(navigatorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                    .add(endDateSelectorPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+                    .add(startDateSelectorPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+                    .add(startTimeSelectorPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(startTimeRelativePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(searchPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+                    .add(endTimeRelativePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(endTimeSelectorPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        navigatorPanelLayout.linkSize(new java.awt.Component[] {endDateSelectorPanel, endTimeRelativePanel, endTimeSelectorPanel, searchPanel, startDateSelectorPanel, startTimeRelativePanel, startTimeSelectorPanel}, org.jdesktop.layout.GroupLayout.VERTICAL);
 
         viewSplitter.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMClient.viewSplitter.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 14), new java.awt.Color(102, 102, 102))); // NOI18N
         viewSplitter.setDividerLocation(0);
@@ -2183,7 +2186,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
             .add(managerPanelLayout.createSequentialGroup()
                 .add(navigatorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(viewSplitter, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 511, Short.MAX_VALUE))
+                .add(viewSplitter, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 523, Short.MAX_VALUE))
         );
 
         managerTab.addTab(bundle.getString("DCMClient.managerPanel.TabConstraints.tabTitle"), managerPanel); // NOI18N
@@ -2297,17 +2300,10 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
         licenseTypePanel.setPreferredSize(new java.awt.Dimension(200, 239));
         licenseTypePanel.setLayout(new java.awt.GridBagLayout());
 
-        serversInLicenseField.setFont(serversInLicenseField.getFont().deriveFont(serversInLicenseField.getFont().getSize()+20f));
+        serversInLicenseField.setFont(serversInLicenseField.getFont().deriveFont(serversInLicenseField.getFont().getSize()+35f));
         serversInLicenseField.setForeground(new java.awt.Color(102, 102, 102));
         serversInLicenseField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         serversInLicenseField.setText(bundle.getString("DCMClient.serversInLicenseField.text")); // NOI18N
-        serversInLicenseField.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                serversInLicenseFieldActionPerformed(evt);
-            }
-        });
         serversInLicenseField.addKeyListener(new java.awt.event.KeyAdapter()
         {
             public void keyReleased(java.awt.event.KeyEvent evt)
@@ -4529,7 +4525,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
 
             if (startsWithANumber)
             {
-                NavigatorPreset dcmPreset = dcmClientRMI.getDCMPreset(Long.parseLong(lineArray[0].toString()));
+                DCMPreset dcmPreset = dcmClientRMI.getDCMPreset(Long.parseLong(lineArray[0].toString()));
                 try { dcmClientRMI.deleteDCMPreset(dcmPreset); } catch (CloneNotSupportedException ex) {  }
                 selectPresetBox.setSelectedItem("");
                 deletePresetButton.setEnabled(false);
@@ -4551,7 +4547,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
 
             if (startsWithANumber)
             {
-                NavigatorPreset dcmPreset = dcmClientRMI.getDCMPreset(Long.parseLong(lineArray[0].toString()));
+                DCMPreset dcmPreset = dcmClientRMI.getDCMPreset(Long.parseLong(lineArray[0].toString()));
                 
                 dcmPreset.setPresetName(lineArray[1]);
                 
@@ -4580,7 +4576,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
             }
             else
             {
-                NavigatorPreset dcmPreset = new NavigatorPreset();
+                DCMPreset dcmPreset = new DCMPreset();
 
                 dcmPreset.setUserId(dcmUser.getId());
                 dcmPreset.setPresetName(String.valueOf(selectPresetBox.getSelectedItem()));
@@ -4617,7 +4613,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
         }
 
         
-        NavigatorPreset thisView = new NavigatorPreset();
+        DCMPreset thisView = new DCMPreset();
         
         thisView.setUserId(dcmUser.getId());
         thisView.setPresetName(String.valueOf(selectPresetBox.getSelectedItem()));
@@ -4663,7 +4659,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
                 deletePresetButton.setEnabled(true);
                 savePresetButton.setEnabled(true);
                 
-                NavigatorPreset dcmPreset = dcmClientRMI.getDCMPreset(Long.parseLong(lineArray[0].toString()));
+                DCMPreset dcmPreset = dcmClientRMI.getDCMPreset(Long.parseLong(lineArray[0].toString()));
                 
                 startCalendar = Calendar.getInstance(); startCalendar = dcmPreset.getStartCalendar();
                 endCalendar = Calendar.getInstance(); endCalendar = dcmPreset.getEndCalendar();
@@ -4706,9 +4702,9 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
     }//GEN-LAST:event_selectPresetBoxActionPerformed
 
     private void selectPresetBoxPopupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_selectPresetBoxPopupMenuWillBecomeVisible
-        ArrayList<NavigatorPreset> dcmPresetList = dcmClientRMI.getDCMPresetList();
+        ArrayList<DCMPreset> dcmPresetList = dcmClientRMI.getDCMPresetList();
         selectPresetBox.removeAllItems(); selectPresetBox.addItem("");
-        for (NavigatorPreset dcmPreset:dcmPresetList) { selectPresetBox.addItem(dcmPreset.getId() + " " + dcmPreset.getPresetName()); }
+        for (DCMPreset dcmPreset:dcmPresetList) { selectPresetBox.addItem(dcmPreset.getId() + " " + dcmPreset.getPresetName()); }
     }//GEN-LAST:event_selectPresetBoxPopupMenuWillBecomeVisible
 
     private void selectPresetBoxFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_selectPresetBoxFocusGained

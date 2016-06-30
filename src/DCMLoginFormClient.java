@@ -31,7 +31,8 @@ public class DCMLoginFormClient extends javax.swing.JFrame
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         windowPanel = new javax.swing.JPanel();
         serverPanel = new javax.swing.JPanel();
@@ -72,8 +73,10 @@ public class DCMLoginFormClient extends javax.swing.JFrame
 
         rmiServerComboBox.setEditable(true);
         rmiServerComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "192.168.192.3", "localhost" }));
-        rmiServerComboBox.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
+        rmiServerComboBox.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
                 rmiServerComboBoxKeyReleased(evt);
             }
         });
@@ -83,8 +86,10 @@ public class DCMLoginFormClient extends javax.swing.JFrame
         rmiPortField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         rmiPortField.setText(bundle.getString("DCMLoginFormClient.rmiPortField.text")); // NOI18N
         rmiPortField.setToolTipText(bundle.getString("DCMLoginFormClient.rmiPortField.toolTipText")); // NOI18N
-        rmiPortField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
+        rmiPortField.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
                 rmiPortFieldKeyReleased(evt);
             }
         });
@@ -94,13 +99,10 @@ public class DCMLoginFormClient extends javax.swing.JFrame
         serverPanelLayout.setHorizontalGroup(
             serverPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(serverPanelLayout.createSequentialGroup()
+                .addContainerGap()
                 .add(serverPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(serverPanelLayout.createSequentialGroup()
-                        .add(339, 339, 339)
-                        .add(hostLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .add(serverPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .add(rmiServerComboBox, 0, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .add(rmiServerComboBox, 0, 374, Short.MAX_VALUE)
+                    .add(hostLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .add(serverPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(serverPanelLayout.createSequentialGroup()
                         .add(8, 8, 8)
@@ -141,8 +143,10 @@ public class DCMLoginFormClient extends javax.swing.JFrame
         usernameField.setFont(usernameField.getFont().deriveFont(usernameField.getFont().getSize()-1f));
         usernameField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         usernameField.setText(bundle.getString("DCMLoginFormClient.usernameField.text")); // NOI18N
-        usernameField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
+        usernameField.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
                 usernameFieldKeyReleased(evt);
             }
         });
@@ -150,16 +154,22 @@ public class DCMLoginFormClient extends javax.swing.JFrame
         passwordField.setBackground(new java.awt.Color(204, 204, 204));
         passwordField.setFont(passwordField.getFont().deriveFont(passwordField.getFont().getSize()-1f));
         passwordField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        passwordField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
+        passwordField.setToolTipText(bundle.getString("DCMLoginFormClient.passwordField.toolTipText")); // NOI18N
+        passwordField.setFocusCycleRoot(true);
+        passwordField.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
                 passwordFieldKeyReleased(evt);
             }
         });
 
         loginButton.setFont(loginButton.getFont().deriveFont(loginButton.getFont().getSize()+1f));
         loginButton.setText(bundle.getString("DCMLoginFormClient.loginButton.text")); // NOI18N
-        loginButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        loginButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 loginButtonActionPerformed(evt);
             }
         });
@@ -174,10 +184,8 @@ public class DCMLoginFormClient extends javax.swing.JFrame
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, loginButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, loginPanelLayout.createSequentialGroup()
                         .add(loginPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(loginPanelLayout.createSequentialGroup()
-                                .add(0, 4, Short.MAX_VALUE)
-                                .add(usernameField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 248, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(userLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .add(userLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 284, Short.MAX_VALUE)
+                            .add(usernameField))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(loginPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                             .add(loginPanelLayout.createSequentialGroup()
@@ -186,9 +194,6 @@ public class DCMLoginFormClient extends javax.swing.JFrame
                             .add(passwordField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 231, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
-
-        loginPanelLayout.linkSize(new java.awt.Component[] {passwordField, usernameField}, org.jdesktop.layout.GroupLayout.HORIZONTAL);
-
         loginPanelLayout.setVerticalGroup(
             loginPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(loginPanelLayout.createSequentialGroup()

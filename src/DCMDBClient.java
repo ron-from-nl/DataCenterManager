@@ -628,17 +628,17 @@ public class DCMDBClient extends Thread implements ConfigurationCaller
 	try { connection.commit(); } catch (SQLException ex) { dcmDBClientCaller.log("Error: DCMDBClient. : connection.commit(): " + ex.getMessage(), true, true, true); }
     }
 
-    public synchronized NavigatorPreset getDCMPreset(long idParam)
+    public synchronized DCMPreset getDCMPreset(long idParam)
     {
         Calendar cal = Calendar.getInstance();
         Statement statement = null; ResultSet resultset = null;
-	NavigatorPreset DCMPreset = null;
+	DCMPreset DCMPreset = null;
 	try { statement = connection.createStatement(); } catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: getDCMPresetByUsername->connection.createStatement(): "+ ex.getMessage(),true, true, true); try { connection.close(); } catch (SQLException ex1) {} connection = initDatabaseClientServer(); }
 	try { resultset = statement.executeQuery("SELECT * FROM APP.DCMPreset WHERE Id = " + idParam); } catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: getDCMPreset->statement.executeQuery(\"SELECT * FROM APP.DCMPreset\"): "+ ex.getMessage(), true, true, true); }
 
 	try { if (resultset.next())
 	{
-            DCMPreset = new NavigatorPreset();
+            DCMPreset = new DCMPreset();
 	    DCMPreset.setId(resultset.getLong(1));
 	    DCMPreset.setUserId(resultset.getLong(2));
 	    DCMPreset.setPresetName(resultset.getString(3));
@@ -670,19 +670,19 @@ public class DCMDBClient extends Thread implements ConfigurationCaller
 	return DCMPreset;
     }
 
-    public synchronized ArrayList<NavigatorPreset> getDCMPresetList()
+    public synchronized ArrayList<DCMPreset> getDCMPresetList()
     {
         Calendar cal = Calendar.getInstance();
         Statement statement = null; ResultSet resultset = null;
-        ArrayList<NavigatorPreset> DCMPresetList = new ArrayList<NavigatorPreset>(); DCMPresetList.clear();
+        ArrayList<DCMPreset> DCMPresetList = new ArrayList<DCMPreset>(); DCMPresetList.clear();
         
-	NavigatorPreset DCMPreset = new NavigatorPreset();
+	DCMPreset DCMPreset = new DCMPreset();
 	try { statement = connection.createStatement(); } catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: getDCMUserByUsername->connection.createStatement(): "+ ex.getMessage(),true, true, true); try { connection.close(); } catch (SQLException ex1) {} connection = initDatabaseClientServer(); }
 	try { resultset = statement.executeQuery("SELECT * FROM APP.DCMPreset ORDER BY Id"); } catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: getDCMPresetList->statement.executeQuery(\"SELECT * FROM APP.DCMPreset\"): "+ ex.getMessage(), true, true, true); }
 
 	try { while (resultset.next())
 	{
-            DCMPreset = new NavigatorPreset();
+            DCMPreset = new DCMPreset();
 	    DCMPreset.setId(resultset.getLong(1));
 	    DCMPreset.setUserId(resultset.getLong(2));
 	    DCMPreset.setPresetName(resultset.getString(3));
@@ -717,7 +717,7 @@ public class DCMDBClient extends Thread implements ConfigurationCaller
 	return DCMPresetList;
     }
 
-    public synchronized void insertDCMPreset(NavigatorPreset DCMPresetParam)
+    public synchronized void insertDCMPreset(DCMPreset DCMPresetParam)
     {
 //        DCMDBClientCaller.log("insertDCMPreset: " + userParam.toString(), true, true, true);
 
@@ -747,7 +747,7 @@ public class DCMDBClient extends Thread implements ConfigurationCaller
 	//try { connection.close(); } catch (SQLException ex) { myUserInterface.log("Error: DCMDBClient. : connection.close(): " + ex.getMessage()); }
     }
 
-    public synchronized void updateDCMPreset(NavigatorPreset userViewParam)
+    public synchronized void updateDCMPreset(DCMPreset userViewParam)
     {
         ArrayList<RMIMessage> rmiMessageList = new ArrayList<RMIMessage>();
 	//connection = getDriverClientConnection();

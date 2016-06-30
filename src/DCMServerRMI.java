@@ -41,11 +41,11 @@ public interface DCMServerRMI extends Remote
 //    public String                   remoteCommand() throws CloneNotSupportedException,RemoteException;
     
     // Trend Navigation
-    public NavigatorPreset                  getDCMPreset(long idParam) throws RemoteException;
-    public ArrayList<NavigatorPreset>       getDCMPresetList() throws RemoteException;
-    public ArrayList<RMIMessage>    insertDCMPreset(NavigatorPreset dcmPresetParam) throws CloneNotSupportedException, RemoteException;
-    public ArrayList<RMIMessage>    updateDCMPreset(NavigatorPreset dcmPresetParam) throws CloneNotSupportedException, RemoteException;
-    public ArrayList<RMIMessage>    deleteDCMPreset(NavigatorPreset dcmPresetParam) throws CloneNotSupportedException, RemoteException;
+    public DCMPreset                  getDCMPreset(long idParam) throws RemoteException;
+    public ArrayList<DCMPreset>       getDCMPresetList() throws RemoteException;
+    public ArrayList<RMIMessage>    insertDCMPreset(DCMPreset dcmPresetParam) throws CloneNotSupportedException, RemoteException;
+    public ArrayList<RMIMessage>    updateDCMPreset(DCMPreset dcmPresetParam) throws CloneNotSupportedException, RemoteException;
+    public ArrayList<RMIMessage>    deleteDCMPreset(DCMPreset dcmPresetParam) throws CloneNotSupportedException, RemoteException;
     public String                   searchExactHosts(String searchString, ArrayList<Server> serverList) throws RemoteException;
     public String                   searchNonExactHosts(String searchString, ArrayList<Server> serverList) throws RemoteException;
     public String                   searchExactResources(String searchString, ArrayList<Server> serverList) throws RemoteException;

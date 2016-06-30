@@ -421,7 +421,8 @@ public class DCMDesktop extends javax.swing.JFrame implements DCMInventoryServer
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
         java.awt.GridBagConstraints gridBagConstraints;
 
         managerTab = new javax.swing.JTabbedPane();
@@ -567,8 +568,10 @@ public class DCMDesktop extends javax.swing.JFrame implements DCMInventoryServer
         setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         setMinimumSize(new java.awt.Dimension(1155, 760));
         setName("mainFrame"); // NOI18N
-        addComponentListener(new java.awt.event.ComponentAdapter() {
-            public void componentResized(java.awt.event.ComponentEvent evt) {
+        addComponentListener(new java.awt.event.ComponentAdapter()
+        {
+            public void componentResized(java.awt.event.ComponentEvent evt)
+            {
                 formComponentResized(evt);
             }
         });
@@ -576,9 +579,10 @@ public class DCMDesktop extends javax.swing.JFrame implements DCMInventoryServer
         managerTab.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
         managerTab.setFocusable(false);
         managerTab.setPreferredSize(new java.awt.Dimension(1024, 768));
-        managerTab.setSize(new java.awt.Dimension(1024, 768));
-        managerTab.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        managerTab.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
                 managerTabMouseClicked(evt);
             }
         });
@@ -592,2425 +596,2479 @@ public class DCMDesktop extends javax.swing.JFrame implements DCMInventoryServer
         startDateSelectorPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), bundle.getString("DCMDesktop.startDateSelectorPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10), new java.awt.Color(102, 102, 102))); // NOI18N
         startDateSelectorPanel.setFont(startDateSelectorPanel.getFont());
         startDateSelectorPanel.setOpaque(false);
-        startDateSelectorPanel.setPreferredSize(new java.awt.Dimension(214, 200));
+        startDateSelectorPanel.setPreferredSize(new java.awt.Dimension(210, 210));
 
-        startDateChooserPanel.setCurrentView(new datechooser.view.appearance.AppearancesList("Bordered",
-            new datechooser.view.appearance.ViewAppearance("custom",
-                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                    new java.awt.Color(0, 0, 0),
-                    new java.awt.Color(0, 0, 255),
-                    false,
-                    true,
-                    new datechooser.view.appearance.swing.ButtonPainter()),
-                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                    new java.awt.Color(0, 0, 0),
-                    new java.awt.Color(0, 0, 255),
-                    true,
-                    true,
-                    new datechooser.view.appearance.swing.ButtonPainter()),
-                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                    new java.awt.Color(0, 0, 255),
-                    new java.awt.Color(0, 0, 255),
-                    false,
-                    true,
-                    new datechooser.view.appearance.swing.ButtonPainter()),
-                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                    new java.awt.Color(128, 128, 128),
-                    new java.awt.Color(0, 0, 255),
-                    false,
-                    true,
-                    new datechooser.view.appearance.swing.LabelPainter()),
-                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                    new java.awt.Color(0, 0, 0),
-                    new java.awt.Color(0, 0, 255),
-                    false,
-                    true,
-                    new datechooser.view.appearance.swing.LabelPainter()),
-                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                    new java.awt.Color(0, 0, 0),
-                    new java.awt.Color(255, 0, 0),
-                    false,
-                    false,
-                    new datechooser.view.appearance.swing.ButtonPainter()),
-                (datechooser.view.BackRenderer)null,
-                false,
-                true)));
-    startDateChooserPanel.setLocale(new java.util.Locale("en", "", ""));
-    startDateChooserPanel.setNavigateFont(new java.awt.Font("Verdana", java.awt.Font.PLAIN, 7));
-    startDateChooserPanel.setBehavior(datechooser.model.multiple.MultyModelBehavior.SELECT_SINGLE);
-    startDateChooserPanel.addSelectionChangedListener(new datechooser.events.SelectionChangedListener() {
-        public void onSelectionChange(datechooser.events.SelectionChangedEvent evt) {
-            startDateChooserPanelOnSelectionChange(evt);
-        }
-    });
+        startDateChooserPanel.setEnabled(false);
+        startDateChooserPanel.setLocale(new java.util.Locale("en", "", ""));
+        startDateChooserPanel.setNavigateFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 7));
+        startDateChooserPanel.setBehavior(datechooser.model.multiple.MultyModelBehavior.SELECT_SINGLE);
+        startDateChooserPanel.addSelectionChangedListener(new datechooser.events.SelectionChangedListener()
+        {
+            public void onSelectionChange(datechooser.events.SelectionChangedEvent evt)
+            {
+                startDateChooserPanelOnSelectionChange(evt);
+            }
+        });
 
-    org.jdesktop.layout.GroupLayout startDateSelectorPanelLayout = new org.jdesktop.layout.GroupLayout(startDateSelectorPanel);
-    startDateSelectorPanel.setLayout(startDateSelectorPanelLayout);
-    startDateSelectorPanelLayout.setHorizontalGroup(
-        startDateSelectorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(startDateChooserPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 176, Short.MAX_VALUE)
-    );
-    startDateSelectorPanelLayout.setVerticalGroup(
-        startDateSelectorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(org.jdesktop.layout.GroupLayout.TRAILING, startDateChooserPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
-    );
+        org.jdesktop.layout.GroupLayout startDateSelectorPanelLayout = new org.jdesktop.layout.GroupLayout(startDateSelectorPanel);
+        startDateSelectorPanel.setLayout(startDateSelectorPanelLayout);
+        startDateSelectorPanelLayout.setHorizontalGroup(
+            startDateSelectorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(startDateChooserPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+        );
+        startDateSelectorPanelLayout.setVerticalGroup(
+            startDateSelectorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, startDateChooserPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
+        );
 
-    startTimeSelectorPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), bundle.getString("DCMDesktop.startTimeSelectorPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10), new java.awt.Color(102, 102, 102))); // NOI18N
-    startTimeSelectorPanel.setFont(startTimeSelectorPanel.getFont());
-    startTimeSelectorPanel.setOpaque(false);
-    startTimeSelectorPanel.setPreferredSize(new java.awt.Dimension(94, 200));
-    java.awt.GridBagLayout startTimeSelectorPanelLayout = new java.awt.GridBagLayout();
-    startTimeSelectorPanelLayout.columnWidths = new int[] {0, 5, 0};
-    startTimeSelectorPanelLayout.rowHeights = new int[] {0, 7, 0};
-    startTimeSelectorPanel.setLayout(startTimeSelectorPanelLayout);
+        startTimeSelectorPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), bundle.getString("DCMDesktop.startTimeSelectorPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10), new java.awt.Color(102, 102, 102))); // NOI18N
+        startTimeSelectorPanel.setFont(startTimeSelectorPanel.getFont());
+        startTimeSelectorPanel.setOpaque(false);
+        startTimeSelectorPanel.setPreferredSize(new java.awt.Dimension(94, 200));
+        java.awt.GridBagLayout startTimeSelectorPanelLayout = new java.awt.GridBagLayout();
+        startTimeSelectorPanelLayout.columnWidths = new int[] {0, 5, 0};
+        startTimeSelectorPanelLayout.rowHeights = new int[] {0, 7, 0};
+        startTimeSelectorPanel.setLayout(startTimeSelectorPanelLayout);
 
-    startTimeField.setBackground(new java.awt.Color(204, 204, 204));
-    startTimeField.setFont(new java.awt.Font("Synchro LET", 0, 24)); // NOI18N
-    startTimeField.setForeground(new java.awt.Color(153, 153, 153));
-    startTimeField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-    startTimeField.setText(bundle.getString("DCMDesktop.startTimeField.text")); // NOI18N
-    startTimeField.setFocusable(false);
-    startTimeField.setHorizontalAlignment(SwingConstants.CENTER);
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 0;
-    gridBagConstraints.gridwidth = 3;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-    gridBagConstraints.weightx = 0.2;
-    startTimeSelectorPanel.add(startTimeField, gridBagConstraints);
+        startTimeField.setBackground(new java.awt.Color(204, 204, 204));
+        startTimeField.setFont(new java.awt.Font("Synchro LET", 0, 24)); // NOI18N
+        startTimeField.setForeground(new java.awt.Color(153, 153, 153));
+        startTimeField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        startTimeField.setText(bundle.getString("DCMDesktop.startTimeField.text")); // NOI18N
+        startTimeField.setFocusable(false);
+        startTimeField.setHorizontalAlignment(SwingConstants.CENTER);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.weightx = 0.2;
+        startTimeSelectorPanel.add(startTimeField, gridBagConstraints);
 
-    startMinuteSlider.setFont(startMinuteSlider.getFont().deriveFont(startMinuteSlider.getFont().getSize()-6f));
-    startMinuteSlider.setMajorTickSpacing(5);
-    startMinuteSlider.setMaximum(59);
-    startMinuteSlider.setMinorTickSpacing(1);
-    startMinuteSlider.setOrientation(javax.swing.JSlider.VERTICAL);
-    startMinuteSlider.setPaintLabels(true);
-    startMinuteSlider.setPaintTicks(true);
-    startMinuteSlider.setSnapToTicks(true);
-    startMinuteSlider.setValue(30);
-    startMinuteSlider.addChangeListener(new javax.swing.event.ChangeListener() {
-        public void stateChanged(javax.swing.event.ChangeEvent evt) {
-            startMinuteSliderStateChanged(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 2;
-    gridBagConstraints.gridy = 2;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-    gridBagConstraints.weightx = 0.1;
-    gridBagConstraints.weighty = 0.3;
-    startTimeSelectorPanel.add(startMinuteSlider, gridBagConstraints);
+        startMinuteSlider.setFont(startMinuteSlider.getFont().deriveFont(startMinuteSlider.getFont().getSize()-6f));
+        startMinuteSlider.setMajorTickSpacing(5);
+        startMinuteSlider.setMaximum(59);
+        startMinuteSlider.setMinorTickSpacing(1);
+        startMinuteSlider.setOrientation(javax.swing.JSlider.VERTICAL);
+        startMinuteSlider.setPaintLabels(true);
+        startMinuteSlider.setPaintTicks(true);
+        startMinuteSlider.setSnapToTicks(true);
+        startMinuteSlider.setValue(30);
+        startMinuteSlider.addChangeListener(new javax.swing.event.ChangeListener()
+        {
+            public void stateChanged(javax.swing.event.ChangeEvent evt)
+            {
+                startMinuteSliderStateChanged(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.3;
+        startTimeSelectorPanel.add(startMinuteSlider, gridBagConstraints);
 
-    startHourSlider.setFont(startHourSlider.getFont().deriveFont(startHourSlider.getFont().getSize()-6f));
-    startHourSlider.setMajorTickSpacing(1);
-    startHourSlider.setMaximum(23);
-    startHourSlider.setMinorTickSpacing(1);
-    startHourSlider.setOrientation(javax.swing.JSlider.VERTICAL);
-    startHourSlider.setPaintLabels(true);
-    startHourSlider.setPaintTicks(true);
-    startHourSlider.setSnapToTicks(true);
-    startHourSlider.setValue(12);
-    startHourSlider.addChangeListener(new javax.swing.event.ChangeListener() {
-        public void stateChanged(javax.swing.event.ChangeEvent evt) {
-            startHourSliderStateChanged(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 2;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-    gridBagConstraints.weightx = 0.1;
-    gridBagConstraints.weighty = 0.3;
-    startTimeSelectorPanel.add(startHourSlider, gridBagConstraints);
+        startHourSlider.setFont(startHourSlider.getFont().deriveFont(startHourSlider.getFont().getSize()-6f));
+        startHourSlider.setMajorTickSpacing(1);
+        startHourSlider.setMaximum(23);
+        startHourSlider.setMinorTickSpacing(1);
+        startHourSlider.setOrientation(javax.swing.JSlider.VERTICAL);
+        startHourSlider.setPaintLabels(true);
+        startHourSlider.setPaintTicks(true);
+        startHourSlider.setSnapToTicks(true);
+        startHourSlider.setValue(12);
+        startHourSlider.addChangeListener(new javax.swing.event.ChangeListener()
+        {
+            public void stateChanged(javax.swing.event.ChangeEvent evt)
+            {
+                startHourSliderStateChanged(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.3;
+        startTimeSelectorPanel.add(startHourSlider, gridBagConstraints);
 
-    endTimeSelectorPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), bundle.getString("DCMDesktop.endTimeSelectorPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10), new java.awt.Color(102, 102, 102))); // NOI18N
-    endTimeSelectorPanel.setFont(endTimeSelectorPanel.getFont());
-    endTimeSelectorPanel.setOpaque(false);
-    endTimeSelectorPanel.setPreferredSize(new java.awt.Dimension(150, 170));
-    java.awt.GridBagLayout endTimeSelectorPanelLayout = new java.awt.GridBagLayout();
-    endTimeSelectorPanelLayout.columnWidths = new int[] {0, 5, 0};
-    endTimeSelectorPanelLayout.rowHeights = new int[] {0, 7, 0};
-    endTimeSelectorPanel.setLayout(endTimeSelectorPanelLayout);
+        endTimeSelectorPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), bundle.getString("DCMDesktop.endTimeSelectorPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10), new java.awt.Color(102, 102, 102))); // NOI18N
+        endTimeSelectorPanel.setFont(endTimeSelectorPanel.getFont());
+        endTimeSelectorPanel.setOpaque(false);
+        endTimeSelectorPanel.setPreferredSize(new java.awt.Dimension(150, 170));
+        java.awt.GridBagLayout endTimeSelectorPanelLayout = new java.awt.GridBagLayout();
+        endTimeSelectorPanelLayout.columnWidths = new int[] {0, 5, 0};
+        endTimeSelectorPanelLayout.rowHeights = new int[] {0, 7, 0};
+        endTimeSelectorPanel.setLayout(endTimeSelectorPanelLayout);
 
-    endTimeField.setBackground(new java.awt.Color(204, 204, 204));
-    endTimeField.setFont(new java.awt.Font("Synchro LET", 0, 24)); // NOI18N
-    endTimeField.setForeground(new java.awt.Color(153, 153, 153));
-    endTimeField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-    endTimeField.setText(bundle.getString("DCMDesktop.endTimeField.text")); // NOI18N
-    endTimeField.setFocusable(false);
-    endTimeField.setMaximumSize(new java.awt.Dimension(82, 2147483647));
-    startTimeField.setHorizontalAlignment(SwingConstants.CENTER);
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 0;
-    gridBagConstraints.gridwidth = 3;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 0.2;
-    endTimeSelectorPanel.add(endTimeField, gridBagConstraints);
+        endTimeField.setBackground(new java.awt.Color(204, 204, 204));
+        endTimeField.setFont(new java.awt.Font("Synchro LET", 0, 24)); // NOI18N
+        endTimeField.setForeground(new java.awt.Color(153, 153, 153));
+        endTimeField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        endTimeField.setText(bundle.getString("DCMDesktop.endTimeField.text")); // NOI18N
+        endTimeField.setFocusable(false);
+        endTimeField.setMaximumSize(new java.awt.Dimension(82, 2147483647));
+        startTimeField.setHorizontalAlignment(SwingConstants.CENTER);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.2;
+        endTimeSelectorPanel.add(endTimeField, gridBagConstraints);
 
-    endHourSlider.setFont(endHourSlider.getFont().deriveFont(endHourSlider.getFont().getSize()-6f));
-    endHourSlider.setMajorTickSpacing(1);
-    endHourSlider.setMaximum(23);
-    endHourSlider.setMinorTickSpacing(1);
-    endHourSlider.setOrientation(javax.swing.JSlider.VERTICAL);
-    endHourSlider.setPaintLabels(true);
-    endHourSlider.setPaintTicks(true);
-    endHourSlider.setSnapToTicks(true);
-    endHourSlider.setValue(12);
-    endHourSlider.setPreferredSize(new java.awt.Dimension(29, 42));
-    endHourSlider.addChangeListener(new javax.swing.event.ChangeListener() {
-        public void stateChanged(javax.swing.event.ChangeEvent evt) {
-            endHourSliderStateChanged(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 2;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 0.1;
-    gridBagConstraints.weighty = 0.3;
-    endTimeSelectorPanel.add(endHourSlider, gridBagConstraints);
+        endHourSlider.setFont(endHourSlider.getFont().deriveFont(endHourSlider.getFont().getSize()-6f));
+        endHourSlider.setMajorTickSpacing(1);
+        endHourSlider.setMaximum(23);
+        endHourSlider.setMinorTickSpacing(1);
+        endHourSlider.setOrientation(javax.swing.JSlider.VERTICAL);
+        endHourSlider.setPaintLabels(true);
+        endHourSlider.setPaintTicks(true);
+        endHourSlider.setSnapToTicks(true);
+        endHourSlider.setValue(12);
+        endHourSlider.setPreferredSize(new java.awt.Dimension(29, 42));
+        endHourSlider.addChangeListener(new javax.swing.event.ChangeListener()
+        {
+            public void stateChanged(javax.swing.event.ChangeEvent evt)
+            {
+                endHourSliderStateChanged(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.3;
+        endTimeSelectorPanel.add(endHourSlider, gridBagConstraints);
 
-    endMinuteSlider.setFont(endMinuteSlider.getFont().deriveFont(endMinuteSlider.getFont().getSize()-6f));
-    endMinuteSlider.setMajorTickSpacing(5);
-    endMinuteSlider.setMaximum(59);
-    endMinuteSlider.setMinorTickSpacing(1);
-    endMinuteSlider.setOrientation(javax.swing.JSlider.VERTICAL);
-    endMinuteSlider.setPaintLabels(true);
-    endMinuteSlider.setPaintTicks(true);
-    endMinuteSlider.setSnapToTicks(true);
-    endMinuteSlider.setValue(30);
-    endMinuteSlider.setPreferredSize(new java.awt.Dimension(44, 124));
-    endMinuteSlider.addChangeListener(new javax.swing.event.ChangeListener() {
-        public void stateChanged(javax.swing.event.ChangeEvent evt) {
-            endMinuteSliderStateChanged(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 2;
-    gridBagConstraints.gridy = 2;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 0.1;
-    gridBagConstraints.weighty = 0.3;
-    endTimeSelectorPanel.add(endMinuteSlider, gridBagConstraints);
+        endMinuteSlider.setFont(endMinuteSlider.getFont().deriveFont(endMinuteSlider.getFont().getSize()-6f));
+        endMinuteSlider.setMajorTickSpacing(5);
+        endMinuteSlider.setMaximum(59);
+        endMinuteSlider.setMinorTickSpacing(1);
+        endMinuteSlider.setOrientation(javax.swing.JSlider.VERTICAL);
+        endMinuteSlider.setPaintLabels(true);
+        endMinuteSlider.setPaintTicks(true);
+        endMinuteSlider.setSnapToTicks(true);
+        endMinuteSlider.setValue(30);
+        endMinuteSlider.setPreferredSize(new java.awt.Dimension(44, 124));
+        endMinuteSlider.addChangeListener(new javax.swing.event.ChangeListener()
+        {
+            public void stateChanged(javax.swing.event.ChangeEvent evt)
+            {
+                endMinuteSliderStateChanged(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.3;
+        endTimeSelectorPanel.add(endMinuteSlider, gridBagConstraints);
 
-    endDateSelectorPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), bundle.getString("DCMDesktop.endDateSelectorPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10), new java.awt.Color(102, 102, 102))); // NOI18N
-    endDateSelectorPanel.setForeground(new java.awt.Color(51, 51, 51));
-    endDateSelectorPanel.setFont(endDateSelectorPanel.getFont());
-    endDateSelectorPanel.setOpaque(false);
-    endDateSelectorPanel.setPreferredSize(new java.awt.Dimension(216, 170));
+        endDateSelectorPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), bundle.getString("DCMDesktop.endDateSelectorPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10), new java.awt.Color(102, 102, 102))); // NOI18N
+        endDateSelectorPanel.setForeground(new java.awt.Color(51, 51, 51));
+        endDateSelectorPanel.setFont(endDateSelectorPanel.getFont());
+        endDateSelectorPanel.setOpaque(false);
+        endDateSelectorPanel.setPreferredSize(new java.awt.Dimension(210, 170));
 
-    endDateChooserPanel.setCurrentView(new datechooser.view.appearance.AppearancesList("Bordered",
-        new datechooser.view.appearance.ViewAppearance("custom",
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                new java.awt.Color(0, 0, 0),
-                new java.awt.Color(0, 0, 255),
-                false,
-                true,
-                new datechooser.view.appearance.swing.ButtonPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                new java.awt.Color(0, 0, 0),
-                new java.awt.Color(0, 0, 255),
-                true,
-                true,
-                new datechooser.view.appearance.swing.ButtonPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                new java.awt.Color(0, 0, 255),
-                new java.awt.Color(0, 0, 255),
-                false,
-                true,
-                new datechooser.view.appearance.swing.ButtonPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                new java.awt.Color(128, 128, 128),
-                new java.awt.Color(0, 0, 255),
-                false,
-                true,
-                new datechooser.view.appearance.swing.LabelPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                new java.awt.Color(0, 0, 0),
-                new java.awt.Color(0, 0, 255),
-                false,
-                true,
-                new datechooser.view.appearance.swing.LabelPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                new java.awt.Color(0, 0, 0),
-                new java.awt.Color(255, 0, 0),
-                false,
-                false,
-                new datechooser.view.appearance.swing.ButtonPainter()),
-            (datechooser.view.BackRenderer)null,
-            false,
-            true)));
-endDateChooserPanel.setLocale(new java.util.Locale("en", "", ""));
-endDateChooserPanel.setNavigateFont(new java.awt.Font("Verdana", java.awt.Font.PLAIN, 7));
-endDateChooserPanel.setBehavior(datechooser.model.multiple.MultyModelBehavior.SELECT_SINGLE);
-endDateChooserPanel.addSelectionChangedListener(new datechooser.events.SelectionChangedListener() {
-    public void onSelectionChange(datechooser.events.SelectionChangedEvent evt) {
-        endDateChooserPanelOnSelectionChange(evt);
-    }
-    });
+        endDateChooserPanel.setEnabled(false);
+        endDateChooserPanel.setLocale(new java.util.Locale("en", "", ""));
+        endDateChooserPanel.setNavigateFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 7));
+        endDateChooserPanel.setBehavior(datechooser.model.multiple.MultyModelBehavior.SELECT_SINGLE);
+        endDateChooserPanel.addSelectionChangedListener(new datechooser.events.SelectionChangedListener()
+        {
+            public void onSelectionChange(datechooser.events.SelectionChangedEvent evt)
+            {
+                endDateChooserPanelOnSelectionChange(evt);
+            }
+        });
 
-    org.jdesktop.layout.GroupLayout endDateSelectorPanelLayout = new org.jdesktop.layout.GroupLayout(endDateSelectorPanel);
-    endDateSelectorPanel.setLayout(endDateSelectorPanelLayout);
-    endDateSelectorPanelLayout.setHorizontalGroup(
-        endDateSelectorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(endDateChooserPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 176, Short.MAX_VALUE)
-    );
-    endDateSelectorPanelLayout.setVerticalGroup(
-        endDateSelectorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(endDateChooserPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-    );
+        org.jdesktop.layout.GroupLayout endDateSelectorPanelLayout = new org.jdesktop.layout.GroupLayout(endDateSelectorPanel);
+        endDateSelectorPanel.setLayout(endDateSelectorPanelLayout);
+        endDateSelectorPanelLayout.setHorizontalGroup(
+            endDateSelectorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(endDateChooserPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+        );
+        endDateSelectorPanelLayout.setVerticalGroup(
+            endDateSelectorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(endDateChooserPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
+        );
 
-    searchPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), bundle.getString("DCMDesktop.searchPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10), new java.awt.Color(102, 102, 102))); // NOI18N
-    searchPanel.setFont(searchPanel.getFont());
-    searchPanel.setOpaque(false);
-    searchPanel.setPreferredSize(new java.awt.Dimension(190, 314));
+        searchPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), bundle.getString("DCMDesktop.searchPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10), new java.awt.Color(102, 102, 102))); // NOI18N
+        searchPanel.setFont(searchPanel.getFont());
+        searchPanel.setOpaque(false);
+        searchPanel.setPreferredSize(new java.awt.Dimension(190, 314));
 
-    deletePresetButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete_icon.png"))); // NOI18N
-    deletePresetButton.setToolTipText(bundle.getString("DCMDesktop.deletePresetButton.toolTipText")); // NOI18N
-    deletePresetButton.setEnabled(false);
-    deletePresetButton.setFocusable(false);
-    deletePresetButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    deletePresetButton.setMaximumSize(new java.awt.Dimension(80, 10));
-    deletePresetButton.setMinimumSize(new java.awt.Dimension(80, 10));
-    deletePresetButton.setPreferredSize(new java.awt.Dimension(80, 10));
-    deletePresetButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            deletePresetButtonActionPerformed(evt);
-        }
-    });
+        deletePresetButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete_icon.png"))); // NOI18N
+        deletePresetButton.setToolTipText(bundle.getString("DCMDesktop.deletePresetButton.toolTipText")); // NOI18N
+        deletePresetButton.setEnabled(false);
+        deletePresetButton.setFocusable(false);
+        deletePresetButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        deletePresetButton.setMaximumSize(new java.awt.Dimension(80, 10));
+        deletePresetButton.setMinimumSize(new java.awt.Dimension(80, 10));
+        deletePresetButton.setPreferredSize(new java.awt.Dimension(80, 10));
+        deletePresetButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                deletePresetButtonActionPerformed(evt);
+            }
+        });
 
-    selectPresetBox.setEditable(true);
-    selectPresetBox.setFont(selectPresetBox.getFont().deriveFont(selectPresetBox.getFont().getSize()-3f));
-    selectPresetBox.setForeground(new java.awt.Color(102, 102, 102));
-    selectPresetBox.setMaximumRowCount(25);
-    selectPresetBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Presets" }));
-    selectPresetBox.setToolTipText(bundle.getString("DCMDesktop.selectPresetBox.toolTipText")); // NOI18N
-    selectPresetBox.setEnabled(false);
-    selectPresetBox.setMinimumSize(new java.awt.Dimension(68, 20));
-    selectPresetBox.setPreferredSize(new java.awt.Dimension(68, 20));
-    selectPresetBox.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
-        public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
-            selectPresetBoxPopupMenuWillBecomeVisible(evt);
-        }
-        public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {
-        }
-        public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
-        }
-    });
-    selectPresetBox.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            selectPresetBoxActionPerformed(evt);
-        }
-    });
-    selectPresetBox.addFocusListener(new java.awt.event.FocusAdapter() {
-        public void focusGained(java.awt.event.FocusEvent evt) {
-            selectPresetBoxFocusGained(evt);
-        }
-    });
+        selectPresetBox.setEditable(true);
+        selectPresetBox.setFont(selectPresetBox.getFont().deriveFont(selectPresetBox.getFont().getSize()-3f));
+        selectPresetBox.setForeground(new java.awt.Color(102, 102, 102));
+        selectPresetBox.setMaximumRowCount(25);
+        selectPresetBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Presets" }));
+        selectPresetBox.setToolTipText(bundle.getString("DCMDesktop.selectPresetBox.toolTipText")); // NOI18N
+        selectPresetBox.setEnabled(false);
+        selectPresetBox.setMinimumSize(new java.awt.Dimension(68, 20));
+        selectPresetBox.setPreferredSize(new java.awt.Dimension(68, 20));
+        selectPresetBox.addPopupMenuListener(new javax.swing.event.PopupMenuListener()
+        {
+            public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt)
+            {
+                selectPresetBoxPopupMenuWillBecomeVisible(evt);
+            }
+            public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt)
+            {
+            }
+            public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt)
+            {
+            }
+        });
+        selectPresetBox.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                selectPresetBoxActionPerformed(evt);
+            }
+        });
+        selectPresetBox.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                selectPresetBoxFocusGained(evt);
+            }
+        });
 
-    savePresetButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save_icon.png"))); // NOI18N
-    savePresetButton.setToolTipText(bundle.getString("DCMDesktop.savePresetButton.toolTipText")); // NOI18N
-    savePresetButton.setEnabled(false);
-    savePresetButton.setFocusable(false);
-    savePresetButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    savePresetButton.setMaximumSize(new java.awt.Dimension(80, 10));
-    savePresetButton.setMinimumSize(new java.awt.Dimension(80, 10));
-    savePresetButton.setPreferredSize(new java.awt.Dimension(80, 10));
-    savePresetButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            savePresetButtonActionPerformed(evt);
-        }
-    });
+        savePresetButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save_icon.png"))); // NOI18N
+        savePresetButton.setToolTipText(bundle.getString("DCMDesktop.savePresetButton.toolTipText")); // NOI18N
+        savePresetButton.setEnabled(false);
+        savePresetButton.setFocusable(false);
+        savePresetButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        savePresetButton.setMaximumSize(new java.awt.Dimension(80, 10));
+        savePresetButton.setMinimumSize(new java.awt.Dimension(80, 10));
+        savePresetButton.setPreferredSize(new java.awt.Dimension(80, 10));
+        savePresetButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                savePresetButtonActionPerformed(evt);
+            }
+        });
 
-    searchField.setFont(searchField.getFont().deriveFont(searchField.getFont().getSize()-3f));
-    searchField.setForeground(new java.awt.Color(102, 102, 102));
-    searchField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-    searchField.setText(bundle.getString("DCMDesktop.searchField.text")); // NOI18N
-    searchField.setToolTipText(bundle.getString("DCMDesktop.searchField.toolTipText")); // NOI18N
-    searchField.setEnabled(false);
-    searchField.setMaximumSize(new java.awt.Dimension(900, 20));
-    searchField.setMinimumSize(new java.awt.Dimension(14, 20));
-    searchField.setPreferredSize(new java.awt.Dimension(48, 20));
-    searchField.addFocusListener(new java.awt.event.FocusAdapter() {
-        public void focusGained(java.awt.event.FocusEvent evt) {
-            searchFieldFocusGained(evt);
-        }
-    });
-    searchField.addKeyListener(new java.awt.event.KeyAdapter() {
-        public void keyReleased(java.awt.event.KeyEvent evt) {
-            searchFieldKeyReleased(evt);
-        }
-    });
+        searchField.setFont(searchField.getFont().deriveFont(searchField.getFont().getSize()-3f));
+        searchField.setForeground(new java.awt.Color(102, 102, 102));
+        searchField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        searchField.setText(bundle.getString("DCMDesktop.searchField.text")); // NOI18N
+        searchField.setToolTipText(bundle.getString("DCMDesktop.searchField.toolTipText")); // NOI18N
+        searchField.setEnabled(false);
+        searchField.setMaximumSize(new java.awt.Dimension(900, 20));
+        searchField.setPreferredSize(new java.awt.Dimension(48, 20));
+        searchField.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                searchFieldFocusGained(evt);
+            }
+        });
+        searchField.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                searchFieldKeyReleased(evt);
+            }
+        });
 
-    wordSearchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search_exact.png"))); // NOI18N
-    wordSearchButton.setToolTipText(bundle.getString("DCMDesktop.wordSearchButton.toolTipText")); // NOI18N
-    wordSearchButton.setEnabled(false);
-    wordSearchButton.setFocusable(false);
-    wordSearchButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    wordSearchButton.setMaximumSize(new java.awt.Dimension(80, 10));
-    wordSearchButton.setMinimumSize(new java.awt.Dimension(80, 10));
-    wordSearchButton.setPreferredSize(new java.awt.Dimension(80, 10));
-    wordSearchButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            wordSearchButtonActionPerformed(evt);
-        }
-    });
+        wordSearchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search_exact.png"))); // NOI18N
+        wordSearchButton.setToolTipText(bundle.getString("DCMDesktop.wordSearchButton.toolTipText")); // NOI18N
+        wordSearchButton.setEnabled(false);
+        wordSearchButton.setFocusable(false);
+        wordSearchButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        wordSearchButton.setMaximumSize(new java.awt.Dimension(80, 10));
+        wordSearchButton.setMinimumSize(new java.awt.Dimension(80, 10));
+        wordSearchButton.setPreferredSize(new java.awt.Dimension(80, 10));
+        wordSearchButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                wordSearchButtonActionPerformed(evt);
+            }
+        });
 
-    matchSearchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search_match.png"))); // NOI18N
-    matchSearchButton.setToolTipText(bundle.getString("DCMDesktop.matchSearchButton.toolTipText")); // NOI18N
-    matchSearchButton.setEnabled(false);
-    matchSearchButton.setFocusable(false);
-    matchSearchButton.setMaximumSize(new java.awt.Dimension(80, 20));
-    matchSearchButton.setMinimumSize(new java.awt.Dimension(80, 20));
-    matchSearchButton.setPreferredSize(new java.awt.Dimension(112, 20));
-    matchSearchButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            matchSearchButtonActionPerformed(evt);
-        }
-    });
+        matchSearchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search_match.png"))); // NOI18N
+        matchSearchButton.setToolTipText(bundle.getString("DCMDesktop.matchSearchButton.toolTipText")); // NOI18N
+        matchSearchButton.setEnabled(false);
+        matchSearchButton.setFocusable(false);
+        matchSearchButton.setMaximumSize(new java.awt.Dimension(80, 20));
+        matchSearchButton.setMinimumSize(new java.awt.Dimension(80, 20));
+        matchSearchButton.setPreferredSize(new java.awt.Dimension(112, 20));
+        matchSearchButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                matchSearchButtonActionPerformed(evt);
+            }
+        });
 
-    selectionArea.setBackground(new java.awt.Color(204, 204, 204));
-    selectionArea.setColumns(20);
-    selectionArea.setFont(new java.awt.Font("Courier New", 1, 8)); // NOI18N
-    selectionArea.setForeground(new java.awt.Color(51, 51, 51));
-    selectionArea.setRows(5);
-    selectionArea.setToolTipText(bundle.getString("DCMDesktop.selectionArea.toolTipText")); // NOI18N
-    selectionArea.setDoubleBuffered(true);
-    selectionArea.addCaretListener(new javax.swing.event.CaretListener() {
-        public void caretUpdate(javax.swing.event.CaretEvent evt) {
-            selectionAreaCaretUpdate(evt);
-        }
-    });
-    selectionScroller.setViewportView(selectionArea);
+        selectionArea.setBackground(new java.awt.Color(204, 204, 204));
+        selectionArea.setColumns(20);
+        selectionArea.setFont(new java.awt.Font("Courier New", 1, 8)); // NOI18N
+        selectionArea.setForeground(new java.awt.Color(51, 51, 51));
+        selectionArea.setRows(5);
+        selectionArea.setToolTipText(bundle.getString("DCMDesktop.selectionArea.toolTipText")); // NOI18N
+        selectionArea.setDoubleBuffered(true);
+        selectionArea.addCaretListener(new javax.swing.event.CaretListener()
+        {
+            public void caretUpdate(javax.swing.event.CaretEvent evt)
+            {
+                selectionAreaCaretUpdate(evt);
+            }
+        });
+        selectionScroller.setViewportView(selectionArea);
 
-    searchStatsScroller.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-    searchStatsScroller.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        searchStatsScroller.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        searchStatsScroller.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
-    searchStatsTable.setBackground(new java.awt.Color(204, 204, 204));
-    searchStatsTable.setFont(searchStatsTable.getFont().deriveFont(searchStatsTable.getFont().getSize()-2f));
-    searchStatsTable.setForeground(new java.awt.Color(102, 102, 102));
-    searchStatsTable.setModel(new javax.swing.table.DefaultTableModel(
-        new Object [][] {
+        searchStatsTable.setBackground(new java.awt.Color(204, 204, 204));
+        searchStatsTable.setFont(searchStatsTable.getFont().deriveFont(searchStatsTable.getFont().getSize()-2f));
+        searchStatsTable.setForeground(new java.awt.Color(102, 102, 102));
+        searchStatsTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][]
+            {
 
-        },
-        new String [] {
-            "Tot", "Servers", "Cat's", "R.Types", "V.Types", "Res."
-        }
-    ) {
-        Class[] types = new Class [] {
-            java.lang.Long.class, java.lang.Long.class, java.lang.Long.class, java.lang.Long.class, java.lang.Long.class, java.lang.Long.class
-        };
-        boolean[] canEdit = new boolean [] {
-            false, false, false, false, false, false
-        };
+            },
+            new String []
+            {
+                "Tot", "Servers", "Cat's", "R.Types", "V.Types", "Res."
+            }
+        )
+        {
+            Class[] types = new Class []
+            {
+                java.lang.Long.class, java.lang.Long.class, java.lang.Long.class, java.lang.Long.class, java.lang.Long.class, java.lang.Long.class
+            };
+            boolean[] canEdit = new boolean []
+            {
+                false, false, false, false, false, false
+            };
 
-        public Class getColumnClass(int columnIndex) {
-            return types [columnIndex];
-        }
+            public Class getColumnClass(int columnIndex)
+            {
+                return types [columnIndex];
+            }
 
-        public boolean isCellEditable(int rowIndex, int columnIndex) {
-            return canEdit [columnIndex];
-        }
-    });
-    searchStatsTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
-    searchStatsTable.setAutoscrolls(false);
-    searchStatsTable.setEnabled(false);
-    searchStatsTable.setFocusable(false);
-    searchStatsTable.setGridColor(new java.awt.Color(51, 51, 51));
-    searchStatsTable.setOpaque(false);
-    searchStatsTable.setRowSelectionAllowed(false);
-    searchStatsTable.setShowGrid(true);
-    searchStatsScroller.setViewportView(searchStatsTable);
+            public boolean isCellEditable(int rowIndex, int columnIndex)
+            {
+                return canEdit [columnIndex];
+            }
+        });
+        searchStatsTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        searchStatsTable.setAutoscrolls(false);
+        searchStatsTable.setEnabled(false);
+        searchStatsTable.setFocusable(false);
+        searchStatsTable.setGridColor(new java.awt.Color(51, 51, 51));
+        searchStatsTable.setOpaque(false);
+        searchStatsTable.setRowSelectionAllowed(false);
+        searchStatsScroller.setViewportView(searchStatsTable);
 
-    navigateXButtonBar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-    navigateXButtonBar.setFloatable(false);
-    navigateXButtonBar.setRollover(true);
-    navigateXButtonBar.setFont(navigateXButtonBar.getFont());
+        navigateXButtonBar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        navigateXButtonBar.setFloatable(false);
+        navigateXButtonBar.setRollover(true);
+        navigateXButtonBar.setFont(navigateXButtonBar.getFont());
 
-    leftButton.setFont(leftButton.getFont().deriveFont(leftButton.getFont().getSize()-2f));
-    leftButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/left.png"))); // NOI18N
-    leftButton.setToolTipText(bundle.getString("DCMDesktop.leftButton.toolTipText")); // NOI18N
-    leftButton.setEnabled(false);
-    leftButton.setFocusable(false);
-    leftButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    leftButton.setMaximumSize(new java.awt.Dimension(23, 18));
-    leftButton.setMinimumSize(new java.awt.Dimension(23, 18));
-    leftButton.setPreferredSize(new java.awt.Dimension(23, 18));
-    leftButton.setSize(new java.awt.Dimension(23, 18));
-    leftButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            leftButtonActionPerformed(evt);
-        }
-    });
-    navigateXButtonBar.add(leftButton);
+        leftButton.setFont(leftButton.getFont().deriveFont(leftButton.getFont().getSize()-2f));
+        leftButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/left.png"))); // NOI18N
+        leftButton.setToolTipText(bundle.getString("DCMDesktop.leftButton.toolTipText")); // NOI18N
+        leftButton.setEnabled(false);
+        leftButton.setFocusable(false);
+        leftButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        leftButton.setMaximumSize(new java.awt.Dimension(23, 18));
+        leftButton.setMinimumSize(new java.awt.Dimension(23, 18));
+        leftButton.setPreferredSize(new java.awt.Dimension(23, 18));
+        leftButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                leftButtonActionPerformed(evt);
+            }
+        });
+        navigateXButtonBar.add(leftButton);
 
-    zoomInXButton.setFont(zoomInXButton.getFont().deriveFont(zoomInXButton.getFont().getSize()-2f));
-    zoomInXButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
-    zoomInXButton.setToolTipText(bundle.getString("DCMDesktop.zoomInXButton.toolTipText")); // NOI18N
-    zoomInXButton.setEnabled(false);
-    zoomInXButton.setFocusable(false);
-    zoomInXButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    zoomInXButton.setMaximumSize(new java.awt.Dimension(23, 18));
-    zoomInXButton.setMinimumSize(new java.awt.Dimension(23, 18));
-    zoomInXButton.setPreferredSize(new java.awt.Dimension(23, 18));
-    zoomInXButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            zoomInXButtonActionPerformed(evt);
-        }
-    });
-    navigateXButtonBar.add(zoomInXButton);
+        zoomInXButton.setFont(zoomInXButton.getFont().deriveFont(zoomInXButton.getFont().getSize()-2f));
+        zoomInXButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
+        zoomInXButton.setToolTipText(bundle.getString("DCMDesktop.zoomInXButton.toolTipText")); // NOI18N
+        zoomInXButton.setEnabled(false);
+        zoomInXButton.setFocusable(false);
+        zoomInXButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        zoomInXButton.setMaximumSize(new java.awt.Dimension(23, 18));
+        zoomInXButton.setMinimumSize(new java.awt.Dimension(23, 18));
+        zoomInXButton.setPreferredSize(new java.awt.Dimension(23, 18));
+        zoomInXButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                zoomInXButtonActionPerformed(evt);
+            }
+        });
+        navigateXButtonBar.add(zoomInXButton);
 
-    zoomOutXButton.setFont(zoomOutXButton.getFont().deriveFont(zoomOutXButton.getFont().getSize()-2f));
-    zoomOutXButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
-    zoomOutXButton.setToolTipText(bundle.getString("DCMDesktop.zoomOutXButton.toolTipText")); // NOI18N
-    zoomOutXButton.setEnabled(false);
-    zoomOutXButton.setFocusable(false);
-    zoomOutXButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    zoomOutXButton.setMaximumSize(new java.awt.Dimension(23, 18));
-    zoomOutXButton.setMinimumSize(new java.awt.Dimension(23, 18));
-    zoomOutXButton.setPreferredSize(new java.awt.Dimension(23, 18));
-    zoomOutXButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            zoomOutXButtonActionPerformed(evt);
-        }
-    });
-    navigateXButtonBar.add(zoomOutXButton);
+        zoomOutXButton.setFont(zoomOutXButton.getFont().deriveFont(zoomOutXButton.getFont().getSize()-2f));
+        zoomOutXButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
+        zoomOutXButton.setToolTipText(bundle.getString("DCMDesktop.zoomOutXButton.toolTipText")); // NOI18N
+        zoomOutXButton.setEnabled(false);
+        zoomOutXButton.setFocusable(false);
+        zoomOutXButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        zoomOutXButton.setMaximumSize(new java.awt.Dimension(23, 18));
+        zoomOutXButton.setMinimumSize(new java.awt.Dimension(23, 18));
+        zoomOutXButton.setPreferredSize(new java.awt.Dimension(23, 18));
+        zoomOutXButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                zoomOutXButtonActionPerformed(evt);
+            }
+        });
+        navigateXButtonBar.add(zoomOutXButton);
 
-    rightButton.setFont(rightButton.getFont().deriveFont(rightButton.getFont().getSize()-2f));
-    rightButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/right.png"))); // NOI18N
-    rightButton.setToolTipText(bundle.getString("DCMDesktop.rightButton.toolTipText")); // NOI18N
-    rightButton.setEnabled(false);
-    rightButton.setFocusable(false);
-    rightButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    rightButton.setMaximumSize(new java.awt.Dimension(23, 18));
-    rightButton.setMinimumSize(new java.awt.Dimension(23, 18));
-    rightButton.setPreferredSize(new java.awt.Dimension(23, 18));
-    rightButton.setSize(new java.awt.Dimension(23, 18));
-    rightButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            rightButtonActionPerformed(evt);
-        }
-    });
-    navigateXButtonBar.add(rightButton);
+        rightButton.setFont(rightButton.getFont().deriveFont(rightButton.getFont().getSize()-2f));
+        rightButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/right.png"))); // NOI18N
+        rightButton.setToolTipText(bundle.getString("DCMDesktop.rightButton.toolTipText")); // NOI18N
+        rightButton.setEnabled(false);
+        rightButton.setFocusable(false);
+        rightButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        rightButton.setMaximumSize(new java.awt.Dimension(23, 18));
+        rightButton.setMinimumSize(new java.awt.Dimension(23, 18));
+        rightButton.setPreferredSize(new java.awt.Dimension(23, 18));
+        rightButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                rightButtonActionPerformed(evt);
+            }
+        });
+        navigateXButtonBar.add(rightButton);
 
-    swapViewButton.setFont(swapViewButton.getFont().deriveFont(swapViewButton.getFont().getSize()-2f));
-    swapViewButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/up-down.png"))); // NOI18N
-    swapViewButton.setToolTipText(bundle.getString("DCMDesktop.swapViewButton.toolTipText")); // NOI18N
-    swapViewButton.setEnabled(false);
-    swapViewButton.setFocusable(false);
-    swapViewButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    swapViewButton.setMaximumSize(new java.awt.Dimension(23, 18));
-    swapViewButton.setMinimumSize(new java.awt.Dimension(23, 18));
-    swapViewButton.setPreferredSize(new java.awt.Dimension(23, 18));
-    swapViewButton.setSize(new java.awt.Dimension(23, 18));
-    swapViewButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            swapViewButtonActionPerformed(evt);
-        }
-    });
-    navigateXButtonBar.add(swapViewButton);
+        swapViewButton.setFont(swapViewButton.getFont().deriveFont(swapViewButton.getFont().getSize()-2f));
+        swapViewButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/up-down.png"))); // NOI18N
+        swapViewButton.setToolTipText(bundle.getString("DCMDesktop.swapViewButton.toolTipText")); // NOI18N
+        swapViewButton.setEnabled(false);
+        swapViewButton.setFocusable(false);
+        swapViewButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        swapViewButton.setMaximumSize(new java.awt.Dimension(23, 18));
+        swapViewButton.setMinimumSize(new java.awt.Dimension(23, 18));
+        swapViewButton.setPreferredSize(new java.awt.Dimension(23, 18));
+        swapViewButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                swapViewButtonActionPerformed(evt);
+            }
+        });
+        navigateXButtonBar.add(swapViewButton);
 
-    graphButton.setFont(graphButton.getFont().deriveFont(graphButton.getFont().getSize()-2f));
-    graphButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/graph-on.png"))); // NOI18N
-    graphButton.setToolTipText(bundle.getString("DCMDesktop.graphButton.toolTipText")); // NOI18N
-    graphButton.setEnabled(false);
-    graphButton.setFocusable(false);
-    graphButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    graphButton.setMaximumSize(new java.awt.Dimension(23, 18));
-    graphButton.setMinimumSize(new java.awt.Dimension(23, 18));
-    graphButton.setPreferredSize(new java.awt.Dimension(23, 18));
-    graphButton.setSize(new java.awt.Dimension(23, 18));
-    graphButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            graphButtonActionPerformed(evt);
-        }
-    });
-    navigateXButtonBar.add(graphButton);
+        graphButton.setFont(graphButton.getFont().deriveFont(graphButton.getFont().getSize()-2f));
+        graphButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/graph-on.png"))); // NOI18N
+        graphButton.setToolTipText(bundle.getString("DCMDesktop.graphButton.toolTipText")); // NOI18N
+        graphButton.setEnabled(false);
+        graphButton.setFocusable(false);
+        graphButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        graphButton.setMaximumSize(new java.awt.Dimension(23, 18));
+        graphButton.setMinimumSize(new java.awt.Dimension(23, 18));
+        graphButton.setPreferredSize(new java.awt.Dimension(23, 18));
+        graphButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                graphButtonActionPerformed(evt);
+            }
+        });
+        navigateXButtonBar.add(graphButton);
 
-    upButton.setFont(upButton.getFont().deriveFont(upButton.getFont().getSize()-2f));
-    upButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/up.png"))); // NOI18N
-    upButton.setToolTipText(bundle.getString("DCMDesktop.upButton.toolTipText")); // NOI18N
-    upButton.setEnabled(false);
-    upButton.setFocusable(false);
-    upButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    upButton.setMaximumSize(new java.awt.Dimension(23, 18));
-    upButton.setMinimumSize(new java.awt.Dimension(23, 18));
-    upButton.setPreferredSize(new java.awt.Dimension(23, 18));
-    upButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            upButtonActionPerformed(evt);
-        }
-    });
-    navigateXButtonBar.add(upButton);
+        upButton.setFont(upButton.getFont().deriveFont(upButton.getFont().getSize()-2f));
+        upButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/up.png"))); // NOI18N
+        upButton.setToolTipText(bundle.getString("DCMDesktop.upButton.toolTipText")); // NOI18N
+        upButton.setEnabled(false);
+        upButton.setFocusable(false);
+        upButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        upButton.setMaximumSize(new java.awt.Dimension(23, 18));
+        upButton.setMinimumSize(new java.awt.Dimension(23, 18));
+        upButton.setPreferredSize(new java.awt.Dimension(23, 18));
+        upButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                upButtonActionPerformed(evt);
+            }
+        });
+        navigateXButtonBar.add(upButton);
 
-    zoomInYButton.setFont(zoomInYButton.getFont().deriveFont(zoomInYButton.getFont().getSize()-2f));
-    zoomInYButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
-    zoomInYButton.setToolTipText(bundle.getString("DCMDesktop.zoomInYButton.toolTipText")); // NOI18N
-    zoomInYButton.setEnabled(false);
-    zoomInYButton.setFocusable(false);
-    zoomInYButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    zoomInYButton.setMaximumSize(new java.awt.Dimension(23, 18));
-    zoomInYButton.setMinimumSize(new java.awt.Dimension(23, 18));
-    zoomInYButton.setPreferredSize(new java.awt.Dimension(23, 18));
-    zoomInYButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            zoomInYButtonActionPerformed(evt);
-        }
-    });
-    navigateXButtonBar.add(zoomInYButton);
+        zoomInYButton.setFont(zoomInYButton.getFont().deriveFont(zoomInYButton.getFont().getSize()-2f));
+        zoomInYButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
+        zoomInYButton.setToolTipText(bundle.getString("DCMDesktop.zoomInYButton.toolTipText")); // NOI18N
+        zoomInYButton.setEnabled(false);
+        zoomInYButton.setFocusable(false);
+        zoomInYButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        zoomInYButton.setMaximumSize(new java.awt.Dimension(23, 18));
+        zoomInYButton.setMinimumSize(new java.awt.Dimension(23, 18));
+        zoomInYButton.setPreferredSize(new java.awt.Dimension(23, 18));
+        zoomInYButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                zoomInYButtonActionPerformed(evt);
+            }
+        });
+        navigateXButtonBar.add(zoomInYButton);
 
-    zoomOutYButton.setFont(zoomOutYButton.getFont().deriveFont(zoomOutYButton.getFont().getSize()-2f));
-    zoomOutYButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
-    zoomOutYButton.setToolTipText(bundle.getString("DCMDesktop.zoomOutYButton.toolTipText")); // NOI18N
-    zoomOutYButton.setEnabled(false);
-    zoomOutYButton.setFocusable(false);
-    zoomOutYButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    zoomOutYButton.setMaximumSize(new java.awt.Dimension(23, 18));
-    zoomOutYButton.setMinimumSize(new java.awt.Dimension(23, 18));
-    zoomOutYButton.setPreferredSize(new java.awt.Dimension(23, 18));
-    zoomOutYButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            zoomOutYButtonActionPerformed(evt);
-        }
-    });
-    navigateXButtonBar.add(zoomOutYButton);
+        zoomOutYButton.setFont(zoomOutYButton.getFont().deriveFont(zoomOutYButton.getFont().getSize()-2f));
+        zoomOutYButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
+        zoomOutYButton.setToolTipText(bundle.getString("DCMDesktop.zoomOutYButton.toolTipText")); // NOI18N
+        zoomOutYButton.setEnabled(false);
+        zoomOutYButton.setFocusable(false);
+        zoomOutYButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        zoomOutYButton.setMaximumSize(new java.awt.Dimension(23, 18));
+        zoomOutYButton.setMinimumSize(new java.awt.Dimension(23, 18));
+        zoomOutYButton.setPreferredSize(new java.awt.Dimension(23, 18));
+        zoomOutYButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                zoomOutYButtonActionPerformed(evt);
+            }
+        });
+        navigateXButtonBar.add(zoomOutYButton);
 
-    downButton.setFont(downButton.getFont().deriveFont(downButton.getFont().getSize()-2f));
-    downButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/down.png"))); // NOI18N
-    downButton.setToolTipText(bundle.getString("DCMDesktop.downButton.toolTipText")); // NOI18N
-    downButton.setEnabled(false);
-    downButton.setFocusable(false);
-    downButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    downButton.setMaximumSize(new java.awt.Dimension(23, 18));
-    downButton.setMinimumSize(new java.awt.Dimension(23, 18));
-    downButton.setPreferredSize(new java.awt.Dimension(23, 18));
-    downButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            downButtonActionPerformed(evt);
-        }
-    });
-    navigateXButtonBar.add(downButton);
+        downButton.setFont(downButton.getFont().deriveFont(downButton.getFont().getSize()-2f));
+        downButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/down.png"))); // NOI18N
+        downButton.setToolTipText(bundle.getString("DCMDesktop.downButton.toolTipText")); // NOI18N
+        downButton.setEnabled(false);
+        downButton.setFocusable(false);
+        downButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        downButton.setMaximumSize(new java.awt.Dimension(23, 18));
+        downButton.setMinimumSize(new java.awt.Dimension(23, 18));
+        downButton.setPreferredSize(new java.awt.Dimension(23, 18));
+        downButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                downButtonActionPerformed(evt);
+            }
+        });
+        navigateXButtonBar.add(downButton);
 
-    loginButton.setFont(loginButton.getFont().deriveFont(loginButton.getFont().getSize()-2f));
-    loginButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lock.png"))); // NOI18N
-    loginButton.setToolTipText(bundle.getString("DCMDesktop.loginButton.toolTipText")); // NOI18N
-    loginButton.setFocusable(false);
-    loginButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    loginButton.setMaximumSize(new java.awt.Dimension(23, 18));
-    loginButton.setMinimumSize(new java.awt.Dimension(23, 18));
-    loginButton.setPreferredSize(new java.awt.Dimension(23, 18));
-    loginButton.setSize(new java.awt.Dimension(23, 18));
-    loginButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            loginButtonActionPerformed(evt);
-        }
-    });
-    navigateXButtonBar.add(loginButton);
+        loginButton.setFont(loginButton.getFont().deriveFont(loginButton.getFont().getSize()-2f));
+        loginButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lock.png"))); // NOI18N
+        loginButton.setToolTipText(bundle.getString("DCMDesktop.loginButton.toolTipText")); // NOI18N
+        loginButton.setFocusable(false);
+        loginButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        loginButton.setMaximumSize(new java.awt.Dimension(23, 18));
+        loginButton.setMinimumSize(new java.awt.Dimension(23, 18));
+        loginButton.setPreferredSize(new java.awt.Dimension(23, 18));
+        loginButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                loginButtonActionPerformed(evt);
+            }
+        });
+        navigateXButtonBar.add(loginButton);
 
-    org.jdesktop.layout.GroupLayout searchPanelLayout = new org.jdesktop.layout.GroupLayout(searchPanel);
-    searchPanel.setLayout(searchPanelLayout);
-    searchPanelLayout.setHorizontalGroup(
-        searchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(searchPanelLayout.createSequentialGroup()
-            .add(3, 3, 3)
-            .add(deletePresetButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 27, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(selectPresetBox, 0, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(savePresetButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 27, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(searchField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(wordSearchButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 27, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(matchSearchButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 27, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-        .add(searchStatsScroller, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-        .add(navigateXButtonBar, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
-        .add(selectionScroller)
-    );
-    searchPanelLayout.setVerticalGroup(
-        searchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(searchPanelLayout.createSequentialGroup()
-            .add(searchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.CENTER)
+        org.jdesktop.layout.GroupLayout searchPanelLayout = new org.jdesktop.layout.GroupLayout(searchPanel);
+        searchPanel.setLayout(searchPanelLayout);
+        searchPanelLayout.setHorizontalGroup(
+            searchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(searchPanelLayout.createSequentialGroup()
+                .add(3, 3, 3)
                 .add(deletePresetButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 27, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(selectPresetBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 21, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(selectPresetBox, 0, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(savePresetButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 27, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(searchField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 21, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(searchField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(wordSearchButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 27, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(matchSearchButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 27, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-            .add(0, 0, Short.MAX_VALUE)
-            .add(selectionScroller, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(searchStatsScroller, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 19, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(navigateXButtonBar, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-    );
-
-    searchPanelLayout.linkSize(new java.awt.Component[] {deletePresetButton, matchSearchButton, savePresetButton, wordSearchButton}, org.jdesktop.layout.GroupLayout.VERTICAL);
-
-    startTimeRelativePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), bundle.getString("DCMDesktop.startTimeRelativePanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10), new java.awt.Color(102, 102, 102))); // NOI18N
-    startTimeRelativePanel.setFont(startTimeRelativePanel.getFont());
-    startTimeRelativePanel.setOpaque(false);
-    startTimeRelativePanel.setPreferredSize(new java.awt.Dimension(150, 170));
-    java.awt.GridBagLayout startTimeRelativePanelLayout = new java.awt.GridBagLayout();
-    startTimeRelativePanelLayout.columnWidths = new int[] {0, 5, 0};
-    startTimeRelativePanelLayout.rowHeights = new int[] {0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0};
-    startTimeRelativePanel.setLayout(startTimeRelativePanelLayout);
-
-    startTimeIsRelativeButton.setFont(startTimeIsRelativeButton.getFont().deriveFont((float)9));
-    startTimeIsRelativeButton.setText(bundle.getString("DCMDesktop.startTimeIsRelativeButton.text")); // NOI18N
-    startTimeIsRelativeButton.setToolTipText(bundle.getString("DCMDesktop.startTimeIsRelativeButton.toolTipText")); // NOI18N
-    startTimeIsRelativeButton.setFocusable(false);
-    startTimeIsRelativeButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            startTimeIsRelativeButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 0;
-    gridBagConstraints.gridwidth = 3;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 2.0;
-    gridBagConstraints.weighty = 1.0;
-    startTimeRelativePanel.add(startTimeIsRelativeButton, gridBagConstraints);
-
-    startMonthLabel.setFont(startMonthLabel.getFont().deriveFont(startMonthLabel.getFont().getSize()-6f));
-    startMonthLabel.setForeground(new java.awt.Color(102, 102, 102));
-    startMonthLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    startMonthLabel.setText(bundle.getString("DCMDesktop.startMonthLabel.text")); // NOI18N
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 2;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    startTimeRelativePanel.add(startMonthLabel, gridBagConstraints);
-
-    startMonthPlusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
-    startMonthPlusButton.setToolTipText(bundle.getString("DCMDesktop.startMonthPlusButton.toolTipText")); // NOI18N
-    startMonthPlusButton.setEnabled(false);
-    startMonthPlusButton.setFocusable(false);
-    startMonthPlusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    startMonthPlusButton.setMaximumSize(new java.awt.Dimension(22, 15));
-    startMonthPlusButton.setMinimumSize(new java.awt.Dimension(22, 15));
-    startMonthPlusButton.setPreferredSize(new java.awt.Dimension(22, 15));
-    startMonthPlusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    startMonthPlusButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            startMonthPlusButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 4;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    startTimeRelativePanel.add(startMonthPlusButton, gridBagConstraints);
-
-    startDayPlusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
-    startDayPlusButton.setToolTipText(bundle.getString("DCMDesktop.startDayPlusButton.toolTipText")); // NOI18N
-    startDayPlusButton.setEnabled(false);
-    startDayPlusButton.setFocusable(false);
-    startDayPlusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    startDayPlusButton.setMaximumSize(new java.awt.Dimension(22, 15));
-    startDayPlusButton.setMinimumSize(new java.awt.Dimension(22, 15));
-    startDayPlusButton.setPreferredSize(new java.awt.Dimension(22, 15));
-    startDayPlusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    startDayPlusButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            startDayPlusButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 2;
-    gridBagConstraints.gridy = 4;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    startTimeRelativePanel.add(startDayPlusButton, gridBagConstraints);
-
-    startMonthField.setFont(startMonthField.getFont().deriveFont(startMonthField.getFont().getSize()-5f));
-    startMonthField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-    startMonthField.setText(bundle.getString("DCMDesktop.startMonthField.text")); // NOI18N
-    startMonthField.setToolTipText(bundle.getString("DCMDesktop.startMonthField.toolTipText")); // NOI18N
-    startMonthField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-    startMonthField.setEnabled(false);
-    startMonthField.addKeyListener(new java.awt.event.KeyAdapter() {
-        public void keyReleased(java.awt.event.KeyEvent evt) {
-            startMonthFieldKeyReleased(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 6;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    startTimeRelativePanel.add(startMonthField, gridBagConstraints);
-
-    startDayField.setFont(startDayField.getFont().deriveFont(startDayField.getFont().getSize()-5f));
-    startDayField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-    startDayField.setText(bundle.getString("DCMDesktop.startDayField.text")); // NOI18N
-    startDayField.setToolTipText(bundle.getString("DCMDesktop.startDayField.toolTipText")); // NOI18N
-    startDayField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-    startDayField.setEnabled(false);
-    startDayField.addKeyListener(new java.awt.event.KeyAdapter() {
-        public void keyReleased(java.awt.event.KeyEvent evt) {
-            startDayFieldKeyReleased(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 2;
-    gridBagConstraints.gridy = 6;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    startTimeRelativePanel.add(startDayField, gridBagConstraints);
-
-    startMonthMinusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
-    startMonthMinusButton.setToolTipText(bundle.getString("DCMDesktop.startMonthMinusButton.toolTipText")); // NOI18N
-    startMonthMinusButton.setEnabled(false);
-    startMonthMinusButton.setFocusable(false);
-    startMonthMinusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    startMonthMinusButton.setMaximumSize(new java.awt.Dimension(22, 15));
-    startMonthMinusButton.setMinimumSize(new java.awt.Dimension(22, 15));
-    startMonthMinusButton.setPreferredSize(new java.awt.Dimension(22, 15));
-    startMonthMinusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    startMonthMinusButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            startMonthMinusButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 8;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    startTimeRelativePanel.add(startMonthMinusButton, gridBagConstraints);
-
-    startDayMinusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
-    startDayMinusButton.setToolTipText(bundle.getString("DCMDesktop.startDayMinusButton.toolTipText")); // NOI18N
-    startDayMinusButton.setEnabled(false);
-    startDayMinusButton.setFocusable(false);
-    startDayMinusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    startDayMinusButton.setMaximumSize(new java.awt.Dimension(22, 15));
-    startDayMinusButton.setMinimumSize(new java.awt.Dimension(22, 15));
-    startDayMinusButton.setPreferredSize(new java.awt.Dimension(22, 15));
-    startDayMinusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    startDayMinusButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            startDayMinusButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 2;
-    gridBagConstraints.gridy = 8;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    startTimeRelativePanel.add(startDayMinusButton, gridBagConstraints);
-
-    startHourLabel.setFont(startHourLabel.getFont().deriveFont(startHourLabel.getFont().getSize()-6f));
-    startHourLabel.setForeground(new java.awt.Color(102, 102, 102));
-    startHourLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    startHourLabel.setText(bundle.getString("DCMDesktop.startHourLabel.text")); // NOI18N
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 10;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    startTimeRelativePanel.add(startHourLabel, gridBagConstraints);
-
-    startHourPlusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
-    startHourPlusButton.setToolTipText(bundle.getString("DCMDesktop.startHourPlusButton.toolTipText")); // NOI18N
-    startHourPlusButton.setEnabled(false);
-    startHourPlusButton.setFocusable(false);
-    startHourPlusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    startHourPlusButton.setMaximumSize(new java.awt.Dimension(22, 15));
-    startHourPlusButton.setMinimumSize(new java.awt.Dimension(22, 15));
-    startHourPlusButton.setPreferredSize(new java.awt.Dimension(22, 15));
-    startHourPlusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    startHourPlusButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            startHourPlusButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 12;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    startTimeRelativePanel.add(startHourPlusButton, gridBagConstraints);
-
-    startMinutePlusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
-    startMinutePlusButton.setToolTipText(bundle.getString("DCMDesktop.startMinutePlusButton.toolTipText")); // NOI18N
-    startMinutePlusButton.setEnabled(false);
-    startMinutePlusButton.setFocusable(false);
-    startMinutePlusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    startMinutePlusButton.setMaximumSize(new java.awt.Dimension(22, 15));
-    startMinutePlusButton.setMinimumSize(new java.awt.Dimension(22, 15));
-    startMinutePlusButton.setPreferredSize(new java.awt.Dimension(22, 15));
-    startMinutePlusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    startMinutePlusButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            startMinutePlusButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 2;
-    gridBagConstraints.gridy = 12;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    startTimeRelativePanel.add(startMinutePlusButton, gridBagConstraints);
-
-    startHourField.setFont(startHourField.getFont().deriveFont(startHourField.getFont().getSize()-5f));
-    startHourField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-    startHourField.setText(bundle.getString("DCMDesktop.startHourField.text")); // NOI18N
-    startHourField.setToolTipText(bundle.getString("DCMDesktop.startHourField.toolTipText")); // NOI18N
-    startHourField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-    startHourField.setEnabled(false);
-    startHourField.addKeyListener(new java.awt.event.KeyAdapter() {
-        public void keyReleased(java.awt.event.KeyEvent evt) {
-            startHourFieldKeyReleased(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 14;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    startTimeRelativePanel.add(startHourField, gridBagConstraints);
-
-    startMinuteField.setFont(startMinuteField.getFont().deriveFont(startMinuteField.getFont().getSize()-5f));
-    startMinuteField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-    startMinuteField.setText(bundle.getString("DCMDesktop.startMinuteField.text")); // NOI18N
-    startMinuteField.setToolTipText(bundle.getString("DCMDesktop.startMinuteField.toolTipText")); // NOI18N
-    startMinuteField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-    startMinuteField.setEnabled(false);
-    startMinuteField.addKeyListener(new java.awt.event.KeyAdapter() {
-        public void keyReleased(java.awt.event.KeyEvent evt) {
-            startMinuteFieldKeyReleased(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 2;
-    gridBagConstraints.gridy = 14;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    startTimeRelativePanel.add(startMinuteField, gridBagConstraints);
-
-    startHourMinusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
-    startHourMinusButton.setToolTipText(bundle.getString("DCMDesktop.startHourMinusButton.toolTipText")); // NOI18N
-    startHourMinusButton.setEnabled(false);
-    startHourMinusButton.setFocusable(false);
-    startHourMinusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    startHourMinusButton.setMaximumSize(new java.awt.Dimension(22, 15));
-    startHourMinusButton.setMinimumSize(new java.awt.Dimension(22, 15));
-    startHourMinusButton.setPreferredSize(new java.awt.Dimension(22, 15));
-    startHourMinusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    startHourMinusButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            startHourMinusButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 16;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    startTimeRelativePanel.add(startHourMinusButton, gridBagConstraints);
-
-    startMinuteMinusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
-    startMinuteMinusButton.setToolTipText(bundle.getString("DCMDesktop.startMinuteMinusButton.toolTipText")); // NOI18N
-    startMinuteMinusButton.setEnabled(false);
-    startMinuteMinusButton.setFocusable(false);
-    startMinuteMinusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    startMinuteMinusButton.setMaximumSize(new java.awt.Dimension(22, 15));
-    startMinuteMinusButton.setMinimumSize(new java.awt.Dimension(22, 15));
-    startMinuteMinusButton.setPreferredSize(new java.awt.Dimension(22, 15));
-    startMinuteMinusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    startMinuteMinusButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            startMinuteMinusButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 2;
-    gridBagConstraints.gridy = 16;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    startTimeRelativePanel.add(startMinuteMinusButton, gridBagConstraints);
-
-    startDayLabel.setFont(startDayLabel.getFont().deriveFont(startDayLabel.getFont().getSize()-6f));
-    startDayLabel.setForeground(new java.awt.Color(102, 102, 102));
-    startDayLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    startDayLabel.setText(bundle.getString("DCMDesktop.startDayLabel.text")); // NOI18N
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 2;
-    gridBagConstraints.gridy = 2;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    startTimeRelativePanel.add(startDayLabel, gridBagConstraints);
-
-    startMinuteLabel.setFont(startMinuteLabel.getFont().deriveFont(startMinuteLabel.getFont().getSize()-6f));
-    startMinuteLabel.setForeground(new java.awt.Color(102, 102, 102));
-    startMinuteLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    startMinuteLabel.setText(bundle.getString("DCMDesktop.startMinuteLabel.text")); // NOI18N
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 2;
-    gridBagConstraints.gridy = 10;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    startTimeRelativePanel.add(startMinuteLabel, gridBagConstraints);
-
-    endTimeRelativePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), bundle.getString("DCMDesktop.endTimeRelativePanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10), new java.awt.Color(102, 102, 102))); // NOI18N
-    endTimeRelativePanel.setFont(endTimeRelativePanel.getFont());
-    endTimeRelativePanel.setOpaque(false);
-    endTimeRelativePanel.setPreferredSize(new java.awt.Dimension(150, 170));
-    java.awt.GridBagLayout endTimeRelativePanelLayout = new java.awt.GridBagLayout();
-    endTimeRelativePanelLayout.columnWidths = new int[] {0, 5, 0};
-    endTimeRelativePanelLayout.rowHeights = new int[] {0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0};
-    endTimeRelativePanel.setLayout(endTimeRelativePanelLayout);
-
-    endTimeIsRelativeButton.setFont(endTimeIsRelativeButton.getFont().deriveFont((float)9));
-    endTimeIsRelativeButton.setText(bundle.getString("DCMDesktop.endTimeIsRelativeButton.text")); // NOI18N
-    endTimeIsRelativeButton.setToolTipText(bundle.getString("DCMDesktop.endTimeIsRelativeButton.toolTipText")); // NOI18N
-    endTimeIsRelativeButton.setFocusable(false);
-    endTimeIsRelativeButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            endTimeIsRelativeButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 0;
-    gridBagConstraints.gridwidth = 3;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 2.0;
-    gridBagConstraints.weighty = 1.0;
-    endTimeRelativePanel.add(endTimeIsRelativeButton, gridBagConstraints);
-
-    endMonthLabel.setFont(endMonthLabel.getFont().deriveFont(endMonthLabel.getFont().getSize()-6f));
-    endMonthLabel.setForeground(new java.awt.Color(102, 102, 102));
-    endMonthLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    endMonthLabel.setText(bundle.getString("DCMDesktop.endMonthLabel.text")); // NOI18N
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 2;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    endTimeRelativePanel.add(endMonthLabel, gridBagConstraints);
-
-    endMonthPlusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
-    endMonthPlusButton.setToolTipText(bundle.getString("DCMDesktop.endMonthPlusButton.toolTipText")); // NOI18N
-    endMonthPlusButton.setEnabled(false);
-    endMonthPlusButton.setFocusable(false);
-    endMonthPlusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    endMonthPlusButton.setMaximumSize(new java.awt.Dimension(22, 15));
-    endMonthPlusButton.setMinimumSize(new java.awt.Dimension(22, 15));
-    endMonthPlusButton.setPreferredSize(new java.awt.Dimension(22, 15));
-    endMonthPlusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    endMonthPlusButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            endMonthPlusButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 4;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    endTimeRelativePanel.add(endMonthPlusButton, gridBagConstraints);
-
-    endDayPlusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
-    endDayPlusButton.setToolTipText(bundle.getString("DCMDesktop.endDayPlusButton.toolTipText")); // NOI18N
-    endDayPlusButton.setEnabled(false);
-    endDayPlusButton.setFocusable(false);
-    endDayPlusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    endDayPlusButton.setMaximumSize(new java.awt.Dimension(22, 15));
-    endDayPlusButton.setMinimumSize(new java.awt.Dimension(22, 15));
-    endDayPlusButton.setPreferredSize(new java.awt.Dimension(22, 15));
-    endDayPlusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    endDayPlusButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            endDayPlusButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 2;
-    gridBagConstraints.gridy = 4;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    endTimeRelativePanel.add(endDayPlusButton, gridBagConstraints);
-
-    endMonthField.setFont(endMonthField.getFont().deriveFont(endMonthField.getFont().getSize()-5f));
-    endMonthField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-    endMonthField.setText(bundle.getString("DCMDesktop.endMonthField.text")); // NOI18N
-    endMonthField.setToolTipText(bundle.getString("DCMDesktop.endMonthField.toolTipText")); // NOI18N
-    endMonthField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-    endMonthField.setEnabled(false);
-    endMonthField.addKeyListener(new java.awt.event.KeyAdapter() {
-        public void keyReleased(java.awt.event.KeyEvent evt) {
-            endMonthFieldKeyReleased(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 6;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    endTimeRelativePanel.add(endMonthField, gridBagConstraints);
-
-    endDayField.setFont(endDayField.getFont().deriveFont(endDayField.getFont().getSize()-5f));
-    endDayField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-    endDayField.setText(bundle.getString("DCMDesktop.endDayField.text")); // NOI18N
-    endDayField.setToolTipText(bundle.getString("DCMDesktop.endDayField.toolTipText")); // NOI18N
-    endDayField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-    endDayField.setEnabled(false);
-    endDayField.addKeyListener(new java.awt.event.KeyAdapter() {
-        public void keyReleased(java.awt.event.KeyEvent evt) {
-            endDayFieldKeyReleased(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 2;
-    gridBagConstraints.gridy = 6;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    endTimeRelativePanel.add(endDayField, gridBagConstraints);
-
-    endMonthMinusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
-    endMonthMinusButton.setToolTipText(bundle.getString("DCMDesktop.endMonthMinusButton.toolTipText")); // NOI18N
-    endMonthMinusButton.setEnabled(false);
-    endMonthMinusButton.setFocusable(false);
-    endMonthMinusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    endMonthMinusButton.setMaximumSize(new java.awt.Dimension(22, 15));
-    endMonthMinusButton.setMinimumSize(new java.awt.Dimension(22, 15));
-    endMonthMinusButton.setPreferredSize(new java.awt.Dimension(22, 15));
-    endMonthMinusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    endMonthMinusButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            endMonthMinusButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 8;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    endTimeRelativePanel.add(endMonthMinusButton, gridBagConstraints);
-
-    endDayMinusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
-    endDayMinusButton.setToolTipText(bundle.getString("DCMDesktop.endDayMinusButton.toolTipText")); // NOI18N
-    endDayMinusButton.setEnabled(false);
-    endDayMinusButton.setFocusable(false);
-    endDayMinusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    endDayMinusButton.setMaximumSize(new java.awt.Dimension(22, 15));
-    endDayMinusButton.setMinimumSize(new java.awt.Dimension(22, 15));
-    endDayMinusButton.setPreferredSize(new java.awt.Dimension(22, 15));
-    endDayMinusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    endDayMinusButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            endDayMinusButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 2;
-    gridBagConstraints.gridy = 8;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    endTimeRelativePanel.add(endDayMinusButton, gridBagConstraints);
-
-    endHourLabel.setFont(endHourLabel.getFont().deriveFont(endHourLabel.getFont().getSize()-6f));
-    endHourLabel.setForeground(new java.awt.Color(102, 102, 102));
-    endHourLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    endHourLabel.setText(bundle.getString("DCMDesktop.endHourLabel.text")); // NOI18N
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 10;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    endTimeRelativePanel.add(endHourLabel, gridBagConstraints);
-
-    endHourPlusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
-    endHourPlusButton.setToolTipText(bundle.getString("DCMDesktop.endHourPlusButton.toolTipText")); // NOI18N
-    endHourPlusButton.setEnabled(false);
-    endHourPlusButton.setFocusable(false);
-    endHourPlusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    endHourPlusButton.setMaximumSize(new java.awt.Dimension(22, 15));
-    endHourPlusButton.setMinimumSize(new java.awt.Dimension(22, 15));
-    endHourPlusButton.setPreferredSize(new java.awt.Dimension(22, 15));
-    endHourPlusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    endHourPlusButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            endHourPlusButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 12;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    endTimeRelativePanel.add(endHourPlusButton, gridBagConstraints);
-
-    endMinutePlusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
-    endMinutePlusButton.setToolTipText(bundle.getString("DCMDesktop.endMinutePlusButton.toolTipText")); // NOI18N
-    endMinutePlusButton.setEnabled(false);
-    endMinutePlusButton.setFocusable(false);
-    endMinutePlusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    endMinutePlusButton.setMaximumSize(new java.awt.Dimension(22, 15));
-    endMinutePlusButton.setMinimumSize(new java.awt.Dimension(22, 15));
-    endMinutePlusButton.setPreferredSize(new java.awt.Dimension(22, 15));
-    endMinutePlusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    endMinutePlusButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            endMinutePlusButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 2;
-    gridBagConstraints.gridy = 12;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    endTimeRelativePanel.add(endMinutePlusButton, gridBagConstraints);
-
-    endHourField.setFont(endHourField.getFont().deriveFont(endHourField.getFont().getSize()-5f));
-    endHourField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-    endHourField.setText(bundle.getString("DCMDesktop.endHourField.text")); // NOI18N
-    endHourField.setToolTipText(bundle.getString("DCMDesktop.endHourField.toolTipText")); // NOI18N
-    endHourField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-    endHourField.setEnabled(false);
-    endHourField.addKeyListener(new java.awt.event.KeyAdapter() {
-        public void keyReleased(java.awt.event.KeyEvent evt) {
-            endHourFieldKeyReleased(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 14;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    endTimeRelativePanel.add(endHourField, gridBagConstraints);
-
-    endMinuteField.setFont(endMinuteField.getFont().deriveFont(endMinuteField.getFont().getSize()-5f));
-    endMinuteField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-    endMinuteField.setText(bundle.getString("DCMDesktop.endMinuteField.text")); // NOI18N
-    endMinuteField.setToolTipText(bundle.getString("DCMDesktop.endMinuteField.toolTipText")); // NOI18N
-    endMinuteField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-    endMinuteField.setEnabled(false);
-    endMinuteField.addKeyListener(new java.awt.event.KeyAdapter() {
-        public void keyReleased(java.awt.event.KeyEvent evt) {
-            endMinuteFieldKeyReleased(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 2;
-    gridBagConstraints.gridy = 14;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    endTimeRelativePanel.add(endMinuteField, gridBagConstraints);
-
-    endHourMinusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
-    endHourMinusButton.setToolTipText(bundle.getString("DCMDesktop.endHourMinusButton.toolTipText")); // NOI18N
-    endHourMinusButton.setEnabled(false);
-    endHourMinusButton.setFocusable(false);
-    endHourMinusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    endHourMinusButton.setMaximumSize(new java.awt.Dimension(22, 15));
-    endHourMinusButton.setMinimumSize(new java.awt.Dimension(22, 15));
-    endHourMinusButton.setPreferredSize(new java.awt.Dimension(22, 15));
-    endHourMinusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    endHourMinusButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            endHourMinusButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 16;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    endTimeRelativePanel.add(endHourMinusButton, gridBagConstraints);
-
-    endMinuteMinusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
-    endMinuteMinusButton.setToolTipText(bundle.getString("DCMDesktop.endMinuteMinusButton.toolTipText")); // NOI18N
-    endMinuteMinusButton.setEnabled(false);
-    endMinuteMinusButton.setFocusable(false);
-    endMinuteMinusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    endMinuteMinusButton.setMaximumSize(new java.awt.Dimension(22, 15));
-    endMinuteMinusButton.setMinimumSize(new java.awt.Dimension(22, 15));
-    endMinuteMinusButton.setPreferredSize(new java.awt.Dimension(22, 15));
-    endMinuteMinusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    endMinuteMinusButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            endMinuteMinusButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 2;
-    gridBagConstraints.gridy = 16;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    endTimeRelativePanel.add(endMinuteMinusButton, gridBagConstraints);
-
-    endMinuteLabel.setFont(endMinuteLabel.getFont().deriveFont(endMinuteLabel.getFont().getSize()-6f));
-    endMinuteLabel.setForeground(new java.awt.Color(102, 102, 102));
-    endMinuteLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    endMinuteLabel.setText(bundle.getString("DCMDesktop.endMinuteLabel.text")); // NOI18N
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 2;
-    gridBagConstraints.gridy = 10;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    endTimeRelativePanel.add(endMinuteLabel, gridBagConstraints);
-
-    endDayLabel.setFont(endDayLabel.getFont().deriveFont(endDayLabel.getFont().getSize()-6f));
-    endDayLabel.setForeground(new java.awt.Color(102, 102, 102));
-    endDayLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    endDayLabel.setText(bundle.getString("DCMDesktop.endDayLabel.text")); // NOI18N
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 2;
-    gridBagConstraints.gridy = 2;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 2.0;
-    gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-    endTimeRelativePanel.add(endDayLabel, gridBagConstraints);
-
-    org.jdesktop.layout.GroupLayout navigatorPanelLayout = new org.jdesktop.layout.GroupLayout(navigatorPanel);
-    navigatorPanel.setLayout(navigatorPanelLayout);
-    navigatorPanelLayout.setHorizontalGroup(
-        navigatorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(navigatorPanelLayout.createSequentialGroup()
-            .add(startDateSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 188, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(startTimeSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(startTimeRelativePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(searchPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(endTimeRelativePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(endTimeSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(endDateSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 188, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-    );
-
-    navigatorPanelLayout.linkSize(new java.awt.Component[] {endTimeSelectorPanel, startTimeSelectorPanel}, org.jdesktop.layout.GroupLayout.HORIZONTAL);
-
-    navigatorPanelLayout.linkSize(new java.awt.Component[] {endDateSelectorPanel, startDateSelectorPanel}, org.jdesktop.layout.GroupLayout.HORIZONTAL);
-
-    navigatorPanelLayout.setVerticalGroup(
-        navigatorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(navigatorPanelLayout.createSequentialGroup()
-            .add(navigatorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                .add(org.jdesktop.layout.GroupLayout.LEADING, startDateSelectorPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
-                .add(org.jdesktop.layout.GroupLayout.LEADING, endDateSelectorPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
-                .add(org.jdesktop.layout.GroupLayout.LEADING, endTimeSelectorPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
-                .add(org.jdesktop.layout.GroupLayout.LEADING, startTimeSelectorPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(org.jdesktop.layout.GroupLayout.LEADING, startTimeRelativePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(org.jdesktop.layout.GroupLayout.LEADING, endTimeRelativePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(org.jdesktop.layout.GroupLayout.LEADING, searchPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE))
-            .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-    );
-
-    navigatorPanelLayout.linkSize(new java.awt.Component[] {endDateSelectorPanel, endTimeRelativePanel, endTimeSelectorPanel, searchPanel, startDateSelectorPanel, startTimeRelativePanel, startTimeSelectorPanel}, org.jdesktop.layout.GroupLayout.VERTICAL);
-
-    viewSplitter.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.viewSplitter.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 14), new java.awt.Color(102, 102, 102))); // NOI18N
-    viewSplitter.setDividerLocation(0);
-    viewSplitter.setDividerSize(1);
-    viewSplitter.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
-    viewSplitter.setDoubleBuffered(true);
-    viewSplitter.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-    viewSplitter.setMinimumSize(new java.awt.Dimension(500, 0));
-    viewSplitter.setPreferredSize(new java.awt.Dimension(600, 600));
-
-    treeInventorySplitter.setBorder(null);
-    treeInventorySplitter.setDividerLocation(212);
-    treeInventorySplitter.setDividerSize(4);
-    treeInventorySplitter.setMinimumSize(new java.awt.Dimension(133, 0));
-
-    treeSplitter.setDividerLocation(32);
-    treeSplitter.setDividerSize(1);
-    treeSplitter.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
-
-    treeButtonBar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-    treeButtonBar.setFloatable(false);
-    treeButtonBar.setRollover(true);
-    treeButtonBar.setFont(treeButtonBar.getFont());
-
-    addServerButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
-    addServerButton.setToolTipText(bundle.getString("DCMDesktop.addServerButton.toolTipText")); // NOI18N
-    addServerButton.setEnabled(false);
-    addServerButton.setMaximumSize(new java.awt.Dimension(23, 18));
-    addServerButton.setMinimumSize(new java.awt.Dimension(23, 18));
-    addServerButton.setPreferredSize(new java.awt.Dimension(23, 18));
-    addServerButton.setSize(new java.awt.Dimension(23, 18));
-    addServerButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            addServerButtonActionPerformed(evt);
-        }
-    });
-    treeButtonBar.add(addServerButton);
-
-    deleteServerButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
-    deleteServerButton.setToolTipText(bundle.getString("DCMDesktop.deleteServerButton.toolTipText")); // NOI18N
-    deleteServerButton.setEnabled(false);
-    deleteServerButton.setFocusable(false);
-    deleteServerButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    deleteServerButton.setMaximumSize(new java.awt.Dimension(23, 18));
-    deleteServerButton.setMinimumSize(new java.awt.Dimension(23, 18));
-    deleteServerButton.setPreferredSize(new java.awt.Dimension(23, 18));
-    deleteServerButton.setSize(new java.awt.Dimension(23, 18));
-    deleteServerButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    deleteServerButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            deleteServerButtonActionPerformed(evt);
-        }
-    });
-    treeButtonBar.add(deleteServerButton);
-
-    startPollerButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/poller_icon.png"))); // NOI18N
-    startPollerButton.setToolTipText(bundle.getString("DCMDesktop.startPollerButton.toolTipText")); // NOI18N
-    startPollerButton.setEnabled(false);
-    startPollerButton.setFocusable(false);
-    startPollerButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    startPollerButton.setMaximumSize(new java.awt.Dimension(23, 18));
-    startPollerButton.setMinimumSize(new java.awt.Dimension(23, 18));
-    startPollerButton.setPreferredSize(new java.awt.Dimension(23, 18));
-    startPollerButton.setSize(new java.awt.Dimension(23, 18));
-    startPollerButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    startPollerButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            startPollerButtonActionPerformed(evt);
-        }
-    });
-    treeButtonBar.add(startPollerButton);
-
-    startCommanderButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/terminal_icon.png"))); // NOI18N
-    startCommanderButton.setToolTipText(bundle.getString("DCMDesktop.startCommanderButton.toolTipText")); // NOI18N
-    startCommanderButton.setEnabled(false);
-    startCommanderButton.setFocusable(false);
-    startCommanderButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    startCommanderButton.setMaximumSize(new java.awt.Dimension(23, 18));
-    startCommanderButton.setMinimumSize(new java.awt.Dimension(23, 18));
-    startCommanderButton.setPreferredSize(new java.awt.Dimension(23, 18));
-    startCommanderButton.setSize(new java.awt.Dimension(23, 18));
-    startCommanderButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    startCommanderButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            startCommanderButtonActionPerformed(evt);
-        }
-    });
-    treeButtonBar.add(startCommanderButton);
-
-    treeSplitter.setLeftComponent(treeButtonBar);
-
-    serverTreeScoller.setFont(serverTreeScoller.getFont());
-
-    serverTree.setFont(serverTree.getFont());
-    javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Servers");
-    serverTree.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-    serverTree.setEnabled(false);
-    serverTree.setScrollsOnExpand(true);
-    serverTreeScoller.setViewportView(serverTree);
-
-    treeSplitter.setBottomComponent(serverTreeScoller);
-
-    treeInventorySplitter.setLeftComponent(treeSplitter);
-
-    tableSplitter.setDividerLocation(40);
-    tableSplitter.setDividerSize(1);
-    tableSplitter.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
-
-    hostScroller.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-    hostScroller.setFont(hostScroller.getFont());
-
-    hostTable.setBackground(new java.awt.Color(204, 204, 204));
-    hostTable.setFont(hostTable.getFont().deriveFont((float)11));
-    hostTable.setForeground(new java.awt.Color(51, 51, 51));
-    hostTable.setModel(new javax.swing.table.DefaultTableModel(
-        new Object [][] {
-            {null, null, null, null, null, null, null, null, null, null}
-        },
-        new String [] {
-            "Id", "Host", "Port", "Username", "Password", "SUPassword", "Enabled", "Command", "Comments", "Sysinfo"
-        }
-    ) {
-        Class[] types = new Class [] {
-            java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Boolean.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-        };
-        boolean[] canEdit = new boolean [] {
-            false, true, true, true, true, true, true, true, true, true
-        };
-
-        public Class getColumnClass(int columnIndex) {
-            return types [columnIndex];
-        }
-
-        public boolean isCellEditable(int rowIndex, int columnIndex) {
-            return canEdit [columnIndex];
-        }
-    });
-    hostTable.setAutoCreateRowSorter(true);
-    hostTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
-    hostTable.setColumnSelectionAllowed(true);
-    hostTable.setDoubleBuffered(true);
-    hostTable.setDragEnabled(true);
-    hostTable.setShowGrid(true);
-    hostScroller.setViewportView(hostTable);
-
-    tableSplitter.setTopComponent(hostScroller);
-
-    resourcesScroller.setFont(resourcesScroller.getFont());
-
-    resourcesTable.setBackground(new java.awt.Color(204, 204, 204));
-    resourcesTable.setFont(resourcesTable.getFont().deriveFont((float)11));
-    resourcesTable.setForeground(new java.awt.Color(51, 51, 51));
-    resourcesTable.setModel(new javax.swing.table.DefaultTableModel(
-        new Object [][] {
-            {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null}
-        },
-        new String [] {
-            "Id", "HostId", "Category", "ResourceType", "ValueType", "CounterType", "Resource", "PollCommand", "LastValue", "WarningLimit", "CriticalLimit", "AlertPolls", "Updated", "RRDFile", "Enabled"
-        }
-    ) {
-        Class[] types = new Class [] {
-            java.lang.Long.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Long.class, java.lang.String.class, java.lang.Boolean.class
-        };
-        boolean[] canEdit = new boolean [] {
-            false, true, true, true, true, true, true, true, true, true, true, true, true, true, true
-        };
-
-        public Class getColumnClass(int columnIndex) {
-            return types [columnIndex];
-        }
-
-        public boolean isCellEditable(int rowIndex, int columnIndex) {
-            return canEdit [columnIndex];
-        }
-    });
-    resourcesTable.setAutoCreateRowSorter(true);
-    resourcesTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
-    resourcesTable.setColumnSelectionAllowed(true);
-    resourcesTable.setDoubleBuffered(true);
-    resourcesTable.setDragEnabled(true);
-    resourcesTable.setShowGrid(true);
-    resourcesScroller.setViewportView(resourcesTable);
-
-    tableSplitter.setRightComponent(resourcesScroller);
-
-    treeInventorySplitter.setRightComponent(tableSplitter);
-
-    viewSplitter.setLeftComponent(treeInventorySplitter);
-
-    graphLabel.setBackground(new java.awt.Color(255, 255, 255));
-    graphLabel.setFont(graphLabel.getFont());
-    graphLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    graphLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/dcmheader.jpg"))); // NOI18N
-    graphLabel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-    graphLabel.setMaximumSize(new java.awt.Dimension(10000, 5000));
-    graphLabel.setMinimumSize(new java.awt.Dimension(0, 0));
-    graphLabel.setOpaque(true);
-    graphLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            graphLabelMouseClicked(evt);
-        }
-    });
-    viewSplitter.setBottomComponent(graphLabel);
-
-    org.jdesktop.layout.GroupLayout managerPanelLayout = new org.jdesktop.layout.GroupLayout(managerPanel);
-    managerPanel.setLayout(managerPanelLayout);
-    managerPanelLayout.setHorizontalGroup(
-        managerPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(navigatorPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        .add(viewSplitter, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-    );
-    managerPanelLayout.setVerticalGroup(
-        managerPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(managerPanelLayout.createSequentialGroup()
-            .add(navigatorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(viewSplitter, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 511, Short.MAX_VALUE))
-    );
-
-    managerTab.addTab(bundle.getString("DCMDesktop.managerPanel.TabConstraints.tabTitle"), managerPanel); // NOI18N
-
-    adminPanel.setFont(adminPanel.getFont());
-    adminPanel.setName("adminPanel"); // NOI18N
-    adminPanel.setPreferredSize(new java.awt.Dimension(1164, 700));
-    adminPanel.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            adminPanelMouseClicked(evt);
-        }
-    });
-
-    licenseInnerPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.licenseInnerPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 14), new java.awt.Color(51, 51, 51))); // NOI18N
-    licenseInnerPanel.setFont(licenseInnerPanel.getFont());
-    licenseInnerPanel.setPreferredSize(new java.awt.Dimension(830, 370));
-
-    applyVergunningButton.setFont(applyVergunningButton.getFont().deriveFont(applyVergunningButton.getFont().getSize()+1f));
-    applyVergunningButton.setText(bundle.getString("DCMDesktop.applyVergunningButton.text")); // NOI18N
-    applyVergunningButton.setToolTipText(bundle.getString("DCMDesktop.applyVergunningButton.toolTipText")); // NOI18N
-    applyVergunningButton.setEnabled(false);
-    applyVergunningButton.setFocusPainted(false);
-    applyVergunningButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            applyVergunningButtonActionPerformed(evt);
-        }
-    });
-
-    licenseDatePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.licenseDatePanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10))); // NOI18N
-    licenseDatePanel.setToolTipText(bundle.getString("DCMDesktop.licenseDatePanel.toolTipText")); // NOI18N
-    licenseDatePanel.setFont(licenseDatePanel.getFont());
-    licenseDatePanel.setMaximumSize(new java.awt.Dimension(200, 239));
-    licenseDatePanel.setMinimumSize(new java.awt.Dimension(200, 239));
-    licenseDatePanel.setSize(new java.awt.Dimension(200, 239));
-    licenseDatePanel.setLayout(new java.awt.GridBagLayout());
-
-    vergunningDateChooserPanel.setCurrentView(new datechooser.view.appearance.AppearancesList("Bordered",
-        new datechooser.view.appearance.ViewAppearance("custom",
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                new java.awt.Color(0, 0, 0),
-                new java.awt.Color(0, 0, 255),
-                false,
-                true,
-                new datechooser.view.appearance.swing.ButtonPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                new java.awt.Color(0, 0, 0),
-                new java.awt.Color(0, 0, 255),
-                true,
-                true,
-                new datechooser.view.appearance.swing.ButtonPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                new java.awt.Color(0, 0, 255),
-                new java.awt.Color(0, 0, 255),
-                false,
-                true,
-                new datechooser.view.appearance.swing.ButtonPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                new java.awt.Color(128, 128, 128),
-                new java.awt.Color(0, 0, 255),
-                false,
-                true,
-                new datechooser.view.appearance.swing.LabelPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                new java.awt.Color(0, 0, 0),
-                new java.awt.Color(0, 0, 255),
-                false,
-                true,
-                new datechooser.view.appearance.swing.LabelPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Lucida Grande", java.awt.Font.PLAIN, 13),
-                new java.awt.Color(0, 0, 0),
-                new java.awt.Color(255, 0, 0),
-                false,
-                false,
-                new datechooser.view.appearance.swing.ButtonPainter()),
-            (datechooser.view.BackRenderer)null,
-            false,
-            true)));
-vergunningDateChooserPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.LOWERED,
-    (java.awt.Color)null,
-    (java.awt.Color)null));
-    vergunningDateChooserPanel.setLocale(new java.util.Locale("en", "", ""));
-    vergunningDateChooserPanel.setNavigateFont(new java.awt.Font("Arial", java.awt.Font.PLAIN, 9));
-    vergunningDateChooserPanel.setBehavior(datechooser.model.multiple.MultyModelBehavior.SELECT_SINGLE);
-    vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.SelectionChangedListener() {
-        public void onSelectionChange(datechooser.events.SelectionChangedEvent evt) {
-            vergunningDateChooserPanelOnSelectionChange(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 0;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 0.1;
-    gridBagConstraints.weighty = 0.1;
-    licenseDatePanel.add(vergunningDateChooserPanel, gridBagConstraints);
-
-    licenseCodePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.licenseCodePanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10))); // NOI18N
-    licenseCodePanel.setToolTipText(bundle.getString("DCMDesktop.licenseCodePanel.toolTipText")); // NOI18N
-    licenseCodePanel.setFont(licenseCodePanel.getFont());
-    licenseCodePanel.setMaximumSize(new java.awt.Dimension(200, 239));
-    licenseCodePanel.setMinimumSize(new java.awt.Dimension(200, 239));
-    licenseCodePanel.setSize(new java.awt.Dimension(200, 239));
-
-    vergunningCodeField.setEditable(false);
-    vergunningCodeField.setFont(new java.awt.Font("Courier New", 1, 10)); // NOI18N
-    vergunningCodeField.setToolTipText(bundle.getString("DCMDesktop.vergunningCodeField.toolTipText")); // NOI18N
-    vergunningCodeField.setMaximumSize(new java.awt.Dimension(483, 20));
-    vergunningCodeField.setMinimumSize(new java.awt.Dimension(483, 20));
-    vergunningCodeField.setPreferredSize(new java.awt.Dimension(483, 20));
-    vergunningCodeField.setSize(new java.awt.Dimension(483, 20));
-    vergunningCodeField.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            vergunningCodeFieldMouseClicked(evt);
-        }
-    });
-    vergunningCodeField.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            vergunningCodeFieldActionPerformed(evt);
-        }
-    });
-    vergunningCodeField.addKeyListener(new java.awt.event.KeyAdapter() {
-        public void keyReleased(java.awt.event.KeyEvent evt) {
-            vergunningCodeFieldKeyReleased(evt);
-        }
-    });
-
-    org.jdesktop.layout.GroupLayout licenseCodePanelLayout = new org.jdesktop.layout.GroupLayout(licenseCodePanel);
-    licenseCodePanel.setLayout(licenseCodePanelLayout);
-    licenseCodePanelLayout.setHorizontalGroup(
-        licenseCodePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(vergunningCodeField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-    );
-    licenseCodePanelLayout.setVerticalGroup(
-        licenseCodePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(licenseCodePanelLayout.createSequentialGroup()
+            .add(searchStatsScroller, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .add(navigateXButtonBar, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 367, Short.MAX_VALUE)
+            .add(selectionScroller)
+        );
+        searchPanelLayout.setVerticalGroup(
+            searchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(searchPanelLayout.createSequentialGroup()
+                .add(searchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.CENTER)
+                    .add(deletePresetButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 27, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(selectPresetBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 21, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(savePresetButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 27, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(searchField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 21, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(wordSearchButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 27, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(matchSearchButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 27, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(0, 11, Short.MAX_VALUE)
+                .add(selectionScroller, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(searchStatsScroller, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 19, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(navigateXButtonBar, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+        );
+
+        searchPanelLayout.linkSize(new java.awt.Component[] {deletePresetButton, matchSearchButton, savePresetButton, wordSearchButton}, org.jdesktop.layout.GroupLayout.VERTICAL);
+
+        startTimeRelativePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), bundle.getString("DCMDesktop.startTimeRelativePanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10), new java.awt.Color(102, 102, 102))); // NOI18N
+        startTimeRelativePanel.setFont(startTimeRelativePanel.getFont());
+        startTimeRelativePanel.setOpaque(false);
+        startTimeRelativePanel.setPreferredSize(new java.awt.Dimension(150, 170));
+        java.awt.GridBagLayout startTimeRelativePanelLayout = new java.awt.GridBagLayout();
+        startTimeRelativePanelLayout.columnWidths = new int[] {0, 5, 0};
+        startTimeRelativePanelLayout.rowHeights = new int[] {0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0};
+        startTimeRelativePanel.setLayout(startTimeRelativePanelLayout);
+
+        startTimeIsRelativeButton.setFont(startTimeIsRelativeButton.getFont().deriveFont((float)9));
+        startTimeIsRelativeButton.setText(bundle.getString("DCMDesktop.startTimeIsRelativeButton.text")); // NOI18N
+        startTimeIsRelativeButton.setToolTipText(bundle.getString("DCMDesktop.startTimeIsRelativeButton.toolTipText")); // NOI18N
+        startTimeIsRelativeButton.setFocusable(false);
+        startTimeIsRelativeButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                startTimeIsRelativeButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 2.0;
+        gridBagConstraints.weighty = 1.0;
+        startTimeRelativePanel.add(startTimeIsRelativeButton, gridBagConstraints);
+
+        startMonthLabel.setFont(startMonthLabel.getFont().deriveFont(startMonthLabel.getFont().getSize()-6f));
+        startMonthLabel.setForeground(new java.awt.Color(102, 102, 102));
+        startMonthLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        startMonthLabel.setText(bundle.getString("DCMDesktop.startMonthLabel.text")); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        startTimeRelativePanel.add(startMonthLabel, gridBagConstraints);
+
+        startMonthPlusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
+        startMonthPlusButton.setToolTipText(bundle.getString("DCMDesktop.startMonthPlusButton.toolTipText")); // NOI18N
+        startMonthPlusButton.setEnabled(false);
+        startMonthPlusButton.setFocusable(false);
+        startMonthPlusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        startMonthPlusButton.setMaximumSize(new java.awt.Dimension(22, 15));
+        startMonthPlusButton.setMinimumSize(new java.awt.Dimension(22, 15));
+        startMonthPlusButton.setPreferredSize(new java.awt.Dimension(22, 15));
+        startMonthPlusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        startMonthPlusButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                startMonthPlusButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        startTimeRelativePanel.add(startMonthPlusButton, gridBagConstraints);
+
+        startDayPlusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
+        startDayPlusButton.setToolTipText(bundle.getString("DCMDesktop.startDayPlusButton.toolTipText")); // NOI18N
+        startDayPlusButton.setEnabled(false);
+        startDayPlusButton.setFocusable(false);
+        startDayPlusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        startDayPlusButton.setMaximumSize(new java.awt.Dimension(22, 15));
+        startDayPlusButton.setMinimumSize(new java.awt.Dimension(22, 15));
+        startDayPlusButton.setPreferredSize(new java.awt.Dimension(22, 15));
+        startDayPlusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        startDayPlusButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                startDayPlusButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        startTimeRelativePanel.add(startDayPlusButton, gridBagConstraints);
+
+        startMonthField.setFont(startMonthField.getFont().deriveFont(startMonthField.getFont().getSize()-5f));
+        startMonthField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        startMonthField.setText(bundle.getString("DCMDesktop.startMonthField.text")); // NOI18N
+        startMonthField.setToolTipText(bundle.getString("DCMDesktop.startMonthField.toolTipText")); // NOI18N
+        startMonthField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        startMonthField.setEnabled(false);
+        startMonthField.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                startMonthFieldKeyReleased(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        startTimeRelativePanel.add(startMonthField, gridBagConstraints);
+
+        startDayField.setFont(startDayField.getFont().deriveFont(startDayField.getFont().getSize()-5f));
+        startDayField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        startDayField.setText(bundle.getString("DCMDesktop.startDayField.text")); // NOI18N
+        startDayField.setToolTipText(bundle.getString("DCMDesktop.startDayField.toolTipText")); // NOI18N
+        startDayField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        startDayField.setEnabled(false);
+        startDayField.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                startDayFieldKeyReleased(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        startTimeRelativePanel.add(startDayField, gridBagConstraints);
+
+        startMonthMinusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
+        startMonthMinusButton.setToolTipText(bundle.getString("DCMDesktop.startMonthMinusButton.toolTipText")); // NOI18N
+        startMonthMinusButton.setEnabled(false);
+        startMonthMinusButton.setFocusable(false);
+        startMonthMinusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        startMonthMinusButton.setMaximumSize(new java.awt.Dimension(22, 15));
+        startMonthMinusButton.setMinimumSize(new java.awt.Dimension(22, 15));
+        startMonthMinusButton.setPreferredSize(new java.awt.Dimension(22, 15));
+        startMonthMinusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        startMonthMinusButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                startMonthMinusButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        startTimeRelativePanel.add(startMonthMinusButton, gridBagConstraints);
+
+        startDayMinusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
+        startDayMinusButton.setToolTipText(bundle.getString("DCMDesktop.startDayMinusButton.toolTipText")); // NOI18N
+        startDayMinusButton.setEnabled(false);
+        startDayMinusButton.setFocusable(false);
+        startDayMinusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        startDayMinusButton.setMaximumSize(new java.awt.Dimension(22, 15));
+        startDayMinusButton.setMinimumSize(new java.awt.Dimension(22, 15));
+        startDayMinusButton.setPreferredSize(new java.awt.Dimension(22, 15));
+        startDayMinusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        startDayMinusButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                startDayMinusButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        startTimeRelativePanel.add(startDayMinusButton, gridBagConstraints);
+
+        startHourLabel.setFont(startHourLabel.getFont().deriveFont(startHourLabel.getFont().getSize()-6f));
+        startHourLabel.setForeground(new java.awt.Color(102, 102, 102));
+        startHourLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        startHourLabel.setText(bundle.getString("DCMDesktop.startHourLabel.text")); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        startTimeRelativePanel.add(startHourLabel, gridBagConstraints);
+
+        startHourPlusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
+        startHourPlusButton.setToolTipText(bundle.getString("DCMDesktop.startHourPlusButton.toolTipText")); // NOI18N
+        startHourPlusButton.setEnabled(false);
+        startHourPlusButton.setFocusable(false);
+        startHourPlusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        startHourPlusButton.setMaximumSize(new java.awt.Dimension(22, 15));
+        startHourPlusButton.setMinimumSize(new java.awt.Dimension(22, 15));
+        startHourPlusButton.setPreferredSize(new java.awt.Dimension(22, 15));
+        startHourPlusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        startHourPlusButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                startHourPlusButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        startTimeRelativePanel.add(startHourPlusButton, gridBagConstraints);
+
+        startMinutePlusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
+        startMinutePlusButton.setToolTipText(bundle.getString("DCMDesktop.startMinutePlusButton.toolTipText")); // NOI18N
+        startMinutePlusButton.setEnabled(false);
+        startMinutePlusButton.setFocusable(false);
+        startMinutePlusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        startMinutePlusButton.setMaximumSize(new java.awt.Dimension(22, 15));
+        startMinutePlusButton.setMinimumSize(new java.awt.Dimension(22, 15));
+        startMinutePlusButton.setPreferredSize(new java.awt.Dimension(22, 15));
+        startMinutePlusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        startMinutePlusButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                startMinutePlusButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        startTimeRelativePanel.add(startMinutePlusButton, gridBagConstraints);
+
+        startHourField.setFont(startHourField.getFont().deriveFont(startHourField.getFont().getSize()-5f));
+        startHourField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        startHourField.setText(bundle.getString("DCMDesktop.startHourField.text")); // NOI18N
+        startHourField.setToolTipText(bundle.getString("DCMDesktop.startHourField.toolTipText")); // NOI18N
+        startHourField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        startHourField.setEnabled(false);
+        startHourField.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                startHourFieldKeyReleased(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        startTimeRelativePanel.add(startHourField, gridBagConstraints);
+
+        startMinuteField.setFont(startMinuteField.getFont().deriveFont(startMinuteField.getFont().getSize()-5f));
+        startMinuteField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        startMinuteField.setText(bundle.getString("DCMDesktop.startMinuteField.text")); // NOI18N
+        startMinuteField.setToolTipText(bundle.getString("DCMDesktop.startMinuteField.toolTipText")); // NOI18N
+        startMinuteField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        startMinuteField.setEnabled(false);
+        startMinuteField.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                startMinuteFieldKeyReleased(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        startTimeRelativePanel.add(startMinuteField, gridBagConstraints);
+
+        startHourMinusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
+        startHourMinusButton.setToolTipText(bundle.getString("DCMDesktop.startHourMinusButton.toolTipText")); // NOI18N
+        startHourMinusButton.setEnabled(false);
+        startHourMinusButton.setFocusable(false);
+        startHourMinusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        startHourMinusButton.setMaximumSize(new java.awt.Dimension(22, 15));
+        startHourMinusButton.setMinimumSize(new java.awt.Dimension(22, 15));
+        startHourMinusButton.setPreferredSize(new java.awt.Dimension(22, 15));
+        startHourMinusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        startHourMinusButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                startHourMinusButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 16;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        startTimeRelativePanel.add(startHourMinusButton, gridBagConstraints);
+
+        startMinuteMinusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
+        startMinuteMinusButton.setToolTipText(bundle.getString("DCMDesktop.startMinuteMinusButton.toolTipText")); // NOI18N
+        startMinuteMinusButton.setEnabled(false);
+        startMinuteMinusButton.setFocusable(false);
+        startMinuteMinusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        startMinuteMinusButton.setMaximumSize(new java.awt.Dimension(22, 15));
+        startMinuteMinusButton.setMinimumSize(new java.awt.Dimension(22, 15));
+        startMinuteMinusButton.setPreferredSize(new java.awt.Dimension(22, 15));
+        startMinuteMinusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        startMinuteMinusButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                startMinuteMinusButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 16;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        startTimeRelativePanel.add(startMinuteMinusButton, gridBagConstraints);
+
+        startDayLabel.setFont(startDayLabel.getFont().deriveFont(startDayLabel.getFont().getSize()-6f));
+        startDayLabel.setForeground(new java.awt.Color(102, 102, 102));
+        startDayLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        startDayLabel.setText(bundle.getString("DCMDesktop.startDayLabel.text")); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        startTimeRelativePanel.add(startDayLabel, gridBagConstraints);
+
+        startMinuteLabel.setFont(startMinuteLabel.getFont().deriveFont(startMinuteLabel.getFont().getSize()-6f));
+        startMinuteLabel.setForeground(new java.awt.Color(102, 102, 102));
+        startMinuteLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        startMinuteLabel.setText(bundle.getString("DCMDesktop.startMinuteLabel.text")); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        startTimeRelativePanel.add(startMinuteLabel, gridBagConstraints);
+
+        endTimeRelativePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), bundle.getString("DCMDesktop.endTimeRelativePanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10), new java.awt.Color(102, 102, 102))); // NOI18N
+        endTimeRelativePanel.setFont(endTimeRelativePanel.getFont());
+        endTimeRelativePanel.setOpaque(false);
+        endTimeRelativePanel.setPreferredSize(new java.awt.Dimension(150, 170));
+        java.awt.GridBagLayout endTimeRelativePanelLayout = new java.awt.GridBagLayout();
+        endTimeRelativePanelLayout.columnWidths = new int[] {0, 5, 0};
+        endTimeRelativePanelLayout.rowHeights = new int[] {0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0};
+        endTimeRelativePanel.setLayout(endTimeRelativePanelLayout);
+
+        endTimeIsRelativeButton.setFont(endTimeIsRelativeButton.getFont().deriveFont((float)9));
+        endTimeIsRelativeButton.setText(bundle.getString("DCMDesktop.endTimeIsRelativeButton.text")); // NOI18N
+        endTimeIsRelativeButton.setToolTipText(bundle.getString("DCMDesktop.endTimeIsRelativeButton.toolTipText")); // NOI18N
+        endTimeIsRelativeButton.setFocusable(false);
+        endTimeIsRelativeButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                endTimeIsRelativeButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 2.0;
+        gridBagConstraints.weighty = 1.0;
+        endTimeRelativePanel.add(endTimeIsRelativeButton, gridBagConstraints);
+
+        endMonthLabel.setFont(endMonthLabel.getFont().deriveFont(endMonthLabel.getFont().getSize()-6f));
+        endMonthLabel.setForeground(new java.awt.Color(102, 102, 102));
+        endMonthLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        endMonthLabel.setText(bundle.getString("DCMDesktop.endMonthLabel.text")); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        endTimeRelativePanel.add(endMonthLabel, gridBagConstraints);
+
+        endMonthPlusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
+        endMonthPlusButton.setToolTipText(bundle.getString("DCMDesktop.endMonthPlusButton.toolTipText")); // NOI18N
+        endMonthPlusButton.setEnabled(false);
+        endMonthPlusButton.setFocusable(false);
+        endMonthPlusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        endMonthPlusButton.setMaximumSize(new java.awt.Dimension(22, 15));
+        endMonthPlusButton.setMinimumSize(new java.awt.Dimension(22, 15));
+        endMonthPlusButton.setPreferredSize(new java.awt.Dimension(22, 15));
+        endMonthPlusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        endMonthPlusButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                endMonthPlusButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        endTimeRelativePanel.add(endMonthPlusButton, gridBagConstraints);
+
+        endDayPlusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
+        endDayPlusButton.setToolTipText(bundle.getString("DCMDesktop.endDayPlusButton.toolTipText")); // NOI18N
+        endDayPlusButton.setEnabled(false);
+        endDayPlusButton.setFocusable(false);
+        endDayPlusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        endDayPlusButton.setMaximumSize(new java.awt.Dimension(22, 15));
+        endDayPlusButton.setMinimumSize(new java.awt.Dimension(22, 15));
+        endDayPlusButton.setPreferredSize(new java.awt.Dimension(22, 15));
+        endDayPlusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        endDayPlusButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                endDayPlusButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        endTimeRelativePanel.add(endDayPlusButton, gridBagConstraints);
+
+        endMonthField.setFont(endMonthField.getFont().deriveFont(endMonthField.getFont().getSize()-5f));
+        endMonthField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        endMonthField.setText(bundle.getString("DCMDesktop.endMonthField.text")); // NOI18N
+        endMonthField.setToolTipText(bundle.getString("DCMDesktop.endMonthField.toolTipText")); // NOI18N
+        endMonthField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        endMonthField.setEnabled(false);
+        endMonthField.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                endMonthFieldKeyReleased(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        endTimeRelativePanel.add(endMonthField, gridBagConstraints);
+
+        endDayField.setFont(endDayField.getFont().deriveFont(endDayField.getFont().getSize()-5f));
+        endDayField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        endDayField.setText(bundle.getString("DCMDesktop.endDayField.text")); // NOI18N
+        endDayField.setToolTipText(bundle.getString("DCMDesktop.endDayField.toolTipText")); // NOI18N
+        endDayField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        endDayField.setEnabled(false);
+        endDayField.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                endDayFieldKeyReleased(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        endTimeRelativePanel.add(endDayField, gridBagConstraints);
+
+        endMonthMinusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
+        endMonthMinusButton.setToolTipText(bundle.getString("DCMDesktop.endMonthMinusButton.toolTipText")); // NOI18N
+        endMonthMinusButton.setEnabled(false);
+        endMonthMinusButton.setFocusable(false);
+        endMonthMinusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        endMonthMinusButton.setMaximumSize(new java.awt.Dimension(22, 15));
+        endMonthMinusButton.setMinimumSize(new java.awt.Dimension(22, 15));
+        endMonthMinusButton.setPreferredSize(new java.awt.Dimension(22, 15));
+        endMonthMinusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        endMonthMinusButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                endMonthMinusButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        endTimeRelativePanel.add(endMonthMinusButton, gridBagConstraints);
+
+        endDayMinusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
+        endDayMinusButton.setToolTipText(bundle.getString("DCMDesktop.endDayMinusButton.toolTipText")); // NOI18N
+        endDayMinusButton.setEnabled(false);
+        endDayMinusButton.setFocusable(false);
+        endDayMinusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        endDayMinusButton.setMaximumSize(new java.awt.Dimension(22, 15));
+        endDayMinusButton.setMinimumSize(new java.awt.Dimension(22, 15));
+        endDayMinusButton.setPreferredSize(new java.awt.Dimension(22, 15));
+        endDayMinusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        endDayMinusButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                endDayMinusButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        endTimeRelativePanel.add(endDayMinusButton, gridBagConstraints);
+
+        endHourLabel.setFont(endHourLabel.getFont().deriveFont(endHourLabel.getFont().getSize()-6f));
+        endHourLabel.setForeground(new java.awt.Color(102, 102, 102));
+        endHourLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        endHourLabel.setText(bundle.getString("DCMDesktop.endHourLabel.text")); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        endTimeRelativePanel.add(endHourLabel, gridBagConstraints);
+
+        endHourPlusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
+        endHourPlusButton.setToolTipText(bundle.getString("DCMDesktop.endHourPlusButton.toolTipText")); // NOI18N
+        endHourPlusButton.setEnabled(false);
+        endHourPlusButton.setFocusable(false);
+        endHourPlusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        endHourPlusButton.setMaximumSize(new java.awt.Dimension(22, 15));
+        endHourPlusButton.setMinimumSize(new java.awt.Dimension(22, 15));
+        endHourPlusButton.setPreferredSize(new java.awt.Dimension(22, 15));
+        endHourPlusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        endHourPlusButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                endHourPlusButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        endTimeRelativePanel.add(endHourPlusButton, gridBagConstraints);
+
+        endMinutePlusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
+        endMinutePlusButton.setToolTipText(bundle.getString("DCMDesktop.endMinutePlusButton.toolTipText")); // NOI18N
+        endMinutePlusButton.setEnabled(false);
+        endMinutePlusButton.setFocusable(false);
+        endMinutePlusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        endMinutePlusButton.setMaximumSize(new java.awt.Dimension(22, 15));
+        endMinutePlusButton.setMinimumSize(new java.awt.Dimension(22, 15));
+        endMinutePlusButton.setPreferredSize(new java.awt.Dimension(22, 15));
+        endMinutePlusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        endMinutePlusButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                endMinutePlusButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        endTimeRelativePanel.add(endMinutePlusButton, gridBagConstraints);
+
+        endHourField.setFont(endHourField.getFont().deriveFont(endHourField.getFont().getSize()-5f));
+        endHourField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        endHourField.setText(bundle.getString("DCMDesktop.endHourField.text")); // NOI18N
+        endHourField.setToolTipText(bundle.getString("DCMDesktop.endHourField.toolTipText")); // NOI18N
+        endHourField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        endHourField.setEnabled(false);
+        endHourField.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                endHourFieldKeyReleased(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        endTimeRelativePanel.add(endHourField, gridBagConstraints);
+
+        endMinuteField.setFont(endMinuteField.getFont().deriveFont(endMinuteField.getFont().getSize()-5f));
+        endMinuteField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        endMinuteField.setText(bundle.getString("DCMDesktop.endMinuteField.text")); // NOI18N
+        endMinuteField.setToolTipText(bundle.getString("DCMDesktop.endMinuteField.toolTipText")); // NOI18N
+        endMinuteField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        endMinuteField.setEnabled(false);
+        endMinuteField.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                endMinuteFieldKeyReleased(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        endTimeRelativePanel.add(endMinuteField, gridBagConstraints);
+
+        endHourMinusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
+        endHourMinusButton.setToolTipText(bundle.getString("DCMDesktop.endHourMinusButton.toolTipText")); // NOI18N
+        endHourMinusButton.setEnabled(false);
+        endHourMinusButton.setFocusable(false);
+        endHourMinusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        endHourMinusButton.setMaximumSize(new java.awt.Dimension(22, 15));
+        endHourMinusButton.setMinimumSize(new java.awt.Dimension(22, 15));
+        endHourMinusButton.setPreferredSize(new java.awt.Dimension(22, 15));
+        endHourMinusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        endHourMinusButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                endHourMinusButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 16;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        endTimeRelativePanel.add(endHourMinusButton, gridBagConstraints);
+
+        endMinuteMinusButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
+        endMinuteMinusButton.setToolTipText(bundle.getString("DCMDesktop.endMinuteMinusButton.toolTipText")); // NOI18N
+        endMinuteMinusButton.setEnabled(false);
+        endMinuteMinusButton.setFocusable(false);
+        endMinuteMinusButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        endMinuteMinusButton.setMaximumSize(new java.awt.Dimension(22, 15));
+        endMinuteMinusButton.setMinimumSize(new java.awt.Dimension(22, 15));
+        endMinuteMinusButton.setPreferredSize(new java.awt.Dimension(22, 15));
+        endMinuteMinusButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        endMinuteMinusButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                endMinuteMinusButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 16;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        endTimeRelativePanel.add(endMinuteMinusButton, gridBagConstraints);
+
+        endMinuteLabel.setFont(endMinuteLabel.getFont().deriveFont(endMinuteLabel.getFont().getSize()-6f));
+        endMinuteLabel.setForeground(new java.awt.Color(102, 102, 102));
+        endMinuteLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        endMinuteLabel.setText(bundle.getString("DCMDesktop.endMinuteLabel.text")); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        endTimeRelativePanel.add(endMinuteLabel, gridBagConstraints);
+
+        endDayLabel.setFont(endDayLabel.getFont().deriveFont(endDayLabel.getFont().getSize()-6f));
+        endDayLabel.setForeground(new java.awt.Color(102, 102, 102));
+        endDayLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        endDayLabel.setText(bundle.getString("DCMDesktop.endDayLabel.text")); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 2.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+        endTimeRelativePanel.add(endDayLabel, gridBagConstraints);
+
+        org.jdesktop.layout.GroupLayout navigatorPanelLayout = new org.jdesktop.layout.GroupLayout(navigatorPanel);
+        navigatorPanel.setLayout(navigatorPanelLayout);
+        navigatorPanelLayout.setHorizontalGroup(
+            navigatorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(navigatorPanelLayout.createSequentialGroup()
+                .add(startDateSelectorPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(startTimeSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(startTimeRelativePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(searchPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(endTimeRelativePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(endTimeSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(endDateSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+        );
+
+        navigatorPanelLayout.linkSize(new java.awt.Component[] {endTimeSelectorPanel, startTimeSelectorPanel}, org.jdesktop.layout.GroupLayout.HORIZONTAL);
+
+        navigatorPanelLayout.linkSize(new java.awt.Component[] {endDateSelectorPanel, startDateSelectorPanel}, org.jdesktop.layout.GroupLayout.HORIZONTAL);
+
+        navigatorPanelLayout.setVerticalGroup(
+            navigatorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(navigatorPanelLayout.createSequentialGroup()
+                .add(navigatorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, startDateSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 220, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, endDateSelectorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 220, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, endTimeSelectorPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, startTimeSelectorPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, startTimeRelativePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, endTimeRelativePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, searchPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        navigatorPanelLayout.linkSize(new java.awt.Component[] {endDateSelectorPanel, endTimeRelativePanel, endTimeSelectorPanel, searchPanel, startDateSelectorPanel, startTimeRelativePanel, startTimeSelectorPanel}, org.jdesktop.layout.GroupLayout.VERTICAL);
+
+        viewSplitter.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.viewSplitter.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 14), new java.awt.Color(102, 102, 102))); // NOI18N
+        viewSplitter.setDividerLocation(0);
+        viewSplitter.setDividerSize(1);
+        viewSplitter.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
+        viewSplitter.setDoubleBuffered(true);
+        viewSplitter.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        viewSplitter.setMinimumSize(new java.awt.Dimension(500, 0));
+        viewSplitter.setPreferredSize(new java.awt.Dimension(600, 600));
+
+        treeInventorySplitter.setBorder(null);
+        treeInventorySplitter.setDividerLocation(212);
+        treeInventorySplitter.setDividerSize(4);
+        treeInventorySplitter.setMinimumSize(new java.awt.Dimension(133, 0));
+
+        treeSplitter.setDividerLocation(32);
+        treeSplitter.setDividerSize(1);
+        treeSplitter.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
+
+        treeButtonBar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        treeButtonBar.setFloatable(false);
+        treeButtonBar.setRollover(true);
+        treeButtonBar.setFont(treeButtonBar.getFont());
+
+        addServerButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
+        addServerButton.setToolTipText(bundle.getString("DCMDesktop.addServerButton.toolTipText")); // NOI18N
+        addServerButton.setEnabled(false);
+        addServerButton.setMaximumSize(new java.awt.Dimension(23, 18));
+        addServerButton.setMinimumSize(new java.awt.Dimension(23, 18));
+        addServerButton.setPreferredSize(new java.awt.Dimension(23, 18));
+        addServerButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                addServerButtonActionPerformed(evt);
+            }
+        });
+        treeButtonBar.add(addServerButton);
+
+        deleteServerButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minus.png"))); // NOI18N
+        deleteServerButton.setToolTipText(bundle.getString("DCMDesktop.deleteServerButton.toolTipText")); // NOI18N
+        deleteServerButton.setEnabled(false);
+        deleteServerButton.setFocusable(false);
+        deleteServerButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        deleteServerButton.setMaximumSize(new java.awt.Dimension(23, 18));
+        deleteServerButton.setMinimumSize(new java.awt.Dimension(23, 18));
+        deleteServerButton.setPreferredSize(new java.awt.Dimension(23, 18));
+        deleteServerButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        deleteServerButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                deleteServerButtonActionPerformed(evt);
+            }
+        });
+        treeButtonBar.add(deleteServerButton);
+
+        startPollerButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/poller_icon.png"))); // NOI18N
+        startPollerButton.setToolTipText(bundle.getString("DCMDesktop.startPollerButton.toolTipText")); // NOI18N
+        startPollerButton.setEnabled(false);
+        startPollerButton.setFocusable(false);
+        startPollerButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        startPollerButton.setMaximumSize(new java.awt.Dimension(23, 18));
+        startPollerButton.setMinimumSize(new java.awt.Dimension(23, 18));
+        startPollerButton.setPreferredSize(new java.awt.Dimension(23, 18));
+        startPollerButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        startPollerButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                startPollerButtonActionPerformed(evt);
+            }
+        });
+        treeButtonBar.add(startPollerButton);
+
+        startCommanderButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/terminal_icon.png"))); // NOI18N
+        startCommanderButton.setToolTipText(bundle.getString("DCMDesktop.startCommanderButton.toolTipText")); // NOI18N
+        startCommanderButton.setEnabled(false);
+        startCommanderButton.setFocusable(false);
+        startCommanderButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        startCommanderButton.setMaximumSize(new java.awt.Dimension(23, 18));
+        startCommanderButton.setMinimumSize(new java.awt.Dimension(23, 18));
+        startCommanderButton.setPreferredSize(new java.awt.Dimension(23, 18));
+        startCommanderButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        startCommanderButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                startCommanderButtonActionPerformed(evt);
+            }
+        });
+        treeButtonBar.add(startCommanderButton);
+
+        treeSplitter.setLeftComponent(treeButtonBar);
+
+        serverTreeScoller.setFont(serverTreeScoller.getFont());
+
+        serverTree.setFont(serverTree.getFont());
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Servers");
+        serverTree.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        serverTree.setEnabled(false);
+        serverTreeScoller.setViewportView(serverTree);
+
+        treeSplitter.setBottomComponent(serverTreeScoller);
+
+        treeInventorySplitter.setLeftComponent(treeSplitter);
+
+        tableSplitter.setDividerLocation(40);
+        tableSplitter.setDividerSize(1);
+        tableSplitter.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
+
+        hostScroller.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        hostScroller.setFont(hostScroller.getFont());
+
+        hostTable.setAutoCreateRowSorter(true);
+        hostTable.setBackground(new java.awt.Color(204, 204, 204));
+        hostTable.setFont(hostTable.getFont().deriveFont((float)11));
+        hostTable.setForeground(new java.awt.Color(51, 51, 51));
+        hostTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][]
+            {
+                {null, null, null, null, null, null, null, null, null, null}
+            },
+            new String []
+            {
+                "Id", "Host", "Port", "Username", "Password", "SUPassword", "Enabled", "Command", "Comments", "Sysinfo"
+            }
+        )
+        {
+            Class[] types = new Class []
+            {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Boolean.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean []
+            {
+                false, true, true, true, true, true, true, true, true, true
+            };
+
+            public Class getColumnClass(int columnIndex)
+            {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex)
+            {
+                return canEdit [columnIndex];
+            }
+        });
+        hostTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        hostTable.setColumnSelectionAllowed(true);
+        hostTable.setDoubleBuffered(true);
+        hostTable.setDragEnabled(true);
+        hostScroller.setViewportView(hostTable);
+
+        tableSplitter.setTopComponent(hostScroller);
+
+        resourcesScroller.setFont(resourcesScroller.getFont());
+
+        resourcesTable.setAutoCreateRowSorter(true);
+        resourcesTable.setBackground(new java.awt.Color(204, 204, 204));
+        resourcesTable.setFont(resourcesTable.getFont().deriveFont((float)11));
+        resourcesTable.setForeground(new java.awt.Color(51, 51, 51));
+        resourcesTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][]
+            {
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null}
+            },
+            new String []
+            {
+                "Id", "HostId", "Category", "ResourceType", "ValueType", "CounterType", "Resource", "PollCommand", "LastValue", "WarningLimit", "CriticalLimit", "AlertPolls", "Updated", "RRDFile", "Enabled"
+            }
+        )
+        {
+            Class[] types = new Class []
+            {
+                java.lang.Long.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Long.class, java.lang.String.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean []
+            {
+                false, true, true, true, true, true, true, true, true, true, true, true, true, true, true
+            };
+
+            public Class getColumnClass(int columnIndex)
+            {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex)
+            {
+                return canEdit [columnIndex];
+            }
+        });
+        resourcesTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        resourcesTable.setColumnSelectionAllowed(true);
+        resourcesTable.setDoubleBuffered(true);
+        resourcesTable.setDragEnabled(true);
+        resourcesScroller.setViewportView(resourcesTable);
+
+        tableSplitter.setRightComponent(resourcesScroller);
+
+        treeInventorySplitter.setRightComponent(tableSplitter);
+
+        viewSplitter.setLeftComponent(treeInventorySplitter);
+
+        graphLabel.setBackground(new java.awt.Color(255, 255, 255));
+        graphLabel.setFont(graphLabel.getFont());
+        graphLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        graphLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/dcmheader.jpg"))); // NOI18N
+        graphLabel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        graphLabel.setMaximumSize(new java.awt.Dimension(10000, 5000));
+        graphLabel.setMinimumSize(new java.awt.Dimension(0, 0));
+        graphLabel.setOpaque(true);
+        graphLabel.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                graphLabelMouseClicked(evt);
+            }
+        });
+        viewSplitter.setBottomComponent(graphLabel);
+
+        org.jdesktop.layout.GroupLayout managerPanelLayout = new org.jdesktop.layout.GroupLayout(managerPanel);
+        managerPanel.setLayout(managerPanelLayout);
+        managerPanelLayout.setHorizontalGroup(
+            managerPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(navigatorPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .add(viewSplitter, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        managerPanelLayout.setVerticalGroup(
+            managerPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(managerPanelLayout.createSequentialGroup()
+                .add(navigatorPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(viewSplitter, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 511, Short.MAX_VALUE))
+        );
+
+        managerTab.addTab(bundle.getString("DCMDesktop.managerPanel.TabConstraints.tabTitle"), managerPanel); // NOI18N
+
+        adminPanel.setFont(adminPanel.getFont());
+        adminPanel.setName("adminPanel"); // NOI18N
+        adminPanel.setPreferredSize(new java.awt.Dimension(1164, 700));
+        adminPanel.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                adminPanelMouseClicked(evt);
+            }
+        });
+
+        licenseInnerPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.licenseInnerPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 14), new java.awt.Color(51, 51, 51))); // NOI18N
+        licenseInnerPanel.setFont(licenseInnerPanel.getFont());
+        licenseInnerPanel.setPreferredSize(new java.awt.Dimension(830, 370));
+
+        applyVergunningButton.setFont(applyVergunningButton.getFont().deriveFont(applyVergunningButton.getFont().getSize()+1f));
+        applyVergunningButton.setText(bundle.getString("DCMDesktop.applyVergunningButton.text")); // NOI18N
+        applyVergunningButton.setToolTipText(bundle.getString("DCMDesktop.applyVergunningButton.toolTipText")); // NOI18N
+        applyVergunningButton.setEnabled(false);
+        applyVergunningButton.setFocusPainted(false);
+        applyVergunningButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                applyVergunningButtonActionPerformed(evt);
+            }
+        });
+
+        licenseDatePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.licenseDatePanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10))); // NOI18N
+        licenseDatePanel.setToolTipText(bundle.getString("DCMDesktop.licenseDatePanel.toolTipText")); // NOI18N
+        licenseDatePanel.setFont(licenseDatePanel.getFont());
+        licenseDatePanel.setMaximumSize(new java.awt.Dimension(200, 239));
+        licenseDatePanel.setMinimumSize(new java.awt.Dimension(200, 239));
+        licenseDatePanel.setLayout(new java.awt.GridBagLayout());
+
+        vergunningDateChooserPanel.setLocale(new java.util.Locale("en", "", ""));
+        vergunningDateChooserPanel.setNavigateFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 9));
+        vergunningDateChooserPanel.setBehavior(datechooser.model.multiple.MultyModelBehavior.SELECT_SINGLE);
+        vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.SelectionChangedListener()
+        {
+            public void onSelectionChange(datechooser.events.SelectionChangedEvent evt)
+            {
+                vergunningDateChooserPanelOnSelectionChange(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
+        licenseDatePanel.add(vergunningDateChooserPanel, gridBagConstraints);
+
+        licenseCodePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.licenseCodePanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10))); // NOI18N
+        licenseCodePanel.setToolTipText(bundle.getString("DCMDesktop.licenseCodePanel.toolTipText")); // NOI18N
+        licenseCodePanel.setFont(licenseCodePanel.getFont());
+        licenseCodePanel.setMaximumSize(new java.awt.Dimension(200, 239));
+        licenseCodePanel.setMinimumSize(new java.awt.Dimension(200, 239));
+
+        vergunningCodeField.setEditable(false);
+        vergunningCodeField.setFont(new java.awt.Font("Courier New", 1, 10)); // NOI18N
+        vergunningCodeField.setToolTipText(bundle.getString("DCMDesktop.vergunningCodeField.toolTipText")); // NOI18N
+        vergunningCodeField.setMaximumSize(new java.awt.Dimension(483, 20));
+        vergunningCodeField.setMinimumSize(new java.awt.Dimension(483, 20));
+        vergunningCodeField.setPreferredSize(new java.awt.Dimension(483, 20));
+        vergunningCodeField.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                vergunningCodeFieldMouseClicked(evt);
+            }
+        });
+        vergunningCodeField.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                vergunningCodeFieldActionPerformed(evt);
+            }
+        });
+        vergunningCodeField.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                vergunningCodeFieldKeyReleased(evt);
+            }
+        });
+
+        org.jdesktop.layout.GroupLayout licenseCodePanelLayout = new org.jdesktop.layout.GroupLayout(licenseCodePanel);
+        licenseCodePanel.setLayout(licenseCodePanelLayout);
+        licenseCodePanelLayout.setHorizontalGroup(
+            licenseCodePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(vergunningCodeField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addContainerGap())
-    );
+        );
+        licenseCodePanelLayout.setVerticalGroup(
+            licenseCodePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(licenseCodePanelLayout.createSequentialGroup()
+                .add(vergunningCodeField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
 
-    licenseTypePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.licenseTypePanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10))); // NOI18N
-    licenseTypePanel.setToolTipText(bundle.getString("DCMDesktop.licenseTypePanel.toolTipText")); // NOI18N
-    licenseTypePanel.setFont(licenseTypePanel.getFont());
-    licenseTypePanel.setMaximumSize(new java.awt.Dimension(200, 239));
-    licenseTypePanel.setPreferredSize(new java.awt.Dimension(200, 239));
-    licenseTypePanel.setSize(new java.awt.Dimension(200, 239));
-    licenseTypePanel.setLayout(new java.awt.GridBagLayout());
+        licenseTypePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.licenseTypePanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10))); // NOI18N
+        licenseTypePanel.setToolTipText(bundle.getString("DCMDesktop.licenseTypePanel.toolTipText")); // NOI18N
+        licenseTypePanel.setFont(licenseTypePanel.getFont());
+        licenseTypePanel.setMaximumSize(new java.awt.Dimension(200, 239));
+        licenseTypePanel.setPreferredSize(new java.awt.Dimension(200, 239));
+        licenseTypePanel.setLayout(new java.awt.GridBagLayout());
 
-    serversInLicenseField.setFont(serversInLicenseField.getFont().deriveFont(serversInLicenseField.getFont().getSize()+20f));
-    serversInLicenseField.setForeground(new java.awt.Color(102, 102, 102));
-    serversInLicenseField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-    serversInLicenseField.setText(bundle.getString("DCMDesktop.serversInLicenseField.text")); // NOI18N
-    serversInLicenseField.setDragEnabled(false);
-    serversInLicenseField.addKeyListener(new java.awt.event.KeyAdapter() {
-        public void keyReleased(java.awt.event.KeyEvent evt) {
-            serversInLicenseFieldKeyReleased(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 0;
-    gridBagConstraints.gridwidth = 2;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 0.2;
-    gridBagConstraints.weighty = 0.1;
-    licenseTypePanel.add(serversInLicenseField, gridBagConstraints);
+        serversInLicenseField.setFont(serversInLicenseField.getFont().deriveFont(serversInLicenseField.getFont().getSize()+35f));
+        serversInLicenseField.setForeground(new java.awt.Color(102, 102, 102));
+        serversInLicenseField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        serversInLicenseField.setText(bundle.getString("DCMDesktop.serversInLicenseField.text")); // NOI18N
+        serversInLicenseField.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                serversInLicenseFieldKeyReleased(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.2;
+        gridBagConstraints.weighty = 0.1;
+        licenseTypePanel.add(serversInLicenseField, gridBagConstraints);
 
-    plusButton.setFont(plusButton.getFont().deriveFont(plusButton.getFont().getSize()+23f));
-    plusButton.setForeground(new java.awt.Color(102, 102, 102));
-    plusButton.setText(bundle.getString("DCMDesktop.plusButton.text")); // NOI18N
-    plusButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            plusButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 1;
-    gridBagConstraints.gridy = 1;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 0.1;
-    gridBagConstraints.weighty = 0.1;
-    licenseTypePanel.add(plusButton, gridBagConstraints);
+        plusButton.setFont(plusButton.getFont().deriveFont(plusButton.getFont().getSize()+23f));
+        plusButton.setForeground(new java.awt.Color(102, 102, 102));
+        plusButton.setText(bundle.getString("DCMDesktop.plusButton.text")); // NOI18N
+        plusButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                plusButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
+        licenseTypePanel.add(plusButton, gridBagConstraints);
 
-    minusButton.setFont(minusButton.getFont().deriveFont(minusButton.getFont().getSize()+23f));
-    minusButton.setForeground(new java.awt.Color(102, 102, 102));
-    minusButton.setText(bundle.getString("DCMDesktop.minusButton.text")); // NOI18N
-    minusButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            minusButtonActionPerformed(evt);
-        }
-    });
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 1;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 0.1;
-    gridBagConstraints.weighty = 0.1;
-    licenseTypePanel.add(minusButton, gridBagConstraints);
+        minusButton.setFont(minusButton.getFont().deriveFont(minusButton.getFont().getSize()+23f));
+        minusButton.setForeground(new java.awt.Color(102, 102, 102));
+        minusButton.setText(bundle.getString("DCMDesktop.minusButton.text")); // NOI18N
+        minusButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                minusButtonActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
+        licenseTypePanel.add(minusButton, gridBagConstraints);
 
-    licenseDetailsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.licenseDetailsPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10))); // NOI18N
-    licenseDetailsPanel.setToolTipText(bundle.getString("DCMDesktop.licenseDetailsPanel.toolTipText")); // NOI18N
-    licenseDetailsPanel.setFont(licenseDetailsPanel.getFont());
-    licenseDetailsPanel.setMaximumSize(new java.awt.Dimension(200, 239));
-    licenseDetailsPanel.setPreferredSize(new java.awt.Dimension(200, 239));
-    licenseDetailsPanel.setSize(new java.awt.Dimension(200, 239));
-    licenseDetailsPanel.setLayout(new java.awt.GridBagLayout());
+        licenseDetailsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.licenseDetailsPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10))); // NOI18N
+        licenseDetailsPanel.setToolTipText(bundle.getString("DCMDesktop.licenseDetailsPanel.toolTipText")); // NOI18N
+        licenseDetailsPanel.setFont(licenseDetailsPanel.getFont());
+        licenseDetailsPanel.setMaximumSize(new java.awt.Dimension(200, 239));
+        licenseDetailsPanel.setPreferredSize(new java.awt.Dimension(200, 239));
+        licenseDetailsPanel.setLayout(new java.awt.GridBagLayout());
 
-    licenseDetailsScrollPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-    licenseDetailsScrollPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-    licenseDetailsScrollPane.setFont(new java.awt.Font("STHeiti", 0, 13)); // NOI18N
+        licenseDetailsScrollPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        licenseDetailsScrollPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        licenseDetailsScrollPane.setFont(new java.awt.Font("STHeiti", 0, 13)); // NOI18N
 
-    vergunningDetailsTable.setFont(vergunningDetailsTable.getFont().deriveFont(vergunningDetailsTable.getFont().getSize()-1f));
-    vergunningDetailsTable.setForeground(new java.awt.Color(102, 102, 102));
-    vergunningDetailsTable.setModel(new javax.swing.table.DefaultTableModel(
-        new Object [][] {
-            {"License", null},
-            {"Period", null},
-            {"Start Date", null},
-            {"End Date", null},
-            {"Servers", null},
-            {"Discount", null},
-            {"Price", null},
-            {"Total", null}
-        },
-        new String [] {
-            "", ""
-        }
-    ) {
-        Class[] types = new Class [] {
-            java.lang.String.class, java.lang.String.class
-        };
-        boolean[] canEdit = new boolean [] {
-            true, false
-        };
+        vergunningDetailsTable.setAutoCreateRowSorter(true);
+        vergunningDetailsTable.setFont(vergunningDetailsTable.getFont().deriveFont(vergunningDetailsTable.getFont().getSize()-1f));
+        vergunningDetailsTable.setForeground(new java.awt.Color(102, 102, 102));
+        vergunningDetailsTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][]
+            {
+                {"License", null},
+                {"Period", null},
+                {"Start Date", null},
+                {"End Date", null},
+                {"Servers", null},
+                {"Discount", null},
+                {"Price", null},
+                {"Total", null}
+            },
+            new String []
+            {
+                "", ""
+            }
+        )
+        {
+            Class[] types = new Class []
+            {
+                java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean []
+            {
+                true, false
+            };
 
-        public Class getColumnClass(int columnIndex) {
-            return types [columnIndex];
-        }
+            public Class getColumnClass(int columnIndex)
+            {
+                return types [columnIndex];
+            }
 
-        public boolean isCellEditable(int rowIndex, int columnIndex) {
-            return canEdit [columnIndex];
-        }
-    });
-    vergunningDetailsTable.setToolTipText(bundle.getString("DCMDesktop.vergunningDetailsTable.toolTipText")); // NOI18N
-    vergunningDetailsTable.setAutoCreateRowSorter(true);
-    vergunningDetailsTable.setAutoscrolls(false);
-    vergunningDetailsTable.setDoubleBuffered(true);
-    vergunningDetailsTable.setEditingColumn(0);
-    vergunningDetailsTable.setEditingRow(0);
-    vergunningDetailsTable.setEnabled(false);
-    vergunningDetailsTable.setFocusable(false);
-    vergunningDetailsTable.setMaximumSize(new java.awt.Dimension(75, 190));
-    vergunningDetailsTable.setMinimumSize(new java.awt.Dimension(75, 190));
-    vergunningDetailsTable.setName("name"); // NOI18N
-    vergunningDetailsTable.setPreferredSize(new java.awt.Dimension(75, 190));
-    vergunningDetailsTable.setRowHeight(14);
-    vergunningDetailsTable.setRowSelectionAllowed(false);
-    vergunningDetailsTable.setSelectionBackground(new java.awt.Color(51, 102, 255));
-    vergunningDetailsTable.setShowGrid(false);
-    vergunningDetailsTable.setSize(new java.awt.Dimension(75, 190));
-    licenseDetailsScrollPane.setViewportView(vergunningDetailsTable);
-    vergunningDetailsTable.getColumnModel().getColumn(0).setHeaderValue(bundle.getString("DCMDesktop.vergunningDetailsTable.columnModel.title0")); // NOI18N
-    vergunningDetailsTable.getColumnModel().getColumn(1).setHeaderValue(bundle.getString("DCMDesktop.vergunningDetailsTable.columnModel.title1")); // NOI18N
-
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 0;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-    gridBagConstraints.weightx = 1.0;
-    gridBagConstraints.weighty = 1.0;
-    licenseDetailsPanel.add(licenseDetailsScrollPane, gridBagConstraints);
-
-    orderLicenseButton.setFont(orderLicenseButton.getFont().deriveFont(orderLicenseButton.getFont().getSize()+1f));
-    orderLicenseButton.setText(bundle.getString("DCMDesktop.orderLicenseButton.text")); // NOI18N
-    orderLicenseButton.setToolTipText(bundle.getString("DCMDesktop.orderLicenseButton.toolTipText")); // NOI18N
-    orderLicenseButton.setEnabled(false);
-    orderLicenseButton.setFocusPainted(false);
-    orderLicenseButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            orderLicenseButtonActionPerformed(evt);
-        }
-    });
-
-    licensePeriodPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.licensePeriodPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10))); // NOI18N
-    licensePeriodPanel.setToolTipText(bundle.getString("DCMDesktop.licensePeriodPanel.toolTipText")); // NOI18N
-    licensePeriodPanel.setFont(licensePeriodPanel.getFont());
-    licensePeriodPanel.setMaximumSize(new java.awt.Dimension(200, 239));
-    licensePeriodPanel.setPreferredSize(new java.awt.Dimension(200, 239));
-    licensePeriodPanel.setSize(new java.awt.Dimension(200, 239));
-    licensePeriodPanel.setLayout(new java.awt.GridBagLayout());
-
-    licensePeriodScrollPane.setFont(licensePeriodScrollPane.getFont());
-
-    vergunningPeriodList.setFont(vergunningPeriodList.getFont().deriveFont(vergunningPeriodList.getFont().getStyle() | java.awt.Font.BOLD, vergunningPeriodList.getFont().getSize()-1));
-    vergunningPeriodList.setModel(new javax.swing.AbstractListModel() {
-        String[] strings = { "Day", "Week", "Month", "Year", "Lifetime" };
-        public int getSize() { return strings.length; }
-        public Object getElementAt(int i) { return strings[i]; }
-    });
-    vergunningPeriodList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-    vergunningPeriodList.setToolTipText(bundle.getString("DCMDesktop.vergunningPeriodList.toolTipText")); // NOI18N
-    vergunningPeriodList.setEnabled(false);
-    vergunningPeriodList.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            vergunningPeriodListMouseClicked(evt);
-        }
-    });
-    vergunningPeriodList.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
-        public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
-            vergunningPeriodListValueChanged(evt);
-        }
-    });
-    licensePeriodScrollPane.setViewportView(vergunningPeriodList);
-
-    gridBagConstraints = new java.awt.GridBagConstraints();
-    gridBagConstraints.gridx = 0;
-    gridBagConstraints.gridy = 0;
-    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-    gridBagConstraints.weightx = 0.1;
-    gridBagConstraints.weighty = 0.1;
-    licensePeriodPanel.add(licensePeriodScrollPane, gridBagConstraints);
-
-    activationCodePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.activationCodePanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10))); // NOI18N
-    activationCodePanel.setToolTipText(bundle.getString("DCMDesktop.activationCodePanel.toolTipText")); // NOI18N
-    activationCodePanel.setFont(activationCodePanel.getFont());
-    activationCodePanel.setMaximumSize(new java.awt.Dimension(200, 239));
-    activationCodePanel.setMinimumSize(new java.awt.Dimension(200, 239));
-    activationCodePanel.setSize(new java.awt.Dimension(200, 239));
-
-    activationCodeField.setBackground(new java.awt.Color(204, 204, 204));
-    activationCodeField.setFont(new java.awt.Font("Courier New", 1, 10)); // NOI18N
-    activationCodeField.setToolTipText(bundle.getString("DCMDesktop.activationCodeField.toolTipText")); // NOI18N
-    activationCodeField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-    activationCodeField.setMaximumSize(new java.awt.Dimension(483, 20));
-    activationCodeField.setMinimumSize(new java.awt.Dimension(483, 20));
-    activationCodeField.setPreferredSize(new java.awt.Dimension(483, 20));
-    activationCodeField.setSize(new java.awt.Dimension(483, 20));
-    activationCodeField.addCaretListener(new javax.swing.event.CaretListener() {
-        public void caretUpdate(javax.swing.event.CaretEvent evt) {
-            activationCodeFieldCaretUpdate(evt);
-        }
-    });
-
-    org.jdesktop.layout.GroupLayout activationCodePanelLayout = new org.jdesktop.layout.GroupLayout(activationCodePanel);
-    activationCodePanel.setLayout(activationCodePanelLayout);
-    activationCodePanelLayout.setHorizontalGroup(
-        activationCodePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(activationCodeField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-    );
-    activationCodePanelLayout.setVerticalGroup(
-        activationCodePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(activationCodePanelLayout.createSequentialGroup()
-            .add(activationCodeField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-    );
-
-    org.jdesktop.layout.GroupLayout licenseInnerPanelLayout = new org.jdesktop.layout.GroupLayout(licenseInnerPanel);
-    licenseInnerPanel.setLayout(licenseInnerPanelLayout);
-    licenseInnerPanelLayout.setHorizontalGroup(
-        licenseInnerPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(org.jdesktop.layout.GroupLayout.TRAILING, licenseInnerPanelLayout.createSequentialGroup()
-            .addContainerGap()
-            .add(licenseInnerPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                .add(org.jdesktop.layout.GroupLayout.LEADING, activationCodePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(org.jdesktop.layout.GroupLayout.LEADING, licenseInnerPanelLayout.createSequentialGroup()
-                    .add(licenseTypePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 173, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                    .add(licenseDatePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 242, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                    .add(licensePeriodPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 130, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(licenseCodePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(licenseInnerPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                .add(orderLicenseButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(licenseDetailsPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
-                .add(applyVergunningButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addContainerGap(14, Short.MAX_VALUE))
-    );
-    licenseInnerPanelLayout.setVerticalGroup(
-        licenseInnerPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(licenseInnerPanelLayout.createSequentialGroup()
-            .addContainerGap()
-            .add(licenseInnerPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                .add(licenseTypePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 165, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(licenseDatePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 165, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(licensePeriodPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 165, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(licenseDetailsPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 165, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(licenseInnerPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                .add(orderLicenseButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(activationCodePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 63, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(licenseInnerPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                .add(licenseCodePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 63, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(applyVergunningButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addContainerGap())
-    );
-
-    licenseInnerPanelLayout.linkSize(new java.awt.Component[] {activationCodePanel, applyVergunningButton, licenseCodePanel, orderLicenseButton}, org.jdesktop.layout.GroupLayout.VERTICAL);
-
-    licenseInnerPanelLayout.linkSize(new java.awt.Component[] {licenseDatePanel, licenseDetailsPanel, licensePeriodPanel, licenseTypePanel}, org.jdesktop.layout.GroupLayout.VERTICAL);
-
-    systemPropertiesPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.systemPropertiesPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 14), new java.awt.Color(51, 51, 51))); // NOI18N
-    systemPropertiesPanel.setFont(systemPropertiesPanel.getFont());
-
-    sysPropsScroller.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-    sysPropsScroller.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-    sysPropsScroller.setFont(sysPropsScroller.getFont());
-
-    sysPropsTable.setFont(sysPropsTable.getFont());
-    sysPropsTable.setForeground(new java.awt.Color(102, 102, 102));
-    sysPropsTable.setModel(new javax.swing.table.DefaultTableModel(
-        new Object [][] {
-            {"", ""},
-            {"", ""},
-            {"", ""},
-            {"", ""},
-            {"", ""},
-            {"", ""},
-            {"", ""},
-            {"", ""},
-            {"", ""},
-            {"", ""},
-            {" ", null},
-            {" ", null},
-            {null, null},
-            {null, null},
-            {null, null},
-            {null, null},
-            {null, null}
-        },
-        new String [] {
-            "", ""
-        }
-    ) {
-        Class[] types = new Class [] {
-            java.lang.String.class, java.lang.String.class
-        };
-        boolean[] canEdit = new boolean [] {
-            false, false
-        };
-
-        public Class getColumnClass(int columnIndex) {
-            return types [columnIndex];
+            public boolean isCellEditable(int rowIndex, int columnIndex)
+            {
+                return canEdit [columnIndex];
+            }
+        });
+        vergunningDetailsTable.setToolTipText(bundle.getString("DCMDesktop.vergunningDetailsTable.toolTipText")); // NOI18N
+        vergunningDetailsTable.setAutoscrolls(false);
+        vergunningDetailsTable.setDoubleBuffered(true);
+        vergunningDetailsTable.setEditingColumn(0);
+        vergunningDetailsTable.setEditingRow(0);
+        vergunningDetailsTable.setEnabled(false);
+        vergunningDetailsTable.setFocusable(false);
+        vergunningDetailsTable.setMaximumSize(new java.awt.Dimension(75, 190));
+        vergunningDetailsTable.setMinimumSize(new java.awt.Dimension(75, 190));
+        vergunningDetailsTable.setName("name"); // NOI18N
+        vergunningDetailsTable.setPreferredSize(new java.awt.Dimension(75, 190));
+        vergunningDetailsTable.setRowHeight(14);
+        vergunningDetailsTable.setRowSelectionAllowed(false);
+        vergunningDetailsTable.setSelectionBackground(new java.awt.Color(51, 102, 255));
+        licenseDetailsScrollPane.setViewportView(vergunningDetailsTable);
+        if (vergunningDetailsTable.getColumnModel().getColumnCount() > 0)
+        {
+            vergunningDetailsTable.getColumnModel().getColumn(0).setHeaderValue(bundle.getString("DCMDesktop.vergunningDetailsTable.columnModel.title0")); // NOI18N
+            vergunningDetailsTable.getColumnModel().getColumn(1).setHeaderValue(bundle.getString("DCMDesktop.vergunningDetailsTable.columnModel.title1")); // NOI18N
         }
 
-        public boolean isCellEditable(int rowIndex, int columnIndex) {
-            return canEdit [columnIndex];
-        }
-    });
-    sysPropsTable.setToolTipText(bundle.getString("DCMDesktop.sysPropsTable.toolTipText")); // NOI18N
-    sysPropsTable.setAutoCreateRowSorter(true);
-    sysPropsTable.setAutoscrolls(false);
-    sysPropsTable.setDoubleBuffered(true);
-    sysPropsTable.setEditingColumn(0);
-    sysPropsTable.setEditingRow(0);
-    sysPropsTable.setMaximumSize(new java.awt.Dimension(55, 300));
-    sysPropsTable.setMinimumSize(new java.awt.Dimension(55, 300));
-    sysPropsTable.setName("name"); // NOI18N
-    sysPropsTable.setPreferredSize(new java.awt.Dimension(55, 300));
-    sysPropsTable.setRowHeight(17);
-    sysPropsTable.setSelectionBackground(new java.awt.Color(51, 102, 255));
-    sysPropsTable.setShowGrid(false);
-    sysPropsTable.setSize(new java.awt.Dimension(55, 300));
-    sysPropsScroller.setViewportView(sysPropsTable);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        licenseDetailsPanel.add(licenseDetailsScrollPane, gridBagConstraints);
 
-    org.jdesktop.layout.GroupLayout systemPropertiesPanelLayout = new org.jdesktop.layout.GroupLayout(systemPropertiesPanel);
-    systemPropertiesPanel.setLayout(systemPropertiesPanelLayout);
-    systemPropertiesPanelLayout.setHorizontalGroup(
-        systemPropertiesPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(systemPropertiesPanelLayout.createSequentialGroup()
-            .addContainerGap()
-            .add(sysPropsScroller, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
-            .addContainerGap())
-    );
-    systemPropertiesPanelLayout.setVerticalGroup(
-        systemPropertiesPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(systemPropertiesPanelLayout.createSequentialGroup()
-            .add(sysPropsScroller, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-            .addContainerGap())
-    );
+        orderLicenseButton.setFont(orderLicenseButton.getFont().deriveFont(orderLicenseButton.getFont().getSize()+1f));
+        orderLicenseButton.setText(bundle.getString("DCMDesktop.orderLicenseButton.text")); // NOI18N
+        orderLicenseButton.setToolTipText(bundle.getString("DCMDesktop.orderLicenseButton.toolTipText")); // NOI18N
+        orderLicenseButton.setEnabled(false);
+        orderLicenseButton.setFocusPainted(false);
+        orderLicenseButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                orderLicenseButtonActionPerformed(evt);
+            }
+        });
 
-    userPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.userPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 14), new java.awt.Color(51, 51, 51))); // NOI18N
-    userPanel.setFont(userPanel.getFont());
-    userPanel.setMaximumSize(new java.awt.Dimension(500, 32767));
-    userPanel.setPreferredSize(new java.awt.Dimension(400, 424));
-    userPanel.setSize(new java.awt.Dimension(600, 0));
+        licensePeriodPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.licensePeriodPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10))); // NOI18N
+        licensePeriodPanel.setToolTipText(bundle.getString("DCMDesktop.licensePeriodPanel.toolTipText")); // NOI18N
+        licensePeriodPanel.setFont(licensePeriodPanel.getFont());
+        licensePeriodPanel.setMaximumSize(new java.awt.Dimension(200, 239));
+        licensePeriodPanel.setPreferredSize(new java.awt.Dimension(200, 239));
+        licensePeriodPanel.setLayout(new java.awt.GridBagLayout());
 
-    userScroller.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-    userScroller.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-    userScroller.setFont(userScroller.getFont());
+        licensePeriodScrollPane.setFont(licensePeriodScrollPane.getFont());
 
-    userTable.setFont(userTable.getFont());
-    userTable.setForeground(new java.awt.Color(102, 102, 102));
-    userTable.setModel(new javax.swing.table.DefaultTableModel(
-        new Object [][] {
-            {null, "", null, null},
-            {null, "", null, null}
-        },
-        new String [] {
-            "Id", "Username", "Password", "Admin"
-        }
-    ) {
-        Class[] types = new Class [] {
-            java.lang.Long.class, java.lang.String.class, java.lang.String.class, java.lang.Boolean.class
-        };
+        vergunningPeriodList.setFont(vergunningPeriodList.getFont().deriveFont(vergunningPeriodList.getFont().getStyle() | java.awt.Font.BOLD, vergunningPeriodList.getFont().getSize()-1));
+        vergunningPeriodList.setModel(new javax.swing.AbstractListModel()
+        {
+            String[] strings = { "Day", "Week", "Month", "Year", "Lifetime" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        vergunningPeriodList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        vergunningPeriodList.setToolTipText(bundle.getString("DCMDesktop.vergunningPeriodList.toolTipText")); // NOI18N
+        vergunningPeriodList.setEnabled(false);
+        vergunningPeriodList.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                vergunningPeriodListMouseClicked(evt);
+            }
+        });
+        vergunningPeriodList.addListSelectionListener(new javax.swing.event.ListSelectionListener()
+        {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt)
+            {
+                vergunningPeriodListValueChanged(evt);
+            }
+        });
+        licensePeriodScrollPane.setViewportView(vergunningPeriodList);
 
-        public Class getColumnClass(int columnIndex) {
-            return types [columnIndex];
-        }
-    });
-    userTable.setToolTipText(bundle.getString("DCMDesktop.userTable.toolTipText")); // NOI18N
-    userTable.setAutoCreateRowSorter(true);
-    userTable.setAutoscrolls(false);
-    userTable.setDoubleBuffered(true);
-    userTable.setFocusable(false);
-    userTable.setMaximumSize(new java.awt.Dimension(55, 250));
-    userTable.setMinimumSize(new java.awt.Dimension(55, 250));
-    userTable.setName("userTable"); // NOI18N
-    userTable.setPreferredSize(new java.awt.Dimension(55, 250));
-    userTable.setSelectionBackground(new java.awt.Color(51, 102, 255));
-    userTable.setShowGrid(false);
-    userTable.setSize(new java.awt.Dimension(55, 250));
-    userScroller.setViewportView(userTable);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
+        licensePeriodPanel.add(licensePeriodScrollPane, gridBagConstraints);
 
-    dcmUserButtonBar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-    dcmUserButtonBar.setFloatable(false);
-    dcmUserButtonBar.setRollover(true);
-    dcmUserButtonBar.setFont(dcmUserButtonBar.getFont());
+        activationCodePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.activationCodePanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 10))); // NOI18N
+        activationCodePanel.setToolTipText(bundle.getString("DCMDesktop.activationCodePanel.toolTipText")); // NOI18N
+        activationCodePanel.setFont(activationCodePanel.getFont());
+        activationCodePanel.setMaximumSize(new java.awt.Dimension(200, 239));
+        activationCodePanel.setMinimumSize(new java.awt.Dimension(200, 239));
 
-    addDCMUserButton.setText(bundle.getString("DCMDesktop.addDCMUserButton.text")); // NOI18N
-    addDCMUserButton.setToolTipText(bundle.getString("DCMDesktop.addDCMUserButton.toolTipText")); // NOI18N
-    addDCMUserButton.setEnabled(false);
-    addDCMUserButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            addDCMUserButtonActionPerformed(evt);
-        }
-    });
-    dcmUserButtonBar.add(addDCMUserButton);
+        activationCodeField.setBackground(new java.awt.Color(204, 204, 204));
+        activationCodeField.setFont(new java.awt.Font("Courier New", 1, 10)); // NOI18N
+        activationCodeField.setToolTipText(bundle.getString("DCMDesktop.activationCodeField.toolTipText")); // NOI18N
+        activationCodeField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        activationCodeField.setMaximumSize(new java.awt.Dimension(483, 20));
+        activationCodeField.setMinimumSize(new java.awt.Dimension(483, 20));
+        activationCodeField.setPreferredSize(new java.awt.Dimension(483, 20));
+        activationCodeField.addCaretListener(new javax.swing.event.CaretListener()
+        {
+            public void caretUpdate(javax.swing.event.CaretEvent evt)
+            {
+                activationCodeFieldCaretUpdate(evt);
+            }
+        });
 
-    deleteDCMUserButton.setText(bundle.getString("DCMDesktop.deleteDCMUserButton.text")); // NOI18N
-    deleteDCMUserButton.setToolTipText(bundle.getString("DCMDesktop.deleteDCMUserButton.toolTipText")); // NOI18N
-    deleteDCMUserButton.setEnabled(false);
-    deleteDCMUserButton.setFocusable(false);
-    deleteDCMUserButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    deleteDCMUserButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    deleteDCMUserButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            deleteDCMUserButtonActionPerformed(evt);
-        }
-    });
-    dcmUserButtonBar.add(deleteDCMUserButton);
+        org.jdesktop.layout.GroupLayout activationCodePanelLayout = new org.jdesktop.layout.GroupLayout(activationCodePanel);
+        activationCodePanel.setLayout(activationCodePanelLayout);
+        activationCodePanelLayout.setHorizontalGroup(
+            activationCodePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(activationCodeField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        activationCodePanelLayout.setVerticalGroup(
+            activationCodePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(activationCodePanelLayout.createSequentialGroup()
+                .add(activationCodeField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
-    org.jdesktop.layout.GroupLayout userPanelLayout = new org.jdesktop.layout.GroupLayout(userPanel);
-    userPanel.setLayout(userPanelLayout);
-    userPanelLayout.setHorizontalGroup(
-        userPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(userPanelLayout.createSequentialGroup()
-            .addContainerGap()
-            .add(userScroller, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE)
-            .addContainerGap())
-        .add(userPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+        org.jdesktop.layout.GroupLayout licenseInnerPanelLayout = new org.jdesktop.layout.GroupLayout(licenseInnerPanel);
+        licenseInnerPanel.setLayout(licenseInnerPanelLayout);
+        licenseInnerPanelLayout.setHorizontalGroup(
+            licenseInnerPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, licenseInnerPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(licenseInnerPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, activationCodePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, licenseInnerPanelLayout.createSequentialGroup()
+                        .add(licenseTypePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 173, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(licenseDatePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 242, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(licensePeriodPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 130, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(licenseCodePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(licenseInnerPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                    .add(orderLicenseButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(licenseDetailsPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+                    .add(applyVergunningButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+        licenseInnerPanelLayout.setVerticalGroup(
+            licenseInnerPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(licenseInnerPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(licenseInnerPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(licenseTypePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 165, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(licenseDatePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 165, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(licensePeriodPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 165, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(licenseDetailsPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 165, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(licenseInnerPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(orderLicenseButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(activationCodePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 63, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(licenseInnerPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(licenseCodePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 63, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(applyVergunningButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        licenseInnerPanelLayout.linkSize(new java.awt.Component[] {activationCodePanel, applyVergunningButton, licenseCodePanel, orderLicenseButton}, org.jdesktop.layout.GroupLayout.VERTICAL);
+
+        licenseInnerPanelLayout.linkSize(new java.awt.Component[] {licenseDatePanel, licenseDetailsPanel, licensePeriodPanel, licenseTypePanel}, org.jdesktop.layout.GroupLayout.VERTICAL);
+
+        systemPropertiesPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.systemPropertiesPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 14), new java.awt.Color(51, 51, 51))); // NOI18N
+        systemPropertiesPanel.setFont(systemPropertiesPanel.getFont());
+
+        sysPropsScroller.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        sysPropsScroller.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        sysPropsScroller.setFont(sysPropsScroller.getFont());
+
+        sysPropsTable.setAutoCreateRowSorter(true);
+        sysPropsTable.setFont(sysPropsTable.getFont());
+        sysPropsTable.setForeground(new java.awt.Color(102, 102, 102));
+        sysPropsTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][]
+            {
+                {"", ""},
+                {"", ""},
+                {"", ""},
+                {"", ""},
+                {"", ""},
+                {"", ""},
+                {"", ""},
+                {"", ""},
+                {"", ""},
+                {"", ""},
+                {" ", null},
+                {" ", null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String []
+            {
+                "", ""
+            }
+        )
+        {
+            Class[] types = new Class []
+            {
+                java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean []
+            {
+                false, false
+            };
+
+            public Class getColumnClass(int columnIndex)
+            {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex)
+            {
+                return canEdit [columnIndex];
+            }
+        });
+        sysPropsTable.setToolTipText(bundle.getString("DCMDesktop.sysPropsTable.toolTipText")); // NOI18N
+        sysPropsTable.setAutoscrolls(false);
+        sysPropsTable.setDoubleBuffered(true);
+        sysPropsTable.setEditingColumn(0);
+        sysPropsTable.setEditingRow(0);
+        sysPropsTable.setMaximumSize(new java.awt.Dimension(55, 300));
+        sysPropsTable.setMinimumSize(new java.awt.Dimension(55, 300));
+        sysPropsTable.setName("name"); // NOI18N
+        sysPropsTable.setPreferredSize(new java.awt.Dimension(55, 300));
+        sysPropsTable.setRowHeight(17);
+        sysPropsTable.setSelectionBackground(new java.awt.Color(51, 102, 255));
+        sysPropsScroller.setViewportView(sysPropsTable);
+
+        org.jdesktop.layout.GroupLayout systemPropertiesPanelLayout = new org.jdesktop.layout.GroupLayout(systemPropertiesPanel);
+        systemPropertiesPanel.setLayout(systemPropertiesPanelLayout);
+        systemPropertiesPanelLayout.setHorizontalGroup(
+            systemPropertiesPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(systemPropertiesPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(sysPropsScroller, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        systemPropertiesPanelLayout.setVerticalGroup(
+            systemPropertiesPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(systemPropertiesPanelLayout.createSequentialGroup()
+                .add(sysPropsScroller, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        userPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.userPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 14), new java.awt.Color(51, 51, 51))); // NOI18N
+        userPanel.setFont(userPanel.getFont());
+        userPanel.setMaximumSize(new java.awt.Dimension(500, 32767));
+        userPanel.setPreferredSize(new java.awt.Dimension(400, 424));
+
+        userScroller.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        userScroller.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        userScroller.setFont(userScroller.getFont());
+
+        userTable.setAutoCreateRowSorter(true);
+        userTable.setFont(userTable.getFont());
+        userTable.setForeground(new java.awt.Color(102, 102, 102));
+        userTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][]
+            {
+                {null, "", null, null},
+                {null, "", null, null}
+            },
+            new String []
+            {
+                "Id", "Username", "Password", "Admin"
+            }
+        )
+        {
+            Class[] types = new Class []
+            {
+                java.lang.Long.class, java.lang.String.class, java.lang.String.class, java.lang.Boolean.class
+            };
+
+            public Class getColumnClass(int columnIndex)
+            {
+                return types [columnIndex];
+            }
+        });
+        userTable.setToolTipText(bundle.getString("DCMDesktop.userTable.toolTipText")); // NOI18N
+        userTable.setAutoscrolls(false);
+        userTable.setDoubleBuffered(true);
+        userTable.setFocusable(false);
+        userTable.setMaximumSize(new java.awt.Dimension(55, 250));
+        userTable.setMinimumSize(new java.awt.Dimension(55, 250));
+        userTable.setName("userTable"); // NOI18N
+        userTable.setPreferredSize(new java.awt.Dimension(55, 250));
+        userTable.setSelectionBackground(new java.awt.Color(51, 102, 255));
+        userScroller.setViewportView(userTable);
+
+        dcmUserButtonBar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        dcmUserButtonBar.setFloatable(false);
+        dcmUserButtonBar.setRollover(true);
+        dcmUserButtonBar.setFont(dcmUserButtonBar.getFont());
+
+        addDCMUserButton.setText(bundle.getString("DCMDesktop.addDCMUserButton.text")); // NOI18N
+        addDCMUserButton.setToolTipText(bundle.getString("DCMDesktop.addDCMUserButton.toolTipText")); // NOI18N
+        addDCMUserButton.setEnabled(false);
+        addDCMUserButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                addDCMUserButtonActionPerformed(evt);
+            }
+        });
+        dcmUserButtonBar.add(addDCMUserButton);
+
+        deleteDCMUserButton.setText(bundle.getString("DCMDesktop.deleteDCMUserButton.text")); // NOI18N
+        deleteDCMUserButton.setToolTipText(bundle.getString("DCMDesktop.deleteDCMUserButton.toolTipText")); // NOI18N
+        deleteDCMUserButton.setEnabled(false);
+        deleteDCMUserButton.setFocusable(false);
+        deleteDCMUserButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        deleteDCMUserButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        deleteDCMUserButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                deleteDCMUserButtonActionPerformed(evt);
+            }
+        });
+        dcmUserButtonBar.add(deleteDCMUserButton);
+
+        org.jdesktop.layout.GroupLayout userPanelLayout = new org.jdesktop.layout.GroupLayout(userPanel);
+        userPanel.setLayout(userPanelLayout);
+        userPanelLayout.setHorizontalGroup(
+            userPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(userPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(dcmUserButtonBar, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
-                .addContainerGap()))
-    );
-    userPanelLayout.setVerticalGroup(
-        userPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(userPanelLayout.createSequentialGroup()
-            .add(36, 36, 36)
-            .add(userScroller, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
-            .addContainerGap())
-        .add(userPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(userScroller, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 387, Short.MAX_VALUE)
+                .addContainerGap())
+            .add(userPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(userPanelLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .add(dcmUserButtonBar, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        userPanelLayout.setVerticalGroup(
+            userPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(userPanelLayout.createSequentialGroup()
-                .add(dcmUserButtonBar, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(0, 376, Short.MAX_VALUE)))
-    );
+                .add(36, 36, 36)
+                .add(userScroller, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
+                .addContainerGap())
+            .add(userPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(userPanelLayout.createSequentialGroup()
+                    .add(dcmUserButtonBar, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(0, 376, Short.MAX_VALUE)))
+        );
 
-    backupPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.backupPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP)); // NOI18N
+        backupPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.backupPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP)); // NOI18N
 
-    exportButton.setFont(exportButton.getFont().deriveFont(exportButton.getFont().getSize()+4f));
-    exportButton.setText(bundle.getString("DCMDesktop.exportButton.text")); // NOI18N
-    exportButton.setToolTipText(bundle.getString("DCMDesktop.exportButton.toolTipText")); // NOI18N
-    exportButton.setEnabled(false);
-    exportButton.setFocusPainted(false);
-    exportButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            exportButtonActionPerformed(evt);
-        }
-    });
+        exportButton.setFont(exportButton.getFont().deriveFont(exportButton.getFont().getSize()+4f));
+        exportButton.setText(bundle.getString("DCMDesktop.exportButton.text")); // NOI18N
+        exportButton.setToolTipText(bundle.getString("DCMDesktop.exportButton.toolTipText")); // NOI18N
+        exportButton.setEnabled(false);
+        exportButton.setFocusPainted(false);
+        exportButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                exportButtonActionPerformed(evt);
+            }
+        });
 
-    importButton.setFont(importButton.getFont().deriveFont(importButton.getFont().getSize()+4f));
-    importButton.setText(bundle.getString("DCMDesktop.importButton.text")); // NOI18N
-    importButton.setToolTipText(bundle.getString("DCMDesktop.importButton.toolTipText")); // NOI18N
-    importButton.setEnabled(false);
-    importButton.setFocusPainted(false);
-    importButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            importButtonActionPerformed(evt);
-        }
-    });
+        importButton.setFont(importButton.getFont().deriveFont(importButton.getFont().getSize()+4f));
+        importButton.setText(bundle.getString("DCMDesktop.importButton.text")); // NOI18N
+        importButton.setToolTipText(bundle.getString("DCMDesktop.importButton.toolTipText")); // NOI18N
+        importButton.setEnabled(false);
+        importButton.setFocusPainted(false);
+        importButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                importButtonActionPerformed(evt);
+            }
+        });
 
-    org.jdesktop.layout.GroupLayout backupPanelLayout = new org.jdesktop.layout.GroupLayout(backupPanel);
-    backupPanel.setLayout(backupPanelLayout);
-    backupPanelLayout.setHorizontalGroup(
-        backupPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(backupPanelLayout.createSequentialGroup()
-            .addContainerGap()
-            .add(backupPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                .add(org.jdesktop.layout.GroupLayout.TRAILING, exportButton)
-                .add(importButton))
-            .addContainerGap())
-    );
-    backupPanelLayout.setVerticalGroup(
-        backupPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(backupPanelLayout.createSequentialGroup()
-            .add(exportButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 134, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .add(importButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 127, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-    );
+        org.jdesktop.layout.GroupLayout backupPanelLayout = new org.jdesktop.layout.GroupLayout(backupPanel);
+        backupPanel.setLayout(backupPanelLayout);
+        backupPanelLayout.setHorizontalGroup(
+            backupPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(backupPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(backupPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, exportButton)
+                    .add(importButton))
+                .addContainerGap())
+        );
+        backupPanelLayout.setVerticalGroup(
+            backupPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(backupPanelLayout.createSequentialGroup()
+                .add(exportButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 134, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(importButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 127, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+        );
 
-    backupPanelLayout.linkSize(new java.awt.Component[] {exportButton, importButton}, org.jdesktop.layout.GroupLayout.VERTICAL);
+        backupPanelLayout.linkSize(new java.awt.Component[] {exportButton, importButton}, org.jdesktop.layout.GroupLayout.VERTICAL);
 
-    helpdeskPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.helpdeskPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 14), new java.awt.Color(51, 51, 51))); // NOI18N
-    helpdeskPanel.setFont(helpdeskPanel.getFont());
-    helpdeskPanel.setMaximumSize(new java.awt.Dimension(500, 32767));
-    helpdeskPanel.setPreferredSize(new java.awt.Dimension(400, 424));
-    helpdeskPanel.setSize(new java.awt.Dimension(600, 0));
+        helpdeskPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("DCMDesktop.helpdeskPanel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Grande", 0, 14), new java.awt.Color(51, 51, 51))); // NOI18N
+        helpdeskPanel.setFont(helpdeskPanel.getFont());
+        helpdeskPanel.setMaximumSize(new java.awt.Dimension(500, 32767));
+        helpdeskPanel.setPreferredSize(new java.awt.Dimension(400, 424));
 
-    dcmHelpdeskButtonBar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-    dcmHelpdeskButtonBar.setFloatable(false);
-    dcmHelpdeskButtonBar.setRollover(true);
-    dcmHelpdeskButtonBar.setFont(dcmHelpdeskButtonBar.getFont());
+        dcmHelpdeskButtonBar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        dcmHelpdeskButtonBar.setFloatable(false);
+        dcmHelpdeskButtonBar.setRollover(true);
+        dcmHelpdeskButtonBar.setFont(dcmHelpdeskButtonBar.getFont());
 
-    sendEmailButton.setText(bundle.getString("DCMDesktop.sendEmailButton.text")); // NOI18N
-    sendEmailButton.setToolTipText(bundle.getString("DCMDesktop.sendEmailButton.toolTipText")); // NOI18N
-    sendEmailButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            sendEmailButtonActionPerformed(evt);
-        }
-    });
-    dcmHelpdeskButtonBar.add(sendEmailButton);
+        sendEmailButton.setText(bundle.getString("DCMDesktop.sendEmailButton.text")); // NOI18N
+        sendEmailButton.setToolTipText(bundle.getString("DCMDesktop.sendEmailButton.toolTipText")); // NOI18N
+        sendEmailButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                sendEmailButtonActionPerformed(evt);
+            }
+        });
+        dcmHelpdeskButtonBar.add(sendEmailButton);
 
-    clearHelpdeskButton.setText(bundle.getString("DCMDesktop.clearHelpdeskButton.text")); // NOI18N
-    clearHelpdeskButton.setToolTipText(bundle.getString("DCMDesktop.clearHelpdeskButton.toolTipText")); // NOI18N
-    clearHelpdeskButton.setFocusable(false);
-    clearHelpdeskButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    clearHelpdeskButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-    clearHelpdeskButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            clearHelpdeskButtonActionPerformed(evt);
-        }
-    });
-    dcmHelpdeskButtonBar.add(clearHelpdeskButton);
+        clearHelpdeskButton.setText(bundle.getString("DCMDesktop.clearHelpdeskButton.text")); // NOI18N
+        clearHelpdeskButton.setToolTipText(bundle.getString("DCMDesktop.clearHelpdeskButton.toolTipText")); // NOI18N
+        clearHelpdeskButton.setFocusable(false);
+        clearHelpdeskButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        clearHelpdeskButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        clearHelpdeskButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                clearHelpdeskButtonActionPerformed(evt);
+            }
+        });
+        dcmHelpdeskButtonBar.add(clearHelpdeskButton);
 
-    subjectField.setFont(subjectField.getFont().deriveFont(subjectField.getFont().getSize()-2f));
-    subjectField.setForeground(new java.awt.Color(102, 102, 102));
-    subjectField.setText(bundle.getString("DCMDesktop.subjectField.text")); // NOI18N
-    subjectField.setToolTipText(bundle.getString("DCMDesktop.subjectField.toolTipText")); // NOI18N
-    subjectField.addFocusListener(new java.awt.event.FocusAdapter() {
-        public void focusGained(java.awt.event.FocusEvent evt) {
-            subjectFieldFocusGained(evt);
-        }
-    });
+        subjectField.setFont(subjectField.getFont().deriveFont(subjectField.getFont().getSize()-2f));
+        subjectField.setForeground(new java.awt.Color(102, 102, 102));
+        subjectField.setText(bundle.getString("DCMDesktop.subjectField.text")); // NOI18N
+        subjectField.setToolTipText(bundle.getString("DCMDesktop.subjectField.toolTipText")); // NOI18N
+        subjectField.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                subjectFieldFocusGained(evt);
+            }
+        });
 
-    messagePane.setFont(messagePane.getFont().deriveFont(messagePane.getFont().getSize()-2f));
-    messagePane.setForeground(new java.awt.Color(102, 102, 102));
-    messagePane.setText(bundle.getString("DCMDesktop.messagePane.text")); // NOI18N
-    messagePane.addFocusListener(new java.awt.event.FocusAdapter() {
-        public void focusGained(java.awt.event.FocusEvent evt) {
-            messagePaneFocusGained(evt);
-        }
-    });
-    messageScroller.setViewportView(messagePane);
+        messagePane.setFont(messagePane.getFont().deriveFont(messagePane.getFont().getSize()-2f));
+        messagePane.setForeground(new java.awt.Color(102, 102, 102));
+        messagePane.setText(bundle.getString("DCMDesktop.messagePane.text")); // NOI18N
+        messagePane.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                messagePaneFocusGained(evt);
+            }
+        });
+        messageScroller.setViewportView(messagePane);
 
-    org.jdesktop.layout.GroupLayout helpdeskPanelLayout = new org.jdesktop.layout.GroupLayout(helpdeskPanel);
-    helpdeskPanel.setLayout(helpdeskPanelLayout);
-    helpdeskPanelLayout.setHorizontalGroup(
-        helpdeskPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(org.jdesktop.layout.GroupLayout.TRAILING, helpdeskPanelLayout.createSequentialGroup()
-            .addContainerGap()
-            .add(helpdeskPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                .add(org.jdesktop.layout.GroupLayout.LEADING, dcmHelpdeskButtonBar, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(org.jdesktop.layout.GroupLayout.LEADING, subjectField)
-                .add(messageScroller, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-            .addContainerGap())
-    );
-    helpdeskPanelLayout.setVerticalGroup(
-        helpdeskPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(helpdeskPanelLayout.createSequentialGroup()
-            .add(dcmHelpdeskButtonBar, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-            .add(subjectField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(messageScroller)
-            .addContainerGap())
-    );
+        org.jdesktop.layout.GroupLayout helpdeskPanelLayout = new org.jdesktop.layout.GroupLayout(helpdeskPanel);
+        helpdeskPanel.setLayout(helpdeskPanelLayout);
+        helpdeskPanelLayout.setHorizontalGroup(
+            helpdeskPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, helpdeskPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(helpdeskPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, dcmHelpdeskButtonBar, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, subjectField)
+                    .add(messageScroller, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        helpdeskPanelLayout.setVerticalGroup(
+            helpdeskPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(helpdeskPanelLayout.createSequentialGroup()
+                .add(dcmHelpdeskButtonBar, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(subjectField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(messageScroller)
+                .addContainerGap())
+        );
 
-    org.jdesktop.layout.GroupLayout adminPanelLayout = new org.jdesktop.layout.GroupLayout(adminPanel);
-    adminPanel.setLayout(adminPanelLayout);
-    adminPanelLayout.setHorizontalGroup(
-        adminPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(org.jdesktop.layout.GroupLayout.TRAILING, adminPanelLayout.createSequentialGroup()
-            .add(adminPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                .add(licenseInnerPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 804, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(adminPanelLayout.createSequentialGroup()
-                    .add(userPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 409, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                    .add(backupPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(adminPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                .add(helpdeskPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 362, Short.MAX_VALUE)
-                .add(systemPropertiesPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-    );
-    adminPanelLayout.setVerticalGroup(
-        adminPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(adminPanelLayout.createSequentialGroup()
-            .add(adminPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                .add(licenseInnerPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
-                .add(helpdeskPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE))
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(adminPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                .add(userPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE)
-                .add(backupPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(systemPropertiesPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-    );
+        org.jdesktop.layout.GroupLayout adminPanelLayout = new org.jdesktop.layout.GroupLayout(adminPanel);
+        adminPanel.setLayout(adminPanelLayout);
+        adminPanelLayout.setHorizontalGroup(
+            adminPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, adminPanelLayout.createSequentialGroup()
+                .add(adminPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                    .add(licenseInnerPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 804, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(adminPanelLayout.createSequentialGroup()
+                        .add(userPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 409, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(backupPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(adminPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(helpdeskPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
+                    .add(systemPropertiesPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+        adminPanelLayout.setVerticalGroup(
+            adminPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(adminPanelLayout.createSequentialGroup()
+                .add(adminPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                    .add(licenseInnerPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
+                    .add(helpdeskPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(adminPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(userPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
+                    .add(backupPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(systemPropertiesPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
 
-    managerTab.addTab(bundle.getString("DCMDesktop.adminPanel.TabConstraints.tabTitle"), adminPanel); // NOI18N
+        managerTab.addTab(bundle.getString("DCMDesktop.adminPanel.TabConstraints.tabTitle"), adminPanel); // NOI18N
 
-    logPanel.setFont(logPanel.getFont());
-    logPanel.setPreferredSize(new java.awt.Dimension(1164, 700));
+        logPanel.setFont(logPanel.getFont());
+        logPanel.setPreferredSize(new java.awt.Dimension(1164, 700));
 
-    logScroller.setBackground(new java.awt.Color(0, 0, 0));
-    logScroller.setForeground(new java.awt.Color(255, 255, 255));
-    logScroller.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-    logScroller.setDoubleBuffered(true);
-    logScroller.setFocusable(false);
-    logScroller.setFont(new java.awt.Font("Courier New", 1, 12)); // NOI18N
-    logScroller.setOpaque(false);
-    logScroller.addInputMethodListener(new java.awt.event.InputMethodListener() {
-        public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
-        }
-        public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
-            logScrollerCaretPositionChanged(evt);
-        }
-    });
+        logScroller.setBackground(new java.awt.Color(0, 0, 0));
+        logScroller.setForeground(new java.awt.Color(255, 255, 255));
+        logScroller.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        logScroller.setDoubleBuffered(true);
+        logScroller.setFocusable(false);
+        logScroller.setFont(new java.awt.Font("Courier New", 1, 12)); // NOI18N
+        logScroller.setOpaque(false);
+        logScroller.addInputMethodListener(new java.awt.event.InputMethodListener()
+        {
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt)
+            {
+            }
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt)
+            {
+                logScrollerCaretPositionChanged(evt);
+            }
+        });
 
-    logPane.setBackground(new java.awt.Color(0, 0, 0));
-    logPane.setContentType(bundle.getString("DCMDesktop.logPane.contentType")); // NOI18N
-    logPane.setFont(new java.awt.Font("Courier New", 1, 10)); // NOI18N
-    logPane.setForeground(new java.awt.Color(255, 255, 255));
-    logPane.setText(bundle.getString("DCMDesktop.logPane.text")); // NOI18N
-    logPane.setDoubleBuffered(true);
-    logScroller.setViewportView(logPane);
+        logPane.setBackground(new java.awt.Color(0, 0, 0));
+        logPane.setContentType(bundle.getString("DCMDesktop.logPane.contentType")); // NOI18N
+        logPane.setFont(new java.awt.Font("Courier New", 1, 10)); // NOI18N
+        logPane.setForeground(new java.awt.Color(255, 255, 255));
+        logPane.setText(bundle.getString("DCMDesktop.logPane.text")); // NOI18N
+        logPane.setDoubleBuffered(true);
+        logScroller.setViewportView(logPane);
 
-    org.jdesktop.layout.GroupLayout logPanelLayout = new org.jdesktop.layout.GroupLayout(logPanel);
-    logPanel.setLayout(logPanelLayout);
-    logPanelLayout.setHorizontalGroup(
-        logPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(org.jdesktop.layout.GroupLayout.TRAILING, logScroller, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1172, Short.MAX_VALUE)
-    );
-    logPanelLayout.setVerticalGroup(
-        logPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(org.jdesktop.layout.GroupLayout.TRAILING, logScroller, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 771, Short.MAX_VALUE)
-    );
+        org.jdesktop.layout.GroupLayout logPanelLayout = new org.jdesktop.layout.GroupLayout(logPanel);
+        logPanel.setLayout(logPanelLayout);
+        logPanelLayout.setHorizontalGroup(
+            logPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, logScroller, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1172, Short.MAX_VALUE)
+        );
+        logPanelLayout.setVerticalGroup(
+            logPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, logScroller, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 771, Short.MAX_VALUE)
+        );
 
-    managerTab.addTab(bundle.getString("DCMDesktop.logPanel.TabConstraints.tabTitle"), logPanel); // NOI18N
+        managerTab.addTab(bundle.getString("DCMDesktop.logPanel.TabConstraints.tabTitle"), logPanel); // NOI18N
 
-    statusPanel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-    statusPanel.setFont(statusPanel.getFont());
+        statusPanel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        statusPanel.setFont(statusPanel.getFont());
 
-    statusLabel.setFont(new java.awt.Font("STHeiti", 0, 12)); // NOI18N
-    statusLabel.setForeground(new java.awt.Color(51, 51, 51));
-    statusLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-    statusLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            statusLabelMouseClicked(evt);
-        }
-    });
+        statusLabel.setFont(new java.awt.Font("STHeiti", 0, 12)); // NOI18N
+        statusLabel.setForeground(new java.awt.Color(51, 51, 51));
+        statusLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        statusLabel.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                statusLabelMouseClicked(evt);
+            }
+        });
 
-    staticLabel.setFont(new java.awt.Font("STHeiti", 0, 12)); // NOI18N
-    staticLabel.setForeground(new java.awt.Color(153, 153, 153));
-    staticLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-    staticLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        staticLabel.setFont(new java.awt.Font("STHeiti", 0, 12)); // NOI18N
+        staticLabel.setForeground(new java.awt.Color(153, 153, 153));
+        staticLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        staticLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-    org.jdesktop.layout.GroupLayout statusPanelLayout = new org.jdesktop.layout.GroupLayout(statusPanel);
-    statusPanel.setLayout(statusPanelLayout);
-    statusPanelLayout.setHorizontalGroup(
-        statusPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(statusPanelLayout.createSequentialGroup()
-            .add(statusLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 868, Short.MAX_VALUE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(staticLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE))
-    );
-    statusPanelLayout.setVerticalGroup(
-        statusPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(staticLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 19, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-        .add(org.jdesktop.layout.GroupLayout.TRAILING, statusLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 19, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-    );
+        org.jdesktop.layout.GroupLayout statusPanelLayout = new org.jdesktop.layout.GroupLayout(statusPanel);
+        statusPanel.setLayout(statusPanelLayout);
+        statusPanelLayout.setHorizontalGroup(
+            statusPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(statusPanelLayout.createSequentialGroup()
+                .add(statusLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 868, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(staticLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE))
+        );
+        statusPanelLayout.setVerticalGroup(
+            statusPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(staticLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 19, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, statusLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 19, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+        );
 
-    org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
-    getContentPane().setLayout(layout);
-    layout.setHorizontalGroup(
-        layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(statusPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        .add(managerTab, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1193, Short.MAX_VALUE)
-    );
-    layout.setVerticalGroup(
-        layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-            .add(managerTab, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 817, Short.MAX_VALUE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(statusPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-    );
+        org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(statusPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .add(managerTab, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1193, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+                .add(managerTab, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 817, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(statusPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+        );
 
-    pack();
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void firstTimeBalloonTip()
@@ -4797,7 +4855,7 @@ vergunningDateChooserPanel.setBorder(javax.swing.BorderFactory.createEtchedBorde
 
             if (startsWithANumber)
             {
-                NavigatorPreset dcmPreset = dcmDBClient.getDCMPreset(Long.parseLong(lineArray[0].toString()));
+                DCMPreset dcmPreset = dcmDBClient.getDCMPreset(Long.parseLong(lineArray[0].toString()));
                 dcmDBClient.deleteDCMPreset(dcmPreset.getId());
                 selectPresetBox.setSelectedItem("");
                 deletePresetButton.setEnabled(false);
@@ -4819,7 +4877,7 @@ vergunningDateChooserPanel.setBorder(javax.swing.BorderFactory.createEtchedBorde
 
             if (startsWithANumber)
             {
-                NavigatorPreset dcmPreset = dcmDBClient.getDCMPreset(Long.parseLong(lineArray[0].toString()));
+                DCMPreset dcmPreset = dcmDBClient.getDCMPreset(Long.parseLong(lineArray[0].toString()));
 
                 dcmPreset.setPresetName(lineArray[1]);
 
@@ -4848,7 +4906,7 @@ vergunningDateChooserPanel.setBorder(javax.swing.BorderFactory.createEtchedBorde
             }
             else
             {
-                NavigatorPreset dcmPreset = new NavigatorPreset();
+                DCMPreset dcmPreset = new DCMPreset();
 
                 dcmPreset.setUserId(dcmUser.getId());
                 dcmPreset.setPresetName(String.valueOf(selectPresetBox.getSelectedItem()));
@@ -4901,7 +4959,7 @@ vergunningDateChooserPanel.setBorder(javax.swing.BorderFactory.createEtchedBorde
                 deletePresetButton.setEnabled(true);
                 savePresetButton.setEnabled(true);
                 
-                NavigatorPreset dcmPreset = dcmDBClient.getDCMPreset(Long.parseLong(lineArray[0].toString()));
+                DCMPreset dcmPreset = dcmDBClient.getDCMPreset(Long.parseLong(lineArray[0].toString()));
                 
                 startCalendar = Calendar.getInstance(); startCalendar = dcmPreset.getStartCalendar();
                 endCalendar = Calendar.getInstance(); endCalendar = dcmPreset.getEndCalendar();
@@ -4944,9 +5002,9 @@ vergunningDateChooserPanel.setBorder(javax.swing.BorderFactory.createEtchedBorde
     }//GEN-LAST:event_selectPresetBoxActionPerformed
 
     private void selectPresetBoxPopupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_selectPresetBoxPopupMenuWillBecomeVisible
-        ArrayList<NavigatorPreset> dcmPresetList = getDCMViewList();
+        ArrayList<DCMPreset> dcmPresetList = getDCMViewList();
         selectPresetBox.removeAllItems(); selectPresetBox.addItem("");
-        for (NavigatorPreset dcmPreset:dcmPresetList) { selectPresetBox.addItem(dcmPreset.getId() + " " + dcmPreset.getPresetName()); }
+        for (DCMPreset dcmPreset:dcmPresetList) { selectPresetBox.addItem(dcmPreset.getId() + " " + dcmPreset.getPresetName()); }
     }//GEN-LAST:event_selectPresetBoxPopupMenuWillBecomeVisible
 
     private void selectPresetBoxFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_selectPresetBoxFocusGained
@@ -5274,17 +5332,17 @@ vergunningDateChooserPanel.setBorder(javax.swing.BorderFactory.createEtchedBorde
     // End MiddleWare
 
     // Begin MiddleWare
-    public NavigatorPreset getDCMView(long idParam)
+    public DCMPreset getDCMView(long idParam)
     {
-        NavigatorPreset thisDCMView = (NavigatorPreset) dcmDBClient.getDCMPreset(idParam);
+        DCMPreset thisDCMView = (DCMPreset) dcmDBClient.getDCMPreset(idParam);
         return thisDCMView;
     }
     // End MiddleWare
     
     // Begin MiddleWare
-    public ArrayList<NavigatorPreset> getDCMViewList()
+    public ArrayList<DCMPreset> getDCMViewList()
     {
-        ArrayList<NavigatorPreset> dcmPresetList = dcmDBClient.getDCMPresetList();
+        ArrayList<DCMPreset> dcmPresetList = dcmDBClient.getDCMPresetList();
         return dcmPresetList;
     }
     // End MiddleWare

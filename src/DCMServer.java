@@ -277,37 +277,37 @@ public class DCMServer extends java.rmi.server.UnicastRemoteObject implements Se
     }
     
     @Override
-    public ArrayList<RMIMessage> insertDCMPreset(NavigatorPreset viewParam) throws CloneNotSupportedException
+    public ArrayList<RMIMessage> insertDCMPreset(DCMPreset viewParam) throws CloneNotSupportedException
     {
         rmiMessageList.clear(); dcmDBClient.insertDCMPreset(viewParam); return rmiMessageList;
     }
 
     @Override
-    public ArrayList<RMIMessage> updateDCMPreset(NavigatorPreset viewParam) throws CloneNotSupportedException
+    public ArrayList<RMIMessage> updateDCMPreset(DCMPreset viewParam) throws CloneNotSupportedException
     {
         rmiMessageList.clear(); dcmDBClient.updateDCMPreset(viewParam); return rmiMessageList;
     }
 
     @Override
-    public ArrayList<RMIMessage> deleteDCMPreset(NavigatorPreset viewParam) throws CloneNotSupportedException
+    public ArrayList<RMIMessage> deleteDCMPreset(DCMPreset viewParam) throws CloneNotSupportedException
     {
         rmiMessageList.clear(); dcmDBClient.deleteDCMPreset(viewParam.getId()); return rmiMessageList;
     }
 
     // Begin MiddleWare
     @Override
-    public NavigatorPreset getDCMPreset(long idParam)
+    public DCMPreset getDCMPreset(long idParam)
     {
 //        DCMUser dcmUser = new DCMUser();try { dcmUser = (DCMUser) dcmMetaDBClient.getDCMUser(idParam).clone(); } catch (CloneNotSupportedException ex) {  }
-        NavigatorPreset DCMPreset = new NavigatorPreset(); DCMPreset = dcmDBClient.getDCMPreset(idParam);
+        DCMPreset DCMPreset = new DCMPreset(); DCMPreset = dcmDBClient.getDCMPreset(idParam);
         return DCMPreset;
     }
 
     // Begin MiddleWare
     @Override
-    public ArrayList<NavigatorPreset> getDCMPresetList()
+    public ArrayList<DCMPreset> getDCMPresetList()
     {
-        ArrayList<NavigatorPreset> DCMPresetList = dcmDBClient.getDCMPresetList();
+        ArrayList<DCMPreset> DCMPresetList = dcmDBClient.getDCMPresetList();
         return DCMPresetList;
     }
     

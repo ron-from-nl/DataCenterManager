@@ -30,7 +30,8 @@ public class DCMLoginForm extends javax.swing.JFrame
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         windowPanel = new javax.swing.JPanel();
         loginPanel = new javax.swing.JPanel();
@@ -58,8 +59,10 @@ public class DCMLoginForm extends javax.swing.JFrame
         usernameField.setFont(usernameField.getFont().deriveFont(usernameField.getFont().getSize()-1f));
         usernameField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         usernameField.setText(bundle.getString("DCMLoginForm.usernameField.text")); // NOI18N
-        usernameField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
+        usernameField.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
                 usernameFieldKeyReleased(evt);
             }
         });
@@ -67,8 +70,12 @@ public class DCMLoginForm extends javax.swing.JFrame
         passwordField.setBackground(new java.awt.Color(204, 204, 204));
         passwordField.setFont(passwordField.getFont().deriveFont(passwordField.getFont().getSize()-1f));
         passwordField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        passwordField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
+        passwordField.setToolTipText(bundle.getString("DCMLoginForm.passwordField.toolTipText")); // NOI18N
+        passwordField.setFocusCycleRoot(true);
+        passwordField.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
                 passwordFieldKeyReleased(evt);
             }
         });
@@ -85,8 +92,10 @@ public class DCMLoginForm extends javax.swing.JFrame
 
         loginButton.setFont(loginButton.getFont().deriveFont(loginButton.getFont().getSize()+1f));
         loginButton.setText(bundle.getString("DCMLoginForm.loginButton.text")); // NOI18N
-        loginButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        loginButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 loginButtonActionPerformed(evt);
             }
         });

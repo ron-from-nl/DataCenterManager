@@ -3,7 +3,7 @@ package data;
 import java.io.Serializable;
 import java.util.Calendar;
 
-public class NavigatorPreset implements Serializable, Cloneable
+public class DCMPreset implements Serializable, Cloneable
 {
     private static final int     SECOND               = 1;
     private static final int     MINUTE               = SECOND * 60;
@@ -36,7 +36,7 @@ public class NavigatorPreset implements Serializable, Cloneable
     private String      selectedResources;
     private boolean     shared;
 
-    public NavigatorPreset()
+    public DCMPreset()
     {
         id =                        0;
         userId =                    0;

@@ -263,7 +263,7 @@ public class DCMPoller implements DCMDBClientCaller, ConfigurationCaller, DCMPol
                     else if(argsParam[i].equals("--help"))          { usage(); System.exit(1); }
                     else                                            { usage(); System.exit(1); }
                 }
-                try { new DCMPoller(singleShot,timeout,daemon,debug); } catch (Exception ex) { System.out.println("Error: main(): "); }
+                try { new DCMPoller(singleShot, timeout, daemon, debug); } catch (Exception ex) { System.out.println("Error: main(): "); }
             }
         });
     }

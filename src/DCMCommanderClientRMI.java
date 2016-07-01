@@ -1,4 +1,6 @@
-import data.*;
+import data.RMIMessage;
+import data.Server;
+import data.Host;
 import java.io.Serializable;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;

@@ -139,7 +139,8 @@ public class DCMStarter extends javax.swing.JFrame
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         jLayeredPane1 = new javax.swing.JLayeredPane();
         portField = new javax.swing.JTextField();
@@ -184,8 +185,10 @@ public class DCMStarter extends javax.swing.JFrame
         serverField.setToolTipText(bundle.getString("DCMStarter.serverField.toolTipText")); // NOI18N
         serverField.setBorder(null);
         serverField.setOpaque(false);
-        serverField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
+        serverField.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
                 serverFieldKeyReleased(evt);
             }
         });
@@ -195,8 +198,10 @@ public class DCMStarter extends javax.swing.JFrame
         languageBox.setFont(languageBox.getFont().deriveFont(languageBox.getFont().getSize()-3f));
         languageBox.setMaximumRowCount(25);
         languageBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arabic", "English", "Portuguese", "Russian" }));
-        languageBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        languageBox.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 languageBoxActionPerformed(evt);
             }
         });
@@ -219,8 +224,10 @@ public class DCMStarter extends javax.swing.JFrame
         checkVersionButton1.setMaximumSize(new java.awt.Dimension(90, 13));
         checkVersionButton1.setMinimumSize(new java.awt.Dimension(90, 13));
         checkVersionButton1.setPreferredSize(new java.awt.Dimension(90, 13));
-        checkVersionButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        checkVersionButton1.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 checkVersionButton1ActionPerformed(evt);
             }
         });
@@ -245,8 +252,10 @@ public class DCMStarter extends javax.swing.JFrame
         debugCheckbox.setForeground(new java.awt.Color(204, 204, 204));
         debugCheckbox.setText(bundle.getString("DCMStarter.debugCheckbox.text")); // NOI18N
         debugCheckbox.setToolTipText(bundle.getString("DCMStarter.debugCheckbox.toolTipText")); // NOI18N
-        debugCheckbox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        debugCheckbox.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 debugCheckboxActionPerformed(evt);
             }
         });
@@ -258,17 +267,22 @@ public class DCMStarter extends javax.swing.JFrame
         desktopLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/desktop.png"))); // NOI18N
         desktopLabel.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED), bundle.getString("DCMStarter.desktopLabel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.BELOW_TOP, new java.awt.Font("STHeiti", 0, 18), new java.awt.Color(255, 255, 255))); // NOI18N
         desktopLabel.setOpaque(true);
-        desktopLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
+        desktopLabel.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mousePressed(java.awt.event.MouseEvent evt)
+            {
                 desktopLabelMousePressed(evt);
             }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
+            public void mouseReleased(java.awt.event.MouseEvent evt)
+            {
                 desktopLabelMouseReleased(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 desktopLabelMouseExited(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 desktopLabelMouseEntered(evt);
             }
         });
@@ -280,39 +294,53 @@ public class DCMStarter extends javax.swing.JFrame
         serverLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/server.png"))); // NOI18N
         serverLabel.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED), bundle.getString("DCMStarter.serverLabel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.BELOW_TOP, new java.awt.Font("STHeiti", 0, 18), new java.awt.Color(255, 255, 255))); // NOI18N
         serverLabel.setOpaque(true);
-        serverLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
+        serverLabel.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mousePressed(java.awt.event.MouseEvent evt)
+            {
                 serverLabelMousePressed(evt);
             }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
+            public void mouseReleased(java.awt.event.MouseEvent evt)
+            {
                 serverLabelMouseReleased(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                serverLabelMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 serverLabelMouseExited(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 serverLabelMouseEntered(evt);
             }
         });
         jLayeredPane1.add(serverLabel);
-        serverLabel.setBounds(0, 270, 310, 158);
+        serverLabel.setBounds(0, 270, 310, 164);
 
         clientLabel.setFont(clientLabel.getFont());
         clientLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         clientLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/client.png"))); // NOI18N
         clientLabel.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED), bundle.getString("DCMStarter.clientLabel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.BELOW_TOP, new java.awt.Font("STHeiti", 0, 18), new java.awt.Color(255, 255, 255))); // NOI18N
         clientLabel.setOpaque(true);
-        clientLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
+        clientLabel.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mousePressed(java.awt.event.MouseEvent evt)
+            {
                 clientLabelMousePressed(evt);
             }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
+            public void mouseReleased(java.awt.event.MouseEvent evt)
+            {
                 clientLabelMouseReleased(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 clientLabelMouseExited(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 clientLabelMouseEntered(evt);
             }
         });
@@ -324,22 +352,27 @@ public class DCMStarter extends javax.swing.JFrame
         pollerLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/poller.png"))); // NOI18N
         pollerLabel.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED), bundle.getString("DCMStarter.pollerLabel.border.title"), javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.BELOW_TOP, new java.awt.Font("STHeiti", 0, 18), new java.awt.Color(255, 255, 255))); // NOI18N
         pollerLabel.setOpaque(true);
-        pollerLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
+        pollerLabel.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mousePressed(java.awt.event.MouseEvent evt)
+            {
                 pollerLabelMousePressed(evt);
             }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
+            public void mouseReleased(java.awt.event.MouseEvent evt)
+            {
                 pollerLabelMouseReleased(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 pollerLabelMouseExited(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 pollerLabelMouseEntered(evt);
             }
         });
         jLayeredPane1.add(pollerLabel);
-        pollerLabel.setBounds(310, 270, 310, 158);
+        pollerLabel.setBounds(310, 270, 310, 164);
 
         backgroundLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         backgroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/worldmap.jpg"))); // NOI18N
@@ -660,6 +693,11 @@ public class DCMStarter extends javax.swing.JFrame
     private void languageBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_languageBoxActionPerformed
         languageSelected();
     }//GEN-LAST:event_languageBoxActionPerformed
+
+    private void serverLabelMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_serverLabelMouseClicked
+    {//GEN-HEADEREND:event_serverLabelMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_serverLabelMouseClicked
 
     private void dropWindow()
     {

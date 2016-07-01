@@ -50,12 +50,12 @@ Search: "x86 tcpstat | x86 numofprocs" Creates a graph with all Intel X86 server
 Search: "mem swap used | mem ram free" Creates a graph with memory consumption of all your servers e.g. detecting datacenter memory leaks in a snap.
 
 You don't have to type search phrases, you can also slide open the inventory view and drag and drop any inventory items into the search bar, so you don't have to memorize or guess what the inventory has available for you.
-The smart search engine will search every word you specify in all inventory fields, which provides a lazy search capability to you, isn't that great?
+The search engine will search every word you specify in all inventory fields, which provides a lazy search capability to you, isn't that great?
 Multiple different search criteria allowed by specifying a "|" character.
 Match Search and Exact Search possible allowing you to search for parts of words or entire words (the wildcard % also works in Exact Search).
 You can even edit the search results (selected resources) before creating your desired graph.
 
-You'll get the drift, the smart search engine is designed to make searching for server resources or any inventory items extremely easy and powerful.
+The search engine is designed to make searching for server resources or any inventory easy and powerful.
 ---------------------------------------------------------------------------------------------------------------------------
 
 All in all DatacenterManager is the best thing on offer in it's category !!
@@ -69,4 +69,4 @@ Please let me know what you think: ronuitzaandam@gmail.com
 Regards,
 
 Ron de Jong
-+31 6 344 733 73
+ronuitzaandam@gmail.com

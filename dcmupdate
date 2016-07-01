@@ -1,7 +1,0 @@
-#! /bin/bash
-rsync -av Documents/NetBeansProjects/DCManager/dist/DCManager.jar ./dcm/
-rsync -av Documents/NetBeansProjects/DCManager/dist/lib ./dcm/
-find dcm -name ".DS_Store" -exec rm {} \;
-cp dcm/DCManager.jar Desktop/dcm/
-rsync -av dcm/lib/ Desktop/dcm/lib/
-

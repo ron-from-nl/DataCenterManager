@@ -1,2 +1,0 @@
-#! /bin/bash
-rsync -av dcm@www.voipstorm.nl:/usr/local/bin/dcm/dcm/data/databases/DCMArchiveDB ~/dcm/data/databases/

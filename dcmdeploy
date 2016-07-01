@@ -1,3 +1,0 @@
-#! /bin/bash
-rsync -av ~/dcm/DCManager.jar dcm@www.voipstorm.nl:/usr/local/bin/dcm/dcm/
-rsync -av ~/dcm/lib dcm@www.voipstorm.nl:/usr/local/bin/dcm/dcm/

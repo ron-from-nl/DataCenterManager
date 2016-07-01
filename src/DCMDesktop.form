@@ -7660,7 +7660,7 @@
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
                           <FontInfo relative="true">
-                            <Font component="serversInLicenseField" property="font" relativeSize="true" size="35"/>
+                            <Font component="serversInLicenseField" property="font" relativeSize="true" size="20"/>
                           </FontInfo>
                         </Property>
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">

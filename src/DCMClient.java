@@ -820,6 +820,13 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
         selectPresetBox.setEnabled(false);
         selectPresetBox.setMinimumSize(new java.awt.Dimension(68, 20));
         selectPresetBox.setPreferredSize(new java.awt.Dimension(68, 20));
+        selectPresetBox.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                selectPresetBoxFocusGained(evt);
+            }
+        });
         selectPresetBox.addPopupMenuListener(new javax.swing.event.PopupMenuListener()
         {
             public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt)
@@ -838,13 +845,6 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
                 selectPresetBoxActionPerformed(evt);
-            }
-        });
-        selectPresetBox.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                selectPresetBoxFocusGained(evt);
             }
         });
 
@@ -2309,7 +2309,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
         licenseTypePanel.setPreferredSize(new java.awt.Dimension(200, 239));
         licenseTypePanel.setLayout(new java.awt.GridBagLayout());
 
-        serversInLicenseField.setFont(serversInLicenseField.getFont().deriveFont(serversInLicenseField.getFont().getSize()+35f));
+        serversInLicenseField.setFont(serversInLicenseField.getFont().deriveFont(serversInLicenseField.getFont().getSize()+20f));
         serversInLicenseField.setForeground(new java.awt.Color(102, 102, 102));
         serversInLicenseField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         serversInLicenseField.setText(bundle.getString("DCMClient.serversInLicenseField.text")); // NOI18N

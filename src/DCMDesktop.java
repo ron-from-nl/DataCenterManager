@@ -2362,7 +2362,7 @@ public class DCMDesktop extends javax.swing.JFrame implements DCMInventoryServer
         licenseTypePanel.setPreferredSize(new java.awt.Dimension(200, 239));
         licenseTypePanel.setLayout(new java.awt.GridBagLayout());
 
-        serversInLicenseField.setFont(serversInLicenseField.getFont().deriveFont(serversInLicenseField.getFont().getSize()+35f));
+        serversInLicenseField.setFont(serversInLicenseField.getFont().deriveFont(serversInLicenseField.getFont().getSize()+20f));
         serversInLicenseField.setForeground(new java.awt.Color(102, 102, 102));
         serversInLicenseField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         serversInLicenseField.setText(bundle.getString("DCMDesktop.serversInLicenseField.text")); // NOI18N

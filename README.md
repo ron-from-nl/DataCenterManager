@@ -20,3 +20,6 @@ DCMClient:    Client interface (frontend) similar to visible frontend of DCMDesk
 DCMCommander: Multithreaded (just like DCMPoller) mass server script execution SSH connected with Terminal automator
 
 You'll find the necessary libraries in the "libs" directory
+
+This software was developed with: JDK 8u91 with NetBeans 8.1
+http://www.oracle.com/technetwork/articles/javase/jdk-netbeans-jsp-142931.html

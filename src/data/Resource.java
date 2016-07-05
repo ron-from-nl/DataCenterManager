@@ -21,6 +21,7 @@ public class Resource implements Serializable, Cloneable
     private int         alertPolls;
     private Calendar    updated;
     private String      rrdFile;
+    private int         retentionTime; // Years
 
     public Resource()
     {
@@ -38,7 +39,8 @@ public class Resource implements Serializable, Cloneable
         criticalLimit =     0D;
         alertPolls =        0;
         updated =           Calendar.getInstance(); updated.setTimeInMillis(0);
-        rrdFile =         "";
+        rrdFile =	    "";
+        retentionTime =     1;
     }
 
     public Resource(
@@ -56,7 +58,8 @@ public class Resource implements Serializable, Cloneable
                     Double      criticalLimitParam,
                     int         alertPollsParam,
                     Calendar    updatedParam,
-                    String      rrdFileParam
+                    String      rrdFileParam,
+                    int         retentionTimeParam
                )
     {
         id =                idParam;
@@ -74,6 +77,7 @@ public class Resource implements Serializable, Cloneable
         alertPolls =        alertPollsParam;
         updated =           updatedParam;
         rrdFile =           rrdFileParam;
+        retentionTime =     retentionTimeParam;
     }
 
     public long     getId()                { return id;}
@@ -91,6 +95,7 @@ public class Resource implements Serializable, Cloneable
     public int      getAlertPolls()        { return alertPolls;}
     public Calendar getUpdated()           { return updated;}
     public String   getRRDFile()           { return rrdFile;}
+    public int      getRetentionTime()     { return retentionTime;}
     
     public void     setId(long idParam)                         { id =              idParam; }
     public void     setHostId(long hostIdParam)                 { hostId =          hostIdParam; }
@@ -107,6 +112,7 @@ public class Resource implements Serializable, Cloneable
     public void     setAlertPolls(int alertPollsParam)          { alertPolls =      alertPollsParam; }
     public void     setUpdated(Calendar updatedParam)           { updated =         updatedParam;}
     public void     setArchiveDBFile(String rrdFileParam)       { rrdFile =         rrdFileParam; }
+    public void     setRetentionTime(int retentionTimeParam)    { retentionTime =      retentionTimeParam; }
 
     @Override
     public String toString()
@@ -127,6 +133,7 @@ public class Resource implements Serializable, Cloneable
         output += "alertPolls: "        + alertPolls + "\n";
         output += "Updated: "           + updated.getTimeInMillis() + "\n";
         output += "rrdFile: "           + rrdFile + "\n";
+        output += "retentionTime: "     + retentionTime + "\n";
 
         return output;
     }

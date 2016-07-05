@@ -45,7 +45,7 @@ public class DCMStarter extends javax.swing.JFrame
         int posY = Math.round((screenDim.height / 2) - (winHeight / 2));
         setLocation(posX, posY);
         shell = new DCMShell(debug); // For starting the poller
-        checkVersionButton1.setText("Check Version " + DCMLicense.getVersion());
+//        websiteButton.setText("Check Version " + DCMLicense.getVersion());
 //        versionLabel.setText(DCMLicense.getVersion());
         buttonForegroundColor = new Color(255,255,255);
         sloganText = "A UNIX Server can Run, but it can't Hide";
@@ -147,7 +147,7 @@ public class DCMStarter extends javax.swing.JFrame
         serverField = new javax.swing.JTextField();
         languageBox = new javax.swing.JComboBox();
         daemonsVisibleBox = new javax.swing.JCheckBox();
-        checkVersionButton1 = new javax.swing.JButton();
+        websiteButton = new javax.swing.JButton();
         headerLabel = new javax.swing.JLabel();
         sloganLabel = new javax.swing.JLabel();
         debugCheckbox = new javax.swing.JCheckBox();
@@ -206,7 +206,7 @@ public class DCMStarter extends javax.swing.JFrame
             }
         });
         jLayeredPane1.add(languageBox);
-        languageBox.setBounds(490, 80, 120, 20);
+        languageBox.setBounds(520, 80, 100, 20);
 
         daemonsVisibleBox.setFont(daemonsVisibleBox.getFont().deriveFont(daemonsVisibleBox.getFont().getSize()-5f));
         daemonsVisibleBox.setForeground(new java.awt.Color(204, 204, 204));
@@ -216,23 +216,23 @@ public class DCMStarter extends javax.swing.JFrame
         jLayeredPane1.add(daemonsVisibleBox);
         daemonsVisibleBox.setBounds(140, 430, 230, 20);
 
-        checkVersionButton1.setFont(new java.awt.Font("STHeiti", 0, 10)); // NOI18N
-        checkVersionButton1.setText(bundle.getString("DCMStarter.checkVersionButton1.text")); // NOI18N
-        checkVersionButton1.setToolTipText(bundle.getString("DCMStarter.checkVersionButton1.toolTipText")); // NOI18N
-        checkVersionButton1.setActionCommand(bundle.getString("DCMStarter.checkVersionButton1.actionCommand")); // NOI18N
-        checkVersionButton1.setFocusable(false);
-        checkVersionButton1.setMaximumSize(new java.awt.Dimension(90, 13));
-        checkVersionButton1.setMinimumSize(new java.awt.Dimension(90, 13));
-        checkVersionButton1.setPreferredSize(new java.awt.Dimension(90, 13));
-        checkVersionButton1.addActionListener(new java.awt.event.ActionListener()
+        websiteButton.setFont(new java.awt.Font("STHeiti", 0, 10)); // NOI18N
+        websiteButton.setText(bundle.getString("DCMStarter.websiteButton.text")); // NOI18N
+        websiteButton.setToolTipText(bundle.getString("DCMStarter.websiteButton.toolTipText")); // NOI18N
+        websiteButton.setActionCommand(bundle.getString("DCMStarter.websiteButton.actionCommand")); // NOI18N
+        websiteButton.setFocusable(false);
+        websiteButton.setMaximumSize(new java.awt.Dimension(90, 13));
+        websiteButton.setMinimumSize(new java.awt.Dimension(90, 13));
+        websiteButton.setPreferredSize(new java.awt.Dimension(90, 13));
+        websiteButton.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                checkVersionButton1ActionPerformed(evt);
+                websiteButtonActionPerformed(evt);
             }
         });
-        jLayeredPane1.add(checkVersionButton1);
-        checkVersionButton1.setBounds(10, 80, 110, 20);
+        jLayeredPane1.add(websiteButton);
+        websiteButton.setBounds(0, 80, 80, 20);
 
         headerLabel.setFont(headerLabel.getFont().deriveFont(headerLabel.getFont().getStyle() | java.awt.Font.BOLD, headerLabel.getFont().getSize()+35));
         headerLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -686,9 +686,9 @@ public class DCMStarter extends javax.swing.JFrame
         }
     }//GEN-LAST:event_serverFieldKeyReleased
 
-    private void checkVersionButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkVersionButton1ActionPerformed
+    private void websiteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_websiteButtonActionPerformed
         try { java.awt.Desktop.getDesktop().browse(java.net.URI.create("http://sites.google.com/site/ronuitzaandam/")); } catch (IOException ex) { }
-    }//GEN-LAST:event_checkVersionButton1ActionPerformed
+    }//GEN-LAST:event_websiteButtonActionPerformed
 
     private void languageBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_languageBoxActionPerformed
         languageSelected();
@@ -751,7 +751,6 @@ public class DCMStarter extends javax.swing.JFrame
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel backgroundLabel;
-    private javax.swing.JButton checkVersionButton1;
     private javax.swing.JLabel clientLabel;
     private javax.swing.JCheckBox daemonsVisibleBox;
     private javax.swing.JCheckBox debugCheckbox;
@@ -766,5 +765,6 @@ public class DCMStarter extends javax.swing.JFrame
     private javax.swing.JTextField serverField;
     private javax.swing.JLabel serverLabel;
     private javax.swing.JLabel sloganLabel;
+    private javax.swing.JButton websiteButton;
     // End of variables declaration//GEN-END:variables
 }

@@ -22,6 +22,7 @@ public class DCMArchiveCreate implements ConfigurationCaller
     private File rrdHostDir;
     private String rrdArchiveFileString;
     private File rrdArchiveFile;
+    
     public DCMArchiveCreate(DCMInventoryServer inventoryReferenceParam, final Server server)
     {
         configuration = new Configuration(this);
@@ -47,7 +48,7 @@ public class DCMArchiveCreate implements ConfigurationCaller
                 String consulFunction = "AVERAGE"; // AVERAGE, MIN, MAX or LAST.
                 Double xff = 0.1; // Defines XFiles Factor, the percentage of data points that can be anally probed by martians before RRD gives a crap.
                 int pdp = 1; // PDP Primary Data Points (number of bla bla per sample)
-                int rows = 525600; // This makes up retention time (one year in our case)
+                final int mpy = 525600; // Minutes per Year used for archive retention time
                 int totalArchives = server.getResourceList().size();
                 int archiveCounter = 1;
                 log("Action:  DCMArchiveCreate: Creating " + totalArchives + " archives for host: " + server.getHost().getHostname() + ". Please wait...", true, true, true);
@@ -70,7 +71,7 @@ public class DCMArchiveCreate implements ConfigurationCaller
                         try { rrdDef.addDatasource(resource.getResource(), resource.getCounterType(), heartBeat, minValue, maxValue); } catch (RrdException ex) { inventoryReference.rrdCreateFailureResponse("Error: RrdException: RRDCreate: addDatasource " + ex.getMessage()); }
 
                         // Set Archive Properties                         
-                        try { rrdDef.addArchive(consulFunction, xff, pdp, rows); } catch (RrdException ex) { inventoryReference.rrdCreateFailureResponse(" Error: RrdException: RRDCreate: addArchive " + ex.getMessage()); }
+                        try { rrdDef.addArchive(consulFunction, xff, pdp, resource.getRetentionTime() * mpy); } catch (RrdException ex) { inventoryReference.rrdCreateFailureResponse(" Error: RrdException: RRDCreate: addArchive " + ex.getMessage()); }
                         try { rrdDb = new RrdDb(rrdDef); }
                         catch (RrdException ex) { inventoryReference.rrdCreateFailureResponse("Error:  DCMArchiveCreate: RrdException: RRDCreate: new RrdDb(rrdDef) " + ex.getMessage()); }
                         catch (IOException ex) { inventoryReference.rrdCreateFailureResponse("Error:  DCMArchiveCreate: IOException: RRDCreate: new RrdDb(rrdDef) " + ex.getMessage()); }

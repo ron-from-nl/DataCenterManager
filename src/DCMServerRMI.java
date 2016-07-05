@@ -29,7 +29,7 @@ public interface DCMServerRMI extends Remote
     public ArrayList<Host>          getHostList(String hostLines) throws CloneNotSupportedException,RemoteException;
     public ArrayList<Server>        getServerList() throws CloneNotSupportedException,RemoteException;
 //    public void                     addServerList(final int serverOffset) throws RemoteException;
-    public ArrayList<RMIMessage>    inventoryServer(final long instanceParam, final Host hostParam, final int timeoutParam, final int retryMaxParam, final boolean debugParam) throws RemoteException;
+    public ArrayList<RMIMessage>    inventoryServer(final long instanceParam, final Host hostParam, final int retentionTimeParam, final int timeoutParam, final int retryMaxParam, final boolean debugParam) throws RemoteException;
     public ArrayList<RMIMessage>    enableHost(final Host hostParam, final boolean enableParam) throws RemoteException;
     public ArrayList<RMIMessage>    deleteServer(final Server serverParam, final boolean deleteArchivesParam) throws RemoteException;
     public ArrayList<RMIMessage>    deleteServers(final boolean deleteArchivesParam) throws CloneNotSupportedException,RemoteException;

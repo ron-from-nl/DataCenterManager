@@ -1136,7 +1136,8 @@ public class DCMDBClient extends Thread implements ConfigurationCaller
 						    "CriticalLimit Double," +
 						    "AlertPolls INT," +
 						    "Updated BIGINT," +
-						    "RRDFile VARCHAR(250)" +
+						    "RRDFile VARCHAR(250)," +
+						    "RetentionTime INT" +
 						" )"
 					); } catch (SQLException ex1) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: createResourceTable: " + ex1.getMessage(), true, true, true); }
 	try { connection.commit(); } catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: createResourceTable : connection.commit(): " + ex.getMessage(), true, true, true); }
@@ -1185,6 +1186,7 @@ public class DCMDBClient extends Thread implements ConfigurationCaller
 	    resource.setAlertPolls(resultset.getInt(13));
             cal.setTimeInMillis(resultset.getLong(14)); resource.setUpdated(cal);
 	    resource.setArchiveDBFile(resultset.getString(15));
+	    resource.setRetentionTime(resultset.getInt(16));
 	}}
 	catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: selectResource()->while (resultset.next() " + ex.getMessage(), true, true, true); }
 	try { connection.commit(); } catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: selectResource(): connection.commit(): " + ex.getMessage(), true, true, true); }
@@ -1369,6 +1371,7 @@ public class DCMDBClient extends Thread implements ConfigurationCaller
 	try { psInsertResource.setInt(12, resourceParam.getAlertPolls()); }         catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: insertResource: " + ex.getMessage(), true, true, true); }
 	try { psInsertResource.setLong(13, cal.getTimeInMillis()); }                catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: insertResource: " + ex.getMessage(), true, true, true); }
 	try { psInsertResource.setString(14, resourceParam.getRRDFile()); }         catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: insertResource: " + ex.getMessage(), true, true, true); }
+	try { psInsertResource.setInt(15, resourceParam.getRetentionTime()); }      catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: insertResource: " + ex.getMessage(), true, true, true); }
 	try { psInsertResource.execute(); }                                         catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: insertResource: " + ex.getMessage(), true, true, true); }
 	try { connection.commit(); }                                                catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: insertResource: " + ex.getMessage(), true, true, true); }
 	//try { connection.close(); } catch (SQLException ex) { myUserInterface.log("Error: DCMDBClient. : connection.close(): " + ex.getMessage()); }
@@ -1394,7 +1397,8 @@ public class DCMDBClient extends Thread implements ConfigurationCaller
 	try { psUpdateResource.setInt(12, resourceParam.getAlertPolls()); }         catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: updateResource: " + ex.getMessage(), true, true, true); }
 	try { psUpdateResource.setLong(13, resourceParam.getUpdated().getTimeInMillis()); } catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: updateResource: " + ex.getMessage(), true, true, true); }
 	try { psUpdateResource.setString(14, resourceParam.getRRDFile()); }         catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: updateResource: " + ex.getMessage(), true, true, true); }
-	try { psUpdateResource.setLong(15, resourceParam.getId()); }                catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: updateResource: " + ex.getMessage(), true, true, true); }
+	try { psUpdateResource.setInt(15, resourceParam.getRetentionTime()); }      catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: updateResource: " + ex.getMessage(), true, true, true); }
+	try { psUpdateResource.setLong(16, resourceParam.getId()); }                catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: updateResource: " + ex.getMessage(), true, true, true); }
 	try { psUpdateResource.executeUpdate(); }                                   catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: updateResource: " + ex.getMessage(), true, true, true); }
 	try { connection.commit(); }                                                catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: updateResource connection.commit(): " + ex.getMessage(), true, true, true); }
 	//try { connection.close(); } catch (SQLException ex) { myUserInterface.log("Error: DCMDBClient. : connection.close(): " + ex.getMessage()); }
@@ -1408,9 +1412,9 @@ public class DCMDBClient extends Thread implements ConfigurationCaller
             cal=resource.getUpdated();
             //System.out.println("Rid: " + resource.getId() + " RV: " + resource.getLastValue() + " RU: " + resource.getUpdated().getTimeInMillis());
             //connection = getDriverClientConnection();
-            try { psUpdateResourceValue.setDouble(1, resource.getLastValue()); }     catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: updateServerResourcesValues: " + ex.getMessage(), true, true, true); }
-            try { psUpdateResourceValue.setLong(2, cal.getTimeInMillis()); }                            catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: updateServerResourcesValues: " + ex.getMessage(), true, true, true); }
-            try { psUpdateResourceValue.setLong(3, resource.getId()); }              catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: updateServerResourcesValues: " + ex.getMessage(), true, true, true); }
+            try { psUpdateResourceValue.setDouble(1, resource.getLastValue()); }    catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: updateServerResourcesValues: " + ex.getMessage(), true, true, true); }
+            try { psUpdateResourceValue.setLong(2, cal.getTimeInMillis()); }        catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: updateServerResourcesValues: " + ex.getMessage(), true, true, true); }
+            try { psUpdateResourceValue.setLong(3, resource.getId()); }             catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: updateServerResourcesValues: " + ex.getMessage(), true, true, true); }
             try { psUpdateResourceValue.executeUpdate(); }                          catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: updateServerResourcesValues: ResourceId: " + resource.getId() + " ResourceValue: " + resource.getLastValue() + " " + ex.getMessage(), true, true, true); }
             try { connection.commit(); } catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: updateResource connection.commit(): " + ex.getMessage(), true, true, true); }
             //try { connection.close(); } catch (SQLException ex) { myUserInterface.log("Error: DCMDBClient. : connection.close(): " + ex.getMessage()); }            
@@ -1531,6 +1535,7 @@ public class DCMDBClient extends Thread implements ConfigurationCaller
 	    resource.setAlertPolls(resultset.getInt(13));
             cal.setTimeInMillis(resultset.getLong(14)); resource.setUpdated(cal);
 	    resource.setArchiveDBFile(resultset.getString(15));
+	    resource.setRetentionTime(resultset.getInt(16));
             //System.out.println("while Resources: " + resource.getId()); tested
             server.addResource((Resource)resource.clone());
 	}}
@@ -1768,8 +1773,8 @@ public class DCMDBClient extends Thread implements ConfigurationCaller
         try { psUpdateDCMPreset = connection.prepareStatement("UPDATE APP.DCMPreset SET UserId = ?, ViewName = ?, ViewDescription = ?, StartCalendarRelative = ?, StartCalendar = ?, StartMonthSupplement = ?, StartDaySupplement = ?, StartHourSupplement = ?, StartMinuteSupplement = ?, EndCalendarRelative = ?, EndCalendar = ?, EndMonthSupplement = ?, EndDaySupplement = ?, EndHourSupplement = ?, EndMinuteSupplement = ?, EnableSearch = ?, SearchString = ?, SearchExact = ?, SelectedResources = ?, Shared = ? WHERE Id = ?"); } catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: initPrepareStatements->UPDATE DCMPreset: " + ex.getMessage(), true, true, true); }
         try { psInsertServer = connection.prepareStatement("INSERT INTO APP.Host VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"); } catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: initPrepareStatements->INSERT Host: " + ex.getMessage(), true, true, true); }
 	try { psUpdateServer = connection.prepareStatement("UPDATE APP.Host SET Hostname = ?, Port = ?, Username = ?, UserPassword = ?, SuperuserPassword = ?, Sysinfo = ?, Enabled = ?, ContactEmail = ?, LastPolled = ?, Errors = ?, Command = ?, Comment2 = ?, Comment3 = ? WHERE Id = ?"); } catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: initPrepareStatements->UPDATE Host: " + ex.getMessage(), true, true, true); }
-	try { psInsertResource = connection.prepareStatement("INSERT INTO APP.Resource VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"); } catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: initPrepareStatements->INSERT Resource: " + ex.getMessage(), true, true, true); }
-	try { psUpdateResource = connection.prepareStatement("UPDATE APP.Resource SET HostId = ?, Category = ?, ResourceType = ?, ValueType = ?, CounterType = ?, Resource = ?, Enabled = ?, PollCommand = ?, LastValue = ?, WarningLimit = ?, CriticalLimit = ?, AlertPolls = ?, Updated = ?, RRDFile = ? WHERE Id = ?"); } catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: initPrepareStatements->UPDATE Resource: " + ex.getMessage(), true, true, true); }
+	try { psInsertResource = connection.prepareStatement("INSERT INTO APP.Resource VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"); } catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: initPrepareStatements->INSERT Resource: " + ex.getMessage(), true, true, true); }
+	try { psUpdateResource = connection.prepareStatement("UPDATE APP.Resource SET HostId = ?, Category = ?, ResourceType = ?, ValueType = ?, CounterType = ?, Resource = ?, Enabled = ?, PollCommand = ?, LastValue = ?, WarningLimit = ?, CriticalLimit = ?, AlertPolls = ?, Updated = ?, RRDFile = ?, RetentionTime = ? WHERE Id = ?"); } catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: initPrepareStatements->UPDATE Resource: " + ex.getMessage(), true, true, true); }
 	try { psUpdateResourceValue = connection.prepareStatement("UPDATE APP.Resource SET LastValue = ?, Updated = ? WHERE Id = ?"); } catch (SQLException ex) { dcmDBClientCaller.log("Error:  DCMDBClient: SQLException: initPrepareStatements->UPDATE Resource: " + ex.getMessage(), true, true, true); }
 //	try { psUpdateResourceValue = connection.prepareStatement("UPDATE APP.Resource SET LastValue = ? WHERE Id = ?"); } catch (SQLException ex) { javaDBClientCaller.log("Error:  DCMDBClient: SQLException: initPrepareStatements->UPDATE Resource: " + ex.getMessage(), true, true, true); }
 

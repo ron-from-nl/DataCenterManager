@@ -50,6 +50,7 @@ public class DCMServer extends java.rmi.server.UnicastRemoteObject implements Se
     String data;
         
     int port = 22;
+    int retentionTime = 1;
     int sessionTimeout = 5;
 
     int serverInstance = 0;
@@ -355,7 +356,7 @@ public class DCMServer extends java.rmi.server.UnicastRemoteObject implements Se
     
     // Begin MiddleWare // No usages
     @Override
-    public synchronized ArrayList<RMIMessage> inventoryServer(final long instanceParam, final Host hostParam, final int timeoutParam, final int retryMaxParam, final boolean debugParam)
+    public synchronized ArrayList<RMIMessage> inventoryServer(final long instanceParam, final Host hostParam, final int retentionTimeParam, final int timeoutParam, final int retryMaxParam, final boolean debugParam)
     {
         boolean succeeded = false;
         rmiMessageList.clear();
@@ -369,7 +370,7 @@ public class DCMServer extends java.rmi.server.UnicastRemoteObject implements Se
                 // Begin MiddleWare
                 if (dcmDBClient.getHostCount() < dcmVergunningServer.getServersInLicense())
                 {
-                    new DCMInventoryServerServer(dcmServerReference, instanceParam, hostParam, sessionTimeout, retryMaxParam, daemon, debug);
+                    new DCMInventoryServerServer(dcmServerReference, instanceParam, hostParam, retentionTimeParam, timeoutParam, retryMaxParam, daemon, debug);
                 }
                 else
                 {

@@ -63,6 +63,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
     private String data;
         
     private int port = 22;
+    private int retentionTime = 1;
     private int sessionTimeout = 5;
     private int retryMax = 2;
 
@@ -70,8 +71,8 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
     private int serverInstanceCounter = 0;
 
 //    Server server;
-    private DCMInventoryServer inventory;
-    private DCMPollServer poller;
+    private DCMInventoryServer dcmInventoryServer;
+    private DCMPollServer dcmPollServer;
     private DCMInventoryServerCaller inventoryCaller;
     private ConfigurationCaller configurationCaller;
     private final Configuration configuration;
@@ -579,37 +580,37 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
 
         startDateChooserPanel.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
             new datechooser.view.appearance.ViewAppearance("custom",
-                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
                     new java.awt.Color(187, 187, 187),
                     new java.awt.Color(0, 0, 255),
                     false,
                     true,
                     new datechooser.view.appearance.swing.ButtonPainter()),
-                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
                     new java.awt.Color(187, 187, 187),
                     new java.awt.Color(0, 0, 255),
                     true,
                     true,
                     new datechooser.view.appearance.swing.ButtonPainter()),
-                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
                     new java.awt.Color(0, 0, 255),
                     new java.awt.Color(0, 0, 255),
                     false,
                     true,
                     new datechooser.view.appearance.swing.ButtonPainter()),
-                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
                     new java.awt.Color(128, 128, 128),
                     new java.awt.Color(0, 0, 255),
                     false,
                     true,
                     new datechooser.view.appearance.swing.LabelPainter()),
-                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
                     new java.awt.Color(187, 187, 187),
                     new java.awt.Color(0, 0, 255),
                     false,
                     true,
                     new datechooser.view.appearance.swing.LabelPainter()),
-                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
                     new java.awt.Color(187, 187, 187),
                     new java.awt.Color(255, 0, 0),
                     false,
@@ -810,37 +811,37 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
 
     endDateChooserPanel.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
         new datechooser.view.appearance.ViewAppearance("custom",
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
                 new java.awt.Color(187, 187, 187),
                 new java.awt.Color(0, 0, 255),
                 false,
                 true,
                 new datechooser.view.appearance.swing.ButtonPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
                 new java.awt.Color(187, 187, 187),
                 new java.awt.Color(0, 0, 255),
                 true,
                 true,
                 new datechooser.view.appearance.swing.ButtonPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
                 new java.awt.Color(0, 0, 255),
                 new java.awt.Color(0, 0, 255),
                 false,
                 true,
                 new datechooser.view.appearance.swing.ButtonPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
                 new java.awt.Color(128, 128, 128),
                 new java.awt.Color(0, 0, 255),
                 false,
                 true,
                 new datechooser.view.appearance.swing.LabelPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
                 new java.awt.Color(187, 187, 187),
                 new java.awt.Color(0, 0, 255),
                 false,
                 true,
                 new datechooser.view.appearance.swing.LabelPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
                 new java.awt.Color(187, 187, 187),
                 new java.awt.Color(255, 0, 0),
                 false,
@@ -2209,21 +2210,21 @@ endDateChooserPanel.addSelectionChangedListener(new datechooser.events.Selection
     resourcesTable.setModel(new javax.swing.table.DefaultTableModel(
         new Object [][]
         {
-            {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null}
+            {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null}
         },
         new String []
         {
-            "Id", "HostId", "Category", "ResourceType", "ValueType", "CounterType", "Resource", "PollCommand", "LastValue", "WarningLimit", "CriticalLimit", "AlertPolls", "Updated", "RRDFile", "Enabled"
+            "Id", "HostId", "Category", "ResourceType", "ValueType", "CounterType", "Resource", "PollCommand", "LastValue", "WarningLimit", "CriticalLimit", "AlertPolls", "Updated", "RRDFile", "Retention", "Enabled"
         }
     )
     {
         Class[] types = new Class []
         {
-            java.lang.Long.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Long.class, java.lang.String.class, java.lang.Boolean.class
+            java.lang.Long.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Long.class, java.lang.String.class, java.lang.Integer.class, java.lang.Boolean.class
         };
         boolean[] canEdit = new boolean []
         {
-            false, true, true, true, true, true, true, true, true, true, true, true, true, true, true
+            false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true
         };
 
         public Class getColumnClass(int columnIndex)
@@ -2318,37 +2319,37 @@ endDateChooserPanel.addSelectionChangedListener(new datechooser.events.Selection
 
     vergunningDateChooserPanel.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
         new datechooser.view.appearance.ViewAppearance("custom",
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
                 new java.awt.Color(187, 187, 187),
                 new java.awt.Color(0, 0, 255),
                 false,
                 true,
                 new datechooser.view.appearance.swing.ButtonPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
                 new java.awt.Color(187, 187, 187),
                 new java.awt.Color(0, 0, 255),
                 true,
                 true,
                 new datechooser.view.appearance.swing.ButtonPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
                 new java.awt.Color(0, 0, 255),
                 new java.awt.Color(0, 0, 255),
                 false,
                 true,
                 new datechooser.view.appearance.swing.ButtonPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
                 new java.awt.Color(128, 128, 128),
                 new java.awt.Color(0, 0, 255),
                 false,
                 true,
                 new datechooser.view.appearance.swing.LabelPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
                 new java.awt.Color(187, 187, 187),
                 new java.awt.Color(0, 0, 255),
                 false,
                 true,
                 new datechooser.view.appearance.swing.LabelPainter()),
-            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
                 new java.awt.Color(187, 187, 187),
                 new java.awt.Color(255, 0, 0),
                 false,
@@ -3308,10 +3309,11 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
                             addServerFormClient.selectionModel.setSelectionInterval((int)host.getId()-1, (int)host.getId()-1);
 //                            sessionTimeout = Integer.parseInt(addServerFormClient.timeout2Field.getText());
 //                            retryMax = Integer.parseInt(addServerFormClient.retry2Field.getText());
-                            sessionTimeout = addServerFormClient.getTimeout2();
-                            retryMax = addServerFormClient.getRetryMax2();
+                            retentionTime = addServerFormClient.getRetentionTime();
+                            sessionTimeout = addServerFormClient.getTimeout();
+                            retryMax = addServerFormClient.getRetryMax();
                             log("\nAction:  DCMClient: Server inventory initiated for server: " + host.getHostname() + ", please wait...", true, true, true);
-                            ArrayList<RMIMessage> rmiMessageList = null; rmiMessageList = dcmClientRMI.inventoryServer(counter, host, sessionTimeout, retryMax, debug);
+                            ArrayList<RMIMessage> rmiMessageList = null; rmiMessageList = dcmClientRMI.inventoryServer(counter, host, retentionTime, sessionTimeout, retryMax, debug);
                             for (RMIMessage rmiMessage:rmiMessageList) { log(rmiMessage.getMessageType() + " " + rmiMessage.getObjectMethod() + " " + rmiMessage.getLogMessage(), true, true, true); }
                             try { Thread.sleep(2000); } catch (InterruptedException ex) {  }                        
                             try { buildServerTree(); } catch (CloneNotSupportedException ex) { }
@@ -3372,9 +3374,10 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
                 if (dcmClientRMI.getHostCount() < dcmClientRMI.getServersInLicense())
                 {
                     try { log("\nAction:  DCMClient: Server inventory initiated for server: " + addServerFormClient.getHost().getHostname() + ", please wait...", true, true, true); } catch (CloneNotSupportedException ex) {    }
-                    sessionTimeout = addServerFormClient.getTimeout1();
-                    retryMax = addServerFormClient.getRetryMax1();
-                    ArrayList<RMIMessage> rmiMessageList = null; try { rmiMessageList = dcmClientRMI.inventoryServer(0, addServerFormClient.getHost(), sessionTimeout, retryMax, debug); } catch (CloneNotSupportedException ex) { }
+                    retentionTime = addServerFormClient.getRetentionTime();
+                    sessionTimeout = addServerFormClient.getTimeout();
+                    retryMax = addServerFormClient.getRetryMax();
+                    ArrayList<RMIMessage> rmiMessageList = null; try { rmiMessageList = dcmClientRMI.inventoryServer(0, addServerFormClient.getHost(), retentionTime, sessionTimeout, retryMax, debug); } catch (CloneNotSupportedException ex) { }
                     for (RMIMessage rmiMessage:rmiMessageList) { log(rmiMessage.getMessageType() + " " + rmiMessage.getObjectMethod() + " " + rmiMessage.getLogMessage(), true, true, true); }
                     try { buildServerTree(); } catch (CloneNotSupportedException ex) { }
                 }
@@ -5711,7 +5714,7 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
                     Host host = dcmClientRMI.getHostByHostname(serverTree.getSelectionPath().getLastPathComponent().toString()); // MiddleWare Invocation
                     rmiMessageList = dcmClientRMI.deleteServerByHostname(host.getHostname()); // MiddleWare Invocation
                     for (RMIMessage rmiMessage:rmiMessageList) { log(rmiMessage.getMessageType() + " " + rmiMessage.getObjectMethod() + " " + rmiMessage.getLogMessage(), true, true, true); }
-                    rmiMessageList = dcmClientRMI.inventoryServer(host.getId(), host, sessionTimeout, retryMax, debug); // MiddleWare Invocation
+                    rmiMessageList = dcmClientRMI.inventoryServer(host.getId(), host, retentionTime, sessionTimeout, retryMax, debug); // MiddleWare Invocation
                     for (RMIMessage rmiMessage:rmiMessageList) { log(rmiMessage.getMessageType() + " " + rmiMessage.getObjectMethod() + " " + rmiMessage.getLogMessage(), true, true, true); }
                     try { buildServerTree(); } catch (CloneNotSupportedException ex) {log("Error: CloneNotSupportedException: DCManagerClient.deleteServersByForm" + ex.getMessage(), true, true, true);}
                 }
@@ -5742,7 +5745,7 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
                     log("Server update initiated, please wait...", true, true, true);
                     rmiMessageList = dcmClientRMI.deleteServerByHostname(server.getHost().getHostname()); // MiddleWare Invocation
                     for (RMIMessage rmiMessage:rmiMessageList) { log(rmiMessage.getMessageType() + " " + rmiMessage.getObjectMethod() + " " + rmiMessage.getLogMessage(), true, true, true); }
-                    rmiMessageList = dcmClientRMI.inventoryServer(server.getHost().getId(), server.getHost(), sessionTimeout, retryMax, debug); // MiddleWare Invocation
+                    rmiMessageList = dcmClientRMI.inventoryServer(server.getHost().getId(), server.getHost(), retentionTime, sessionTimeout, retryMax, debug); // MiddleWare Invocation
                     for (RMIMessage rmiMessage:rmiMessageList) { log(rmiMessage.getMessageType() + " " + rmiMessage.getObjectMethod() + " " + rmiMessage.getLogMessage(), true, true, true); }
                     try { buildServerTree(); } catch (CloneNotSupportedException ex) {log("Error: CloneNotSupportedException: DCManagerClient.deleteServersByForm" + ex.getMessage(), true, true, true);}
                 }
@@ -6003,15 +6006,34 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
         int resourcesTableRowsNeeded = server.getResourceList().size();
 
         Object[][] data = new Object[resourcesTableRowsNeeded][15];
-        String[]   header = new String [] {"Id", "HostId", "Category", "ResourceType", "ValueType", "CounterType", "Resource", "PollCommand", "LastValue", "WarningLimit", "CriticalLimit", "AlertPolls", "Updated", "RRDFile", "Enabled"};
-        Class[] types = new Class [] {java.lang.Long.class, java.lang.Long.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Long.class, java.lang.String.class, java.lang.Boolean.class};
+        String[]   header = new String [] {"Id", "HostId", "Category", "ResourceType", "ValueType", "CounterType", "Resource", "PollCommand", "LastValue", "WarningLimit", "CriticalLimit", "AlertPolls", "Updated", "RRDFile", "Retention", "Enabled"};
+        Class[] types = new Class [] {java.lang.Long.class, java.lang.Long.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Long.class, java.lang.String.class, java.lang.Integer.class, java.lang.Boolean.class};
         
         //resourcesTable.setModel(new javax.swing.table.DefaultTableModel(data, new String [] {"Id", "HostId", "Category", "ResourceType", "ValueType", "CounterType", "Resource", "Enabled", "PollCommand", "LastValue", "WarningLimit", "CriticalLimit", "AlertPolls", "Updated", "RRDFile"})
         resourcesTable.setModel(new javax.swing.table.DefaultTableModel(data,header)
         {
-            Class[] types = new Class [] {java.lang.Long.class, java.lang.Long.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Long.class, java.lang.String.class,java.lang.Boolean.class};
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, true, true, true, true, true, true, false, true, true
+            Class[] types = new Class [] 
+	    {
+		java.lang.Long.class,
+		java.lang.Long.class,
+		java.lang.String.class,
+		java.lang.String.class,
+		java.lang.String.class,
+		java.lang.String.class,
+		java.lang.String.class,
+		java.lang.String.class,
+		java.lang.Double.class,
+		java.lang.Double.class,
+		java.lang.Double.class,
+		java.lang.Integer.class,
+		java.lang.Long.class,
+		java.lang.String.class,
+		java.lang.Integer.class,
+		java.lang.Boolean.class
+	    };
+            boolean[] canEdit = new boolean [] 
+	    {
+                false, false, false, false, false, false, true, true, true, true, true, true, false, true, false, true
             };
 
             @Override
@@ -6051,7 +6073,8 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
             resourcesTable.setValueAt(resource.getAlertPolls(), rowCounter, 11);
             resourcesTable.setValueAt(resource.getUpdated().getTimeInMillis(), rowCounter, 12);
             resourcesTable.setValueAt(resource.getRRDFile(), rowCounter, 13);
-            resourcesTable.setValueAt(resource.getEnabled(), rowCounter, 14);
+            resourcesTable.setValueAt(resource.getRetentionTime(), rowCounter, 14);
+            resourcesTable.setValueAt(resource.getEnabled(), rowCounter, 15);
             rowCounter++;
         }
         
@@ -6101,7 +6124,7 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
         {
             @Override public void tableChanged(TableModelEvent e)
             {
-                if (e.getColumn() == 14) // NEVER forget this one if the columns in this table changes
+                if (e.getColumn() == 15) // NEVER forget this one if the columns in this table changes
                 {
                     TableModel model = (TableModel)e.getSource();
                     Object data = model.getValueAt(e.getLastRow(), e.getColumn());                        
@@ -6155,14 +6178,50 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
         hostTable.setValueAt(enabled, 0,6);
         
         Object[][] data = new Object[1][15];
-        String[]   header = new String [] {"Id", "HostId", "Category", "ResourceType", "ValueType", "CounterType", "Resource", "PollCommand", "LastValue", "WarningLimit", "CriticalLimit", "AlertPolls", "Updated", "RRDFile", "Enabled"};
-        Class[] types = new Class [] {java.lang.Long.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Long.class, java.lang.String.class, java.lang.Boolean.class};
+        String[]   header = new String [] {"Id", "HostId", "Category", "ResourceType", "ValueType", "CounterType", "Resource", "PollCommand", "LastValue", "WarningLimit", "CriticalLimit", "AlertPolls", "Updated", "RRDFile", "Retention", "Enabled"};
+        Class[] types = new Class []
+	{
+	    java.lang.Long.class,
+	    java.lang.Integer.class,
+	    java.lang.String.class,
+	    java.lang.String.class,
+	    java.lang.String.class,
+	    java.lang.String.class,
+	    java.lang.String.class,
+	    java.lang.String.class,
+	    java.lang.Double.class,
+	    java.lang.Double.class,
+	    java.lang.Double.class,
+	    java.lang.Integer.class,
+	    java.lang.Long.class,
+	    java.lang.String.class,
+	    java.lang.Integer.class,
+	    java.lang.Boolean.class
+	};
 
         resourcesTable.setModel(new javax.swing.table.DefaultTableModel(data,header)
         {
-            Class[] types = new Class [] {java.lang.Long.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Long.class, java.lang.String.class, java.lang.Boolean.class};
+            Class[] types = new Class [] 
+	    {
+		java.lang.Long.class,
+		java.lang.Integer.class,
+		java.lang.String.class,
+		java.lang.String.class,
+		java.lang.String.class,
+		java.lang.String.class,
+		java.lang.String.class,
+		java.lang.String.class,
+		java.lang.Double.class,
+		java.lang.Double.class,
+		java.lang.Double.class,
+		java.lang.Integer.class,
+		java.lang.Long.class,
+		java.lang.String.class,
+		java.lang.Integer.class,
+		java.lang.Boolean.class
+	    };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, true, true, true, true, true, true, false, true, true
+                false, false, false, false, false, false, true, true, true, true, true, true, false, true, false, true
             };
 
             @Override

@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
 
+// This object actually is the DCMServer version or should i say DCM(RMI)Server version, so you know what i mean
 public class DCMInventoryServerServer implements DCMRemoteCommandCaller, DCMDBClientCaller, ConfigurationCaller, DCMPushPollScriptCaller, DCMFileTranferCaller // Login to server for inventory (data) and uses Convert to convert to server object with resources
 {
 
@@ -93,11 +94,13 @@ public class DCMInventoryServerServer implements DCMRemoteCommandCaller, DCMDBCl
     private final String            AIX =       "AIX";
     private final String            HPUX =      "HP-UX";
 
-    private int retryMax =                      2;
-    private int retryCounter =                  0;
+    private int retentionTime =     1;
+    private int retryMax =          2;
+    private int retryCounter =      0;
     
-    public DCMInventoryServerServer(final DCMInventoryServerServerCaller inventoryServerServerCallerParam, final long inventoryInstanceParam, final Host hostParam, final int timeoutParam, int retryMaxParam, final boolean daemonParam, final boolean debugParam)
+    public DCMInventoryServerServer(final DCMInventoryServerServerCaller inventoryServerServerCallerParam, final long inventoryInstanceParam, final Host hostParam, final int retentionTimeParam, final int timeoutParam, int retryMaxParam, final boolean daemonParam, final boolean debugParam)
     {
+	retentionTime = retentionTimeParam;
         retryCounter = 0;
         retryMax = retryMaxParam;
         stageArray = new String[2];
@@ -214,31 +217,31 @@ public class DCMInventoryServerServer implements DCMRemoteCommandCaller, DCMDBCl
                 if      (sysinfo.contains(LINUX))
                 {
                     DCMDataConverterLinux inventoryServerDataConverterLinux = null;
-                    try { inventoryServerDataConverterLinux = new DCMDataConverterLinux(host); } catch (UnknownHostException ex) { inventoryServerServerCaller.log("InventoryServerServer Received Thrown UnknownHost from the LinuxCommandLibrary", true, true, true); }
+                    try { inventoryServerDataConverterLinux = new DCMDataConverterLinux(host,retentionTime); } catch (UnknownHostException ex) { inventoryServerServerCaller.log("InventoryServerServer Received Thrown UnknownHost from the LinuxCommandLibrary", true, true, true); }
                     try { server = (Server) inventoryServerDataConverterLinux.convertInventoryDataToServer(data).clone(); } catch (CloneNotSupportedException ex) { inventoryServerServerCaller.log("Inventory Clone server", true, true, true); }                    
                 }
                 else if (sysinfo.contains(DARWIN))
                 {
                     DCMDataConverterDarwin dcmDataConverterDarwin = null;
-                    try { dcmDataConverterDarwin = new DCMDataConverterDarwin(host); } catch (UnknownHostException ex) { inventoryServerServerCaller.log("InventoryServerServer Received Thrown UnknownHost from the DarwinCommandLibrary", true, true, true); }
+                    try { dcmDataConverterDarwin = new DCMDataConverterDarwin(host,retentionTime); } catch (UnknownHostException ex) { inventoryServerServerCaller.log("InventoryServerServer Received Thrown UnknownHost from the DarwinCommandLibrary", true, true, true); }
                     try { server = (Server) dcmDataConverterDarwin.convertInventoryDataToServer(data).clone(); } catch (CloneNotSupportedException ex) { inventoryServerServerCaller.log("Inventory Clone server", true, true, true); }                    
                 }
                 else if (sysinfo.contains(SUNOS))
                 {
                     DCMDataConverterSunOS inventoryServerDataConverterSunOS = null;
-                    try { inventoryServerDataConverterSunOS = new DCMDataConverterSunOS(host); } catch (UnknownHostException ex) { inventoryServerServerCaller.log("InventoryServerServer Received Thrown UnknownHost from the SunOSCommandLibrary", true, true, true); }
+                    try { inventoryServerDataConverterSunOS = new DCMDataConverterSunOS(host,retentionTime); } catch (UnknownHostException ex) { inventoryServerServerCaller.log("InventoryServerServer Received Thrown UnknownHost from the SunOSCommandLibrary", true, true, true); }
                     try { server = (Server) inventoryServerDataConverterSunOS.convertInventoryDataToServer(data).clone(); } catch (CloneNotSupportedException ex) { inventoryServerServerCaller.log("Inventory Clone server", true, true, true); }                    
                 }
                 else if (sysinfo.contains(AIX))
                 {
                     DCMDataConverterAIX inventoryServerDataConverterAIX = null;
-                    try { inventoryServerDataConverterAIX = new DCMDataConverterAIX(host); } catch (UnknownHostException ex) { inventoryServerServerCaller.log("InventoryServerServer Received Thrown UnknownHost from the AIXCommandLibrary", true, true, true); }
+                    try { inventoryServerDataConverterAIX = new DCMDataConverterAIX(host,retentionTime); } catch (UnknownHostException ex) { inventoryServerServerCaller.log("InventoryServerServer Received Thrown UnknownHost from the AIXCommandLibrary", true, true, true); }
                     try { server = (Server) inventoryServerDataConverterAIX.convertInventoryDataToServer(data).clone(); } catch (CloneNotSupportedException ex) { inventoryServerServerCaller.log("Inventory Clone server", true, true, true); }                    
                 }
                 else if (sysinfo.contains(HPUX))
                 {
                     DCMDataConverterHPUX inventoryServerDataConverterHPUX = null;
-                    try { inventoryServerDataConverterHPUX = new DCMDataConverterHPUX(host); } catch (UnknownHostException ex) { inventoryServerServerCaller.log("InventoryServerServer Received Thrown UnknownHost from the HPUXCommandLibrary", true, true, true); }
+                    try { inventoryServerDataConverterHPUX = new DCMDataConverterHPUX(host,retentionTime); } catch (UnknownHostException ex) { inventoryServerServerCaller.log("InventoryServerServer Received Thrown UnknownHost from the HPUXCommandLibrary", true, true, true); }
                     try { server = (Server) inventoryServerDataConverterHPUX.convertInventoryDataToServer(data).clone(); } catch (CloneNotSupportedException ex) { inventoryServerServerCaller.log("Inventory Clone server", true, true, true); }                    
                 }
 

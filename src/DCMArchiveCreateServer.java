@@ -47,7 +47,7 @@ public class DCMArchiveCreateServer implements ConfigurationCaller
                 String consulFunction = "AVERAGE"; // AVERAGE, MIN, MAX or LAST.
                 Double xff = 0.1; // Defines XFiles Factor, the percentage of data points that can be anally probed by martians before RRD gives a crap.
                 int pdp = 1; // PDP Primary Data Points (number of bla bla per sample)
-                int rows = 525600; // This makes up retention time (one year in our case)
+                final int mpy = 525600; // Minutes per Year used for archive retention time
                 int totalArchives = server.getResourceList().size();
                 int archiveCounter = 1;
                 log("Action:  DCMArchiveCreateServer: Creating " + totalArchives + " archives for host: " + server.getHost().getHostname() + ". Please wait...", true, true, true);
@@ -70,7 +70,7 @@ public class DCMArchiveCreateServer implements ConfigurationCaller
                         try { rrdDef.addDatasource(resource.getResource(), resource.getCounterType(), heartBeat, minValue, maxValue); } catch (RrdException ex) { inventoryServerServerReference.rrdCreateFailureResponse("Error: RrdException: RRDCreate: addDatasource " + ex.getMessage()); }
 
                         // Set Archive Properties                         
-                        try { rrdDef.addArchive(consulFunction, xff, pdp, rows); } catch (RrdException ex) { inventoryServerServerReference.rrdCreateFailureResponse(" Error: RrdException: RRDCreate: addArchive " + ex.getMessage()); }
+                        try { rrdDef.addArchive(consulFunction, xff, pdp, resource.getRetentionTime() * mpy); } catch (RrdException ex) { inventoryServerServerReference.rrdCreateFailureResponse(" Error: RrdException: RRDCreate: addArchive " + ex.getMessage()); }
                         try { rrdDb = new RrdDb(rrdDef); }
                         catch (RrdException ex) { inventoryServerServerReference.rrdCreateFailureResponse("Error:  DCMArchiveCreateServer: RrdException: RRDCreate: new RrdDb(rrdDef) " + ex.getMessage()); }
                         catch (IOException ex) { inventoryServerServerReference.rrdCreateFailureResponse("Error:  DCMArchiveCreateServer: IOException: RRDCreate: new RrdDb(rrdDef) " + ex.getMessage()); }

@@ -1,0 +1,2 @@
+#!/bin/bash
+ps -ef | grep DCM | grep -v grep | awk '{ print $2 }' | while read pid; do echo "killing: ${pid}"; kill ${pid}; done

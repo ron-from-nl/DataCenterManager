@@ -368,7 +368,7 @@ public class DCMInventoryServerServer implements DCMRemoteCommandCaller, DCMDBCl
             cmd.append("mpstat -P ALL | egrep -v \"CPU|^$\" | sed \"s/AM//\" | sed \"s/PM//\" | awk '{ print $2 }' | while read resource; do echo ").append("\"CPU: ${resource}\"; done; \n"); // CPU's
             cmd.append("iostat | egrep -ive \"cpu|device|^$|^ +\" | awk '{ print $1 }' | while read resource; do echo ").append("\"DiskIO: ${resource}\"; done; \n"); // I/O
             cmd.append("df -kP | grep \"^/dev/\" | awk '{ print $6 }' | while read resource; do echo ").append("\"Storage: ${resource}\"; done; \n"); // Storage filesystems
-            cmd.append("netstat -i | egrep -e \"eth\" | awk '{ print $1 }' | while read resource; do echo ").append("\"Network: ${resource}\"; done; \n"); // Network Interfaces
+            cmd.append("netstat -i | egrep -vie \"kernel|^Iface|MTU\" | awk '{ print $1 }' | while read resource; do echo ").append("\"Network: ${resource}\"; done; \n"); // Network Interfaces
 //            cmd.append("echo \"").append(customPromptFlat).append("\";\r\n"); // Arranged prompt output for expect string in RemoteCommand
         }
         else if (sysinfoParam.contains(DARWIN)) // This generates the variable datasources

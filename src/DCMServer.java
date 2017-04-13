@@ -876,8 +876,8 @@ public class DCMServer extends java.rmi.server.UnicastRemoteObject implements Se
         }
         else
         {
-            log("Advise:  DCMDesktop: Thank you for using this Free Lifetime 5 Server License", true, true, true);
-            log("Advise:  DCMDesktop: Please click the Admin Tab if you want more Servers Licensed", true, true, true);
+            log("Advise:  DCMDesktop: Thank you for using DataCenterManager " + DCMLicense.getVersion(), true, true, true);
+            log("Advise:  DCMDesktop: This software is licenced under GPL 3 Licence", true, true, true);
             
         }
     }

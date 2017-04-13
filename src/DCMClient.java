@@ -5330,8 +5330,8 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
         }
         else
         {
-            log("Advise:  DCMClient: Thank you for using this Free Lifetime 5 Server License", true, true, true);
-            log("Advise:  DCMClient: Please click the Admin Tab if you want more Servers Licensed", true, true, true);
+            log("Advise:  DCMClient: Thank you for using DataCenterManager " + DCMLicense.getVersion(), true, true, true);
+            log("Advise:  DCMClient: This software is licenced under GPL 3 Licence", true, true, true);
         }
             managerTab.setSelectedIndex(0);
             startPollerButton.setEnabled(true);

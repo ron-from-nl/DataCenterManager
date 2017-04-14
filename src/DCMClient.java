@@ -4037,7 +4037,7 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
             searchExactWasUsed = false;
             if (searchField.getText().length() >= 0)
             {
-                setSelectionArea(searchExactResources(searchField.getText()));
+                setSelectionArea(searchNonExactResources(searchField.getText()));
 
                 Thread searchFieldKeyReleasedThread = new Thread(new Runnable()
                 {
@@ -4045,9 +4045,9 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
                     @SuppressWarnings({"static-access"})
                     public void run()
                     {
-                        wordSearchButton.setSelected(true);
+                        matchSearchButton.setSelected(true);
                         try { Thread.sleep(250); } catch (InterruptedException ex) { }
-                        wordSearchButton.setSelected(false);
+                        matchSearchButton.setSelected(false);
                     }
                 });
                 searchFieldKeyReleasedThread.setName("searchFieldKeyReleasedThread");

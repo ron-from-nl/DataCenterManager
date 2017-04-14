@@ -4285,10 +4285,10 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
                     @SuppressWarnings({"static-access"})
                     public void run()
                     {
-                        wordSearchButton.setSelected(true);
+                        matchSearchButton.setSelected(true);
                         try { Thread.sleep(250); } catch (InterruptedException ex) { }
-                        wordSearchButton.setSelected(false);
-                        setSelectionArea(searchExactResources(searchField.getText())); // MiddleWare Invocation
+                        matchSearchButton.setSelected(false);
+                        setSelectionArea(searchNonExactResources(searchField.getText())); // MiddleWare Invocation
                     }
                 });
                 searchFieldKeyReleasedThread.setName("searchFieldKeyReleasedThread");

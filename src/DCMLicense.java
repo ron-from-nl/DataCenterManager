@@ -6,7 +6,7 @@ public class DCMLicense
     static final String PRODUCTNAME = "DataCenterManager";
     static final String AUTHOR = "Ron de Jong";
     static final String COPYRIGHT = "© Copyleft " + Calendar.getInstance().get(Calendar.YEAR);
-    static final String VERSION = "2.1.13";
+    static final String VERSION = "2.1.14";
     static final Double SERVERLICENSEPRICE = 0D; //Used to be 19D
 
 //  Version History:

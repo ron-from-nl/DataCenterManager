@@ -581,13 +581,13 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
         startDateChooserPanel.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
             new datechooser.view.appearance.ViewAppearance("custom",
                 new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
-                    new java.awt.Color(187, 187, 187),
+                    new java.awt.Color(77, 77, 77),
                     new java.awt.Color(0, 0, 255),
                     false,
                     true,
                     new datechooser.view.appearance.swing.ButtonPainter()),
                 new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
-                    new java.awt.Color(187, 187, 187),
+                    new java.awt.Color(77, 77, 77),
                     new java.awt.Color(0, 0, 255),
                     true,
                     true,
@@ -605,13 +605,13 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
                     true,
                     new datechooser.view.appearance.swing.LabelPainter()),
                 new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
-                    new java.awt.Color(187, 187, 187),
+                    new java.awt.Color(77, 77, 77),
                     new java.awt.Color(0, 0, 255),
                     false,
                     true,
                     new datechooser.view.appearance.swing.LabelPainter()),
                 new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
-                    new java.awt.Color(187, 187, 187),
+                    new java.awt.Color(77, 77, 77),
                     new java.awt.Color(255, 0, 0),
                     false,
                     false,
@@ -621,7 +621,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
                 true)));
     startDateChooserPanel.setEnabled(false);
     startDateChooserPanel.setLocale(new java.util.Locale("en", "", ""));
-    startDateChooserPanel.setNavigateFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 9));
+    startDateChooserPanel.setNavigateFont(new java.awt.Font("Verdana", java.awt.Font.PLAIN, 9));
     startDateChooserPanel.setBehavior(datechooser.model.multiple.MultyModelBehavior.SELECT_SINGLE);
     startDateChooserPanel.addSelectionChangedListener(new datechooser.events.SelectionChangedListener()
     {
@@ -812,13 +812,13 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
     endDateChooserPanel.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
         new datechooser.view.appearance.ViewAppearance("custom",
             new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
-                new java.awt.Color(187, 187, 187),
+                new java.awt.Color(77, 77, 77),
                 new java.awt.Color(0, 0, 255),
                 false,
                 true,
                 new datechooser.view.appearance.swing.ButtonPainter()),
             new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
-                new java.awt.Color(187, 187, 187),
+                new java.awt.Color(77, 77, 77),
                 new java.awt.Color(0, 0, 255),
                 true,
                 true,
@@ -836,13 +836,13 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
                 true,
                 new datechooser.view.appearance.swing.LabelPainter()),
             new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
-                new java.awt.Color(187, 187, 187),
+                new java.awt.Color(77, 77, 77),
                 new java.awt.Color(0, 0, 255),
                 false,
                 true,
                 new datechooser.view.appearance.swing.LabelPainter()),
             new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
-                new java.awt.Color(187, 187, 187),
+                new java.awt.Color(77, 77, 77),
                 new java.awt.Color(255, 0, 0),
                 false,
                 false,
@@ -852,7 +852,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
             true)));
 endDateChooserPanel.setEnabled(false);
 endDateChooserPanel.setLocale(new java.util.Locale("en", "", ""));
-endDateChooserPanel.setNavigateFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 9));
+endDateChooserPanel.setNavigateFont(new java.awt.Font("Verdana", java.awt.Font.PLAIN, 9));
 endDateChooserPanel.setBehavior(datechooser.model.multiple.MultyModelBehavior.SELECT_SINGLE);
 endDateChooserPanel.addSelectionChangedListener(new datechooser.events.SelectionChangedListener()
 {
@@ -866,7 +866,7 @@ endDateChooserPanel.addSelectionChangedListener(new datechooser.events.Selection
     endDateSelectorPanel.setLayout(endDateSelectorPanelLayout);
     endDateSelectorPanelLayout.setHorizontalGroup(
         endDateSelectorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(endDateChooserPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 208, Short.MAX_VALUE)
+        .add(endDateChooserPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
     );
     endDateSelectorPanelLayout.setVerticalGroup(
         endDateSelectorPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -2022,7 +2022,7 @@ endDateChooserPanel.addSelectionChangedListener(new datechooser.events.Selection
             .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
             .add(startTimeRelativePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(searchPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE)
+            .add(searchPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 355, Short.MAX_VALUE)
             .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
             .add(endTimeRelativePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -2320,13 +2320,13 @@ endDateChooserPanel.addSelectionChangedListener(new datechooser.events.Selection
     vergunningDateChooserPanel.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
         new datechooser.view.appearance.ViewAppearance("custom",
             new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
-                new java.awt.Color(187, 187, 187),
+                new java.awt.Color(77, 77, 77),
                 new java.awt.Color(0, 0, 255),
                 false,
                 true,
                 new datechooser.view.appearance.swing.ButtonPainter()),
             new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
-                new java.awt.Color(187, 187, 187),
+                new java.awt.Color(77, 77, 77),
                 new java.awt.Color(0, 0, 255),
                 true,
                 true,
@@ -2344,13 +2344,13 @@ endDateChooserPanel.addSelectionChangedListener(new datechooser.events.Selection
                 true,
                 new datechooser.view.appearance.swing.LabelPainter()),
             new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
-                new java.awt.Color(187, 187, 187),
+                new java.awt.Color(77, 77, 77),
                 new java.awt.Color(0, 0, 255),
                 false,
                 true,
                 new datechooser.view.appearance.swing.LabelPainter()),
             new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12),
-                new java.awt.Color(187, 187, 187),
+                new java.awt.Color(77, 77, 77),
                 new java.awt.Color(255, 0, 0),
                 false,
                 false,
@@ -2359,7 +2359,7 @@ endDateChooserPanel.addSelectionChangedListener(new datechooser.events.Selection
             false,
             true)));
 vergunningDateChooserPanel.setLocale(new java.util.Locale("en", "", ""));
-vergunningDateChooserPanel.setNavigateFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 9));
+vergunningDateChooserPanel.setNavigateFont(new java.awt.Font("Verdana", java.awt.Font.PLAIN, 9));
 vergunningDateChooserPanel.setBehavior(datechooser.model.multiple.MultyModelBehavior.SELECT_SINGLE);
 vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.SelectionChangedListener()
 {
@@ -2687,7 +2687,7 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
                 .add(org.jdesktop.layout.GroupLayout.LEADING, orderLicenseButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .add(org.jdesktop.layout.GroupLayout.LEADING, licenseDetailsPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
                 .add(applyVergunningButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addContainerGap(17, Short.MAX_VALUE))
+            .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
     licenseInnerPanelLayout.setVerticalGroup(
         licenseInnerPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -2883,7 +2883,7 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
         userPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
         .add(userPanelLayout.createSequentialGroup()
             .addContainerGap()
-            .add(userScroller, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
+            .add(userScroller, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 391, Short.MAX_VALUE)
             .addContainerGap())
         .add(userPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(userPanelLayout.createSequentialGroup()
@@ -3045,18 +3045,18 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
                 .add(licenseInnerPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 832, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
             .add(licenseTabLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                .add(helpdeskPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 353, Short.MAX_VALUE)
+                .add(helpdeskPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
                 .add(systemPropertiesPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
     );
     licenseTabLayout.setVerticalGroup(
         licenseTabLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
         .add(licenseTabLayout.createSequentialGroup()
             .add(licenseTabLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                .add(licenseInnerPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
+                .add(licenseInnerPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 344, Short.MAX_VALUE)
                 .add(helpdeskPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE))
             .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
             .add(licenseTabLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                .add(userPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 436, Short.MAX_VALUE)
+                .add(userPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 424, Short.MAX_VALUE)
                 .add(backupPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .add(systemPropertiesPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addContainerGap())
@@ -4034,7 +4034,7 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
 //        entre = 10)
         if ( evt.getKeyCode() == 10 )
         {
-            searchExactWasUsed = true;
+            searchExactWasUsed = false;
             if (searchField.getText().length() >= 0)
             {
                 setSelectionArea(searchExactResources(searchField.getText()));

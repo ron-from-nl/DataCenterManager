@@ -108,7 +108,7 @@ public class DCMCommanderClient extends javax.swing.JFrame  implements Configura
         dcmRemoteCommandCaller = this;
 //        dcmDBClientCaller = this;
         configuration = new Configuration(configurationCaller);
-        setTitle(THISPRODUCT);
+        setTitle(DCMLicense.getProcuct() + " " + DCMLicense.getVersion());
 
         if ( dcmCommanderClientRMI.connect(dcmServerNameParam, dcmServerPort) ) { outputArea.append("Connected to DCMServer"); } else { outputArea.append("Could NOT connect to DCMServer !!!"); }
 

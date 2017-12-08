@@ -296,7 +296,7 @@ public class DCMClient extends javax.swing.JFrame implements ConfigurationCaller
         
         serverTree.setEnabled(false);
         
-        setTitle(THISPRODUCT);
+        setTitle(DCMLicense.getProcuct() + " " + DCMLicense.getVersion());
         staticLabel.setText(DCMLicense.getCopyright() + " Author: " +DCMLicense.getAuthor());
         
         sysmon = new DCMSysMonitor();

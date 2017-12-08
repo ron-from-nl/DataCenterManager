@@ -32,6 +32,7 @@ public class DCMStarter extends javax.swing.JFrame
     {
         UIManager.put("Label.font",new Font("Courier",Font.ITALIC,12));
         initComponents();
+        setTitle(DCMLicense.getProcuct() + " " + DCMLicense.getVersion());
         try
         { UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel"); }
         catch (ClassNotFoundException ex) { }

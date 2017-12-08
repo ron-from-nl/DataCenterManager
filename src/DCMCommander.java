@@ -113,7 +113,7 @@ public class DCMCommander extends javax.swing.JFrame  implements DCMDBClientCall
         dcmRemoteCommandCaller = this;
         dcmDBClientCaller = this;
         configuration = new Configuration(configurationCaller);
-        setTitle(THISPRODUCT);
+        setTitle(DCMLicense.getProcuct() + " " + DCMLicense.getVersion());
 //        copyrightLabel.setText(License.getCopyright() + " " + License.getCompany() + " - Author: " + License.getAuthor());
 
         // Begin MiddleWare        

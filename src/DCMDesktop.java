@@ -344,7 +344,7 @@ public class DCMDesktop extends javax.swing.JFrame implements DCMInventoryServer
         vergunningStartCalendar.set(Calendar.MINUTE, (int)0);
         vergunningStartCalendar.set(Calendar.SECOND, (int)0);
 
-        setTitle(THISPRODUCT);
+        setTitle(DCMLicense.getProcuct() + " " + DCMLicense.getVersion());
         staticLabel.setText(DCMLicense.getCopyright() + " Author: " +DCMLicense.getAuthor());
         
         try { addServerForm = new DCMAddServerForm(this); } catch (UnsupportedLookAndFeelException ex) { }
